@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#FF007CFF</color>
+	<color name="toolbar_color">#FF007CFF</color>
+    <color name="display_color">#FF007cff</color>
+    <color name="main_color">#CFE6FF</color>
+    <color name="deep_theme_color">#FF3170C7</color>
+    <color name="light_theme_color">#FF039BE5</color>
+    <color name="alpha_theme_color">#B5007CFF</color>
+    <color name="alpha_deep_theme_color">#B50288d1</color>
+	<color name="lighter_color">#CFE6FF</color>
+    <color name="snack_action_color">#FF007cff</color>
+</resources>

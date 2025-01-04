@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item
+        android:id="@+id/menu_main_File_create"
+        android:title="@string/main_File_create"/>
+    <item
+        android:id="@+id/menu_main_File_open"
+        android:title="@string/main_File_open"/>
+	<item
+        android:id="@+id/menu_main_File_example"
+        android:title="@string/main_File_example"/>
+	<item
+        android:id="@+id/menu_main_File_copy"
+        android:title="@string/main_File_copy"/>
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="explorer_color">#FFE4E4E4</color>
+	<color name="opposition">#FF000000</color>
+	<color name="sign">#FFFFFF</color>
+	<color name="title">#FFFFFF</color>
+	<color name="ash">#FFE9E9E9</color>
+	<color name="pure">#FFFFFFFF</color>
+	<color name="theme_color">#FF8100</color>
+	<color name="toolbar_color">#FF8100</color>
+	<color name="display_color">#FF8100</color>
+	<color name="main_color">#FFDFBE</color>
+	<color name="deep_theme_color">#FFC06100</color>
+	<color name="light_theme_color">#FFFF9323</color>
+	<color name="alpha_theme_color">#B5FF8100</color>
+	<color name="alpha_deep_theme_color">#B5C06100</color>
+	<color name="lighter_color">#FFDFBE</color>
+	<color name="snack_action_color">#FF8100</color>
+	<color name="venter">#1DC9FF</color>
+	<color name="ripple_ash">#B5555555</color>
+</resources>

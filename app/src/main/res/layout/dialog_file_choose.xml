@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:padding="10dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:textColor="@color/opposition"
+			android:id="@+id/tv_fileChoose_title"
+			android:layout_marginBottom="5dp"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<HorizontalScrollView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:id="@+id/hsv_chooseFile_filePath"
+				android:layout_weight="1.0">
+
+				<TextView
+					android:layout_height="match_parent"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:layout_width="wrap_content"
+					android:text="/"
+					android:gravity="left|center"
+					android:textColor="@color/opposition"
+					android:id="@+id/tv_fileChoose_path"/>
+
+			</HorizontalScrollView>
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center">
+
+				<ImageButton
+					style="?android:attr/buttonBarButtonStyle"
+					android:layout_height="30dp"
+					android:layout_width="30dp"
+					android:id="@+id/acib_fileChoose_bookmark"
+					android:padding="5dp"
+					android:scaleType="centerInside"
+					android:src="@drawable/bookmark"
+					android:tint="@color/opposition"
+					android:background="?android:attr/selectableItemBackgroundBorderless"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/ash"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:layout_weight="1.0">
+
+		<ListView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/lv_fileChoose_file"/>
+
+	</LinearLayout>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:background="@color/ash"/>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="right|center">
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/home"
+			android:layout_marginRight="10dp"
+			android:textColor="@color/opposition"
+			android:id="@+id/btn_fileChoose_home"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/back"
+			android:textColor="@color/opposition"
+			android:id="@+id/btn_fileChoose_back"
+			android:layout_marginRight="10dp"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/choose_folder"
+			android:textColor="@color/opposition"
+			android:id="@+id/btn_fileChoose_choose_folder"
+			android:layout_marginRight="10dp"
+			android:visibility="gone"/>
+
+		<Button
+			style="?android:attr/buttonBarButtonStyle"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="@string/choose_website"
+			android:textColor="@color/opposition"
+			android:id="@+id/btn_fileChoose_choose_website"
+			android:visibility="gone"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

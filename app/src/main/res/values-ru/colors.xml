@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#FF1A1A1A</color>
+	<color name="toolbar_color">#FFFFFFFF</color>
+    <color name="display_color">#FF000000</color>
+    <color name="main_color">#FFD0D0D0</color>
+    <color name="deep_theme_color">#FF828282</color>
+    <color name="light_theme_color">#FFBDBDBD</color>
+    <color name="alpha_theme_color">#B5ECECEC</color>
+    <color name="alpha_deep_theme_color">#B5828282</color>
+	<color name="lighter_color">#FFD5D5D5</color>
+	<color name="title">#FF000000</color>
+    <color name="snack_action_color">#FFFFFFFF</color>
+</resources>

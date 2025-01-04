@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EasyWeb IDE</string>
+    <string name="error">出错了</string>
+    <string name="done">已完成</string>
+    <string name="close">关闭</string>
+    <string name="apply">应用</string>
+    <string name="alarm">警告</string>
+    <string name="inf">提示</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="next">下一个</string>
+	<string name="iknow">我知道了</string>
+    <string name="check">查看</string>
+    <string name="need_notic">需要注意</string>
+
+    <string name="copyright">版权信息</string>
+    <string name="copyright_msg">开发者：Treep\n“酷安(coolapk.com)” 是 EasyWeb IDE 的主要发布渠道，请谨慎使用通过其他渠道获取的 EasyWeb IDE。\n©Venter 2022.</string>
+
+    <string name="manage_my_user">管理本地用户存档</string>
+    <string name="user_create">创建用户存档</string>
+    <string name="user_describle">拥有用户存档后，你可以享受更人性化的体验，且一个账户可供多个应用分享。此过程不是必须的，你可以跳过。</string>
+    <string name="make_your_username">拟定你的用户名</string>
+    <string name="user_err">此用户名包含某些非法字符或长度超过12个字符，请重新输入</string>
+    <string name="venter_service">Venter 服务</string>
+
+    <string name="main_about">关于</string>
+    <string name="main_about_demo">支持帮助</string>
+    <string name="main_about_writter">开发者：Treep</string>
+    <string name="main_about_love">捐助支持</string>
+    <string name="main_love_title">评价与捐助</string>
+    <string name="main_love_message">这是一条漫长的道路， EasyWeb IDE 的维护与更新离不开开发者的努力，但更离不开广大用户真情支持；\n\n在这里非常诚恳的乞求您的一个好评或一点捐助，这将会是除下载量外开发者最大的动力！\n\n❤</string>
+    <string name="main_about_feedback">反馈建议</string>
+    <string name="main_about_findupdate">检查更新</string>
+    <string name="main_about_newver">当前已是最新版本</string>
+	<string name="cant_check_update">检查更新失败</string>
+
+    <string name="main_File">文件</string>
+    <string name="main_File_open">打开...</string>
+    <string name="main_File_create">创建...</string>
+    <string name="main_File_copy">克隆...</string>
+    <string name="main_File_example">示例...</string>
+    <string name="main_Tools">工具</string>
+    <string name="main_new_file_name">拟定新建名称</string>
+	<string name="new_project_type">新建项目...</string>
+	<string name="new_proj_usual">HTML 项目</string>
+	<string name="new_proj_php">PHP 项目</string>
+    <string name="new_proj_easyapp">EasyApp 项目</string>
+    <string name="main_new_file_json_name">新文件</string>
+    <string name="main_new_file_cannot_create">无法创建文件</string>
+    <string name="main_new_file_exists">当前目录下存在相同名称文件或目录</string>
+    <string name="main_open_file_open_file_error">不支持打开此文件</string>
+    <string name="set_this_proj">配置你的 EasyApp</string>
+
+    <string name="main_More">更多</string>
+
+    <string name="main_More_menu_NewProject">新建站点</string>
+    <string name="main_More_menu_Refresh">刷新目录</string>
+    <string name="main_create_add">添加至项目...</string>
+    <string name="main_project_manifest">配置项目</string>
+    <string name="main_project_service">部署到服务器</string>
+	<string name="main_project_reg_jsres">注册框架</string>
+    <string name="main_project_pack">打包为压缩文件</string>
+    <string name="main_project_manifest_noname">请填写站点名称</string>
+
+    <string name="main_explorer">站点管理器</string>
+    <string name="main_More_explorer_NoProject">当前没有打开站点</string>
+    <string name="main_More_explorer_NoProject_menu_CreateProject">创建站点</string>
+
+    <string name="choose_website">打开此站点</string>
+    <string name="choose_folder">选择文件夹</string>
+    <string name="back">上一层</string>
+    <string name="home">返回原目录</string>
+    <string name="show_projects">显示项目</string>
+    <string name="read_error">无法读取目录</string>
+    <string name="cant_back">当前已在根目录</string>
+
+    <string name="main_open_cant">不支持打开此格式文件</string>
+    <string name="main_open_opened">此文件已打开</string>
+    <string name="main_open_error">打开文件失败，请检查是否拥有足够权限或文件是否存在</string>
+
+    <string name="main_save_isSaveFile_title">是否保存当前文件?</string>
+    <string name="main_save_isSaveFile_btton">保存</string>
+    <string name="main_save_isSaveFile_dontSave">不保存</string>
+    <string name="main_save_error">保存失败，请检查是否拥有足够权限或目录是否存在</string>
+    <string name="main_save_isClose">你还没有保存，是否直接关闭此文件?</string>
+
+    <string name="wait">请稍等</string>
+
+    <string name="main_menu_save">保存</string>
+	<string name="insert">插入</string>
+    <string name="main_menu_add">插入...</string>
+	<string name="main_menu_review_element">审查元素</string>
+    <string name="main_menu_format">格式化代码</string>
+    <string name="main_menu_add_title">在光标处插入...</string>
+
+    <string name="main_menu_run">运行</string>
+    <string name="main_menu_pause">暂停运行当前脚本</string>
+    <string name="main_output">控制台</string>
+    <string name="main_menu_clear">清空</string>
+    <string name="main_menu_js_add">插入脚本代码</string>
+    <string name="main_menu_stop">停止</string>
+	<string name="main_menu_debug_setting">调试预设</string>
+
+    <string name="main_review">页面预览器</string>
+    
+    <string name="main_menu_review">预览</string>
+	<string name="review_with_settings">高级预览</string>
+    <string name="main_menu_refresh">刷新</string>
+    <string name="main_menu_review_msg">网页信息</string>
+    <string name="main_menu_close">关闭</string>
+
+    <string name="main_menu_add_choose_color_title">选取颜色</string>
+
+    <string name="main_menu_add_style_title">插入样式</string>
+
+    <string name="main_menu_add_style_font">字体</string>
+    <string name="main_menu_add_style_backgroon">背景</string>
+    <string name="main_menu_add_style_margin">边距</string>
+    <string name="main_menu_add_style_border">框</string>
+    <string name="main_menu_add_style_positioning">定位</string>
+    <string name="main_menu_add_style_amin">动画</string>
+	<string name="main_menu_add_style_color">颜色</string>
+	<string name="main_menu_add_style_paged_media">分页媒体</string>
+	<string name="main_menu_add_style_dimension">尺寸</string>
+	<string name="main_menu_add_style_content">内容生成</string>
+	<string name="main_menu_add_style_table">表</string>
+	<string name="main_menu_add_style_hyperlink">超链接</string>
+	<string name="main_menu_add_style_print">打印</string>
+	<string name="main_menu_add_style_transition">过度与转换</string>
+	<string name="main_menu_add_style_ui">用户界面</string>
+	
+    <string name="main_More_loading">加载中</string>
+    <string name="main_More_done">完成</string>
+
+    <string name="main_More_preview_goback">后退</string>
+    <string name="main_More_preview_go">前进</string>
+	<string name="full_screen_preview">全屏预览</string>
+
+    <string name="main_menu_run_output">输出</string>
+    <string name="main_menu_run_error">运行出错</string>
+
+    <string name="main_explorer_can_not_goback">已在根目录</string>
+    <string name="main_explorer_website">站点</string>
+
+    <string name="unkown_website">(本地站点)</string>
+
+    <string name="main_explorer_close">关闭站点</string>
+
+    <string name="main_explorer_open_with">其他打开方式</string>
+    <string name="main_explorer_open_with_dir">当前选择的为目录</string>
+    <string name="main_explorer_delete">删除</string>
+    <string name="main_explorer_rename">重命名</string>
+    <string name="main_explorer_copy_path">复制路径...</string>
+    <string name="main_explorer_copy_type">复制模式</string>
+    <string name="main_explorer_copy_full_path">复制完整路径</string>
+    <string name="main_explorer_copy_website_path">复制相对于站点根目录路径</string>
+	<string name="main_explorer_copy_related_file_path">复制相对于当前打开文件路径</string>
+    <string name="main_explorer_copy_done">已复制</string>
+    <string name="main_explorer_copy">复制到指定目录</string>
+    <string name="main_explorer_move">移动到指定目录</string>
+    <string name="main_explorer_delete_dialog">确定进行删除?</string>
+    <string name="delete_manifest_alert">[manifest.json] 是 EasyWeb IDE 站点的重要配置文件。删除后，你将无法在 EasyWeb IDE 中正常的编辑此项目。</string>
+
+	<string name="empty_file">空文件</string>
+    <string name="main_create_html">HTML - 超文本标记文件</string>
+    <string name="main_create_css">CSS - 层叠样式表</string>
+    <string name="main_create_js">JS - 前端脚本</string>
+    <string name="main_create_php">PHP - PHP 服务器端脚本</string>
+    <string name="main_create_php_web">PHP - 可携带 HTML 元素的 PHP 服务器端脚本</string>
+    <string name="main_create_xml">XML - 可扩展标记文件</string>
+    <string name="main_create_jss">JSS - EasyWeb Server 服务器端脚本</string>
+
+    <string name="main_create_website_user">的网站</string>
+    <string name="main_create_website">我的网站</string>
+    <string name="main_create_folder">新建文件夹</string>
+
+    <string name="main_close_app">是否退出应用?</string>
+
+    <string name="FindUpdataMessageTitle">发现更新</string>
+
+    <string name="run_error">运行过程中出错：</string>
+
+    <string name="zip_pic">图片压缩</string>
+
+    <string name="color">颜色</string>
+    <string name="style">样式</string>
+    <string name="tag">标签</string>
+    <string name="add_style_title">插入样式</string>
+    <string name="add_tag_title">插入标签</string>
+    <string name="add_tag_msg">键入插入标签类型名称（如\'div\',\'img\'等）</string>
+    <string name="add_no_end_tag">插入无结束型标签</string>
+    <string name="add_tag">插入一般标签</string>
+
+    <string name="add">增加到</string>
+    <string name="sectioned">已选择</string>
+    <string name="add_div">增加Div</string>
+
+    <string name="main_File_copy_msg">请输入有效网络文件地址</string>
+    <string name="main_File_copy_cantconnect">无法启动克隆</string>
+    <string name="main_File_copy_example">如“http://hostname/index.html”</string>
+
+    <string name="main_check_msg">点击空白处关闭此窗口</string>
+
+    <string name="main_update_title">发现更新 • &#160;</string>
+    <string name="main_update_btn">立即更新</string>
+
+    <string name="main_example_base64">Base64加载图片</string>
+
+
+    <string name="charbutton_undo">撤销</string>
+    <string name="charbutton_redo">重做</string>
+	<string name="charbutton_table">↹</string>
+	
+    <string name="add_em_div">节</string>
+    <string name="add_em_a">超链接</string>
+    <string name="add_em_abbr">缩写词语表示</string>
+    <string name="add_em_img">图像</string>
+    <string name="add_em_bdi">文本方向隔离</string>
+    <string name="add_em_bdo">文本方向覆盖</string>
+    <string name="add_em_style_text">带格式的文本</string>
+    <string name="add_em_hr">水平线</string>
+    <string name="add_em_br">换行</string>
+    <string name="add_em_table">表格</string>
+    <string name="add_em_script">脚本</string>
+    <string name="add_em_meta">元数据</string>
+    <string name="add_em_link">链接</string>
+    <string name="add_css">层叠样式</string>
+    <string name="add_link">链接元素</string>
+	<string name="add_audio">音频</string>
+	<string name="add_video">视频</string>
+	
+    <string name="add_ID">ID</string>
+    <string name="add_class">类</string>
+    <string name="add_size">大小</string>
+    <string name="width">水平长度（px）</string>
+    <string name="height">垂直长度（px）</string>
+    <string name="add_style">样式</string>
+    <string name="add_min_size">最小大小</string>
+    <string name="add_max_size">最大大小</string>
+    <string name="add_dir">内容方向</string>
+    <string name="add_draggable">可拖动性</string>
+    <string name="add_accesskey">触发按键</string>
+    <string name="key_code">按键代码（如\'a\',\'b\',\'c\',\'1\',\'2\',\'3\'等）</string>
+    <string name="add_contenteditable">可编辑性</string>
+    <string name="add_dropzone">可拖动时允许复制、移动、超链接性</string>
+    <string name="add_lang">语言</string>
+    <string name="lang_code">语言代码（如\'en\',\'zh\',\'fr\',\'de\'等）</string>
+    <string name="add_title">提示文字</string>
+    <string name="default_">默认</string>
+    <string name="add_down">指定下载链接</string>
+    <string name="add_href">指定目标链接（填写\'#\'与链接 ID 可触发锚）</string>
+    <string name="add_target">指定何处打开链接</string>
+    <string name="add_a_type">指定链接文档文本的MIME类型</string>
+    <string name="add_mime">MIME类型</string>
+    <string name="add_a_rel">指定当前文档与被链接文档关系</string>
+    <string name="add_img_alt">替代文本</string>
+    <string name="add_img_src">图像链接</string>
+    <string name="add_text_style">样式标签</string>
+    <string name="add_script_async">当为外部脚本时启用异步执行脚本</string>
+    <string name="add_script_charset">当为外部脚本时规定文本字符编码</string>
+    <string name="add_script_charset_ex">字符编码值（如\'ISO-8859-1\',\'UTF-8\'）</string>
+    <string name="add_script_defer">当为外部脚本时启用页面解析完成后执行脚本</string>
+    <string name="add_script_src">外部脚本链接</string>
+    <string name="add_script_type">指定标签内容代码的MIME类型（默认\'text/javascript\'）</string>
+    <string name="add_meta_charset">规定HTML文档字符编码</string>
+    <string name="add_meta_content">定义与 http-equiv 或 name 属性相关的元信息</string>
+    <string name="add_meta_http_equiv">把 content 属性关联到 HTTP 头部</string>
+    <string name="add_meta_name">把 content 属性关联到一个名称</string>
+    <string name="add_meta_other">预设信息</string>
+    <string name="add_css_name">选择器名称</string>
+	<string name="add_media_src">媒体文件链接</string>
+	<string name="add_media_autoplay">自动播放</string>
+	<string name="add_media_controls">显示媒体控制控件</string>
+	<string name="add_media_loop">循环播放</string>
+	<string name="add_media_muted">静音播放</string>
+	<string name="add_media_preload">页面加载时，媒体以何种方式预加载</string>
+	<string name="add_video_poster">视频加载时显示的图像链接</string>
+	
+    <string name="add_table_row">行数</string>
+    <string name="add_table_column">列数</string>
+    <string name="add_table_th">表头位置</string>
+    <string name="add_table_border">表格边框的宽度</string>
+    <string name="add_table_cellpadding">表格内单元格的内边距</string>
+    <string name="add_table_frame">规定外侧边框的可见部分</string>
+    <string name="add_table_rules">规定内侧边框的可见部分</string>
+    <string name="add_table_width">规定表格的宽度</string>
+    <string name="add_table_width_hint">使用正整数或正小数（px），或百分数</string>
+	<string name="is_show_table_nums">单元格内是否显示定位文本</string>
+    <string name="add_table_err">请填写所有数据</string>
+    <string name="add_table_out_err">生成出现错误，请检查数据正确性</string>
+
+    <string name="manifest_name">站点名称</string>
+    <string name="manifest_author">作者</string>
+    <string name="manifest_img">站点默认图像储存文件夹</string>
+    <string name="manifest_js">站点默认脚本储存文件夹</string>
+    <string name="manifest_download">站点默认网络文件储存文件夹</string>
+    <string name="manifest_video">站点默认视频及音频储存文件夹</string>
+    <string name="manifest_hint_img">目录相对于站点主目录路径(如\'/images\')</string>
+    <string name="manifest_hint_js">目录相对于站点主目录路径(如\'/scripts\')</string>
+    <string name="manifest_hint_download">目录相对于站点主目录路径(如\'/downloads\')</string>
+    <string name="manifest_hint_video">目录相对于站点主目录路径(如\'/mediae\')</string>
+    <string name="manifest_path_err">相对路径有误，请检查后重试</string>
+	<string name="manifest_now_server">站点服务器</string>
+	<string name="manifest_clear_server">清除服务器设置</string>
+	<string name="manifest_clear_server_err">当前站点已部署至 EasyWeb IDE 服务器，请在服务器中删除此站点后重试</string>
+
+    <string name="add_file_img">导入的文件可能是 图像 类型文件，是否将此文件存储在站点默认图像储存文件夹？</string>
+    <string name="add_file_js">导入的文件可能是 脚本 类型文件，是否将此文件存储在站点默认脚本储存文件夹？</string>
+    <string name="add_file_down">导入的文件可能是 网络文件 类型文件，是否将此文件存储在站点默认网络文件储存文件夹？</string>
+    <string name="add_file_video">导入的文件可能是 视频或音频 类型文件，是否将此文件存储在站点默认视频及音频储存文件夹？</string>
+
+    <string name="add_file_ok">导入到站点默认储存文件夹</string>
+    <string name="add_file_no">导入到当前文件夹</string>
+
+    <string name="add_js_loadurl">加载网页</string>
+    <string name="add_js_back">返回上一页面</string>
+    <string name="add_js_forward">加载下一页面</string>
+    <string name="add_js_alert">弹出对话框</string>
+	<string name="add_js_log">向控制台记录 Log （仅调试时可用）</string>
+    <string name="add_js_find_em_id">通过 ID 查找对象</string>
+    <string name="add_js_find_em_class">通过类名查找对象</string>
+	<string name="add_js_create_em">创建对象</string>
+    <string name="add_js_remove_em">移除对象</string>
+    <string name="add_js_favorite">加入收藏</string>
+	<string name="add_js_StrToInt">String 转为 Int</string>
+	<string name="add_js_StrToFloat">String 转为 Float</string>
+
+    <string name="close_now_file">关闭</string>
+    <string name="close_other_file">关闭其他</string>
+    <string name="close_all_file">关闭所有</string>
+
+    <string name="close_but_unsave_title">部分无法关闭</string>
+    <string name="close_but_unsave">部分文件未保存，请保存后再关闭</string>
+
+    <string name="base64">Base64 编码与解码</string>
+    <string name="enbase64">为文本或文件编码</string>
+    <string name="debase64">为文本或文件解码</string>
+    <string name="en_text">未编码文本</string>
+    <string name="copy_to_driver">复制到剪切板</string>
+    <string name="choose_file">选择文件</string>
+    <string name="de_text">解码为文本</string>
+    <string name="de_file">解码为文件</string>
+    <string name="de_text_hint">已编码文本</string>
+    <string name="de_file_finish">已保存为名为 \'result_de_base64\' 文件</string>
+
+    <string name="easyicon">从 Easyicon.net 联机搜索图标</string>
+    <string name="devicon">从 Dev-Icon 浏览内置 SVG 图标</string>
+    <string name="weather">从 Weather Icon 浏览内置 SVG 图标</string>
+
+    <string name="fill_color">填充图标颜色</string>
+    <string name="color_err">请填写标准6位 HEX 颜色代码</string>
+    <string name="w_h">边长（px）</string>
+
+    <string name="hide">隐藏</string>
+
+    <string name="link_href">被链接文件位置</string>
+    <string name="link_lang">被链接文档语言</string>
+    <string name="link_rel">当前文档与被链接文件的关系</string>
+    <string name="link_type">指定被链接文档的MIME类型</string>
+
+    <string name="website_title">网页标题</string>
+    <string name="no_title">无标题</string>
+    <string name="website_icon">网页图标</string>
+    <string name="no_icon">无图标</string>
+    <string name="website_url">网页地址</string>
+
+    <string name="server_type">选择服务器类型</string>
+
+    <string name="easyweb_server_settings">控制 EasyWeb Server</string>
+	<string name="php_server_settings">控制 PHP Web Server</string>
+	<string name="other_server_settings">连接第三方服务器</string>
+    <string name="server_set_done">保存设置</string>
+    <string name="server_set_err">数据输入有误，请检查后重试</string>
+
+    <string name="server_type_wifi">EasyWeb Server （局域网，本机）</string>
+	<string name="server_type_php">PHP Web Server （局域网，本机）</string>
+	<string name="server_type_other">第三方服务器应用 （本机）</string>
+    <string name="server_wifi_msg">*请注意，只有当站点端口号是局域网内唯一的，且数值大于1024，当前站点才会成功部署并连接。</string>
+	<string name="server_other_msg">*EasyWeb IDE 支持在应用内预览部署自第三方服务器的站点，请在下方输入您在第三方服务器配置的端口号。</string>
+    <string name="server_wifi_ip">本机IP地址</string>
+    <string name="server_wifi_ip_title">本机IP地址：</string>
+    <string name="server_wifi_port">端口</string>
+    <string name="server_wifi_port_title">端口：</string>
+    <string name="server_wifi_port_8080">默认为 8080</string>
+    <string name="server_wifi_port_has">当前端口已被其他站点占用，请更换后重试</string>
+    <string name="server_wifi_website_form">网站形式</string>
+    <string name="server_wifi_website_form_page">网页</string>
+    <string name="server_wifi_website_form_explorer">文件</string>
+    <string name="is_enable_https">启用 HTTPS</string>
+
+    <string name="server_on_act">启用服务器</string>
+    <string name="server_off_act">停止服务器</string>
+
+    <string name="server_manager">管理 EasyWeb IDE 服务器</string>
+    <string name="service_no_website">未部署任何站点</string>
+	<string name="easyweb_server">EasyWeb Server</string>
+	<string name="php_web_server">PHP Web Server</string>
+	<string name="enable_easyweb_server">EasyWeb Server 已开启</string>
+	<string name="disable_easyweb_server">EasyWeb Server 未启用</string>
+	
+    <string name="website_control">站点控制</string>
+    <string name="website_note">记录时间：</string>
+    <string name="website_status">记录点状态：</string>
+    <string name="website_running">正常连接</string>
+    <string name="website_off">已断开</string>
+    <string name="website_alert">未正常连接</string>
+    <string name="website_alert_msg">异常信息：</string>
+    <string name="website_link">可访问地址：</string>
+    <string name="refresh">刷新</string>
+    <string name="control">操作</string>
+    <string name="server_delete_website">从服务器上删除此站点</string>
+    <string name="server_off_website">断开此站点的连接</string>
+    <string name="server_on_website">连接此站点</string>
+
+    <string name="server_set_done_toast">站点已部署完成</string>
+
+    <string name="website_manifest">更改配置</string>
+
+    <string name="show_register_handler">显示「Http 路径处理管理器」</string>
+    <string name="register_manager">Http 路径处理管理器</string>
+    <string name="no_handlers">当前未注册任何处理器</string>
+    <string name="reg_handler">注册新处理器</string>
+    <string name="help">帮助</string>
+    <string name="handler_path">路径名称</string>
+    <string name="handler_path_example">相对于主机路径(如\'/login\')</string>
+    <string name="handler_file">链接文件</string>
+    <string name="handler_file_example">相对于站点根目录路径</string>
+    <string name="handler_edit">编辑处理器配置</string>
+    <string name="handler_save_err">HTTP 路径重复或链接文件不存在</string>
+    <string name="handler_done">已完成并停止了当前站点</string>
+
+    <string name="add_jss_file">文件系操作</string>
+    <string name="add_jss_web">网页响应操作</string>
+    <string name="add_jss_debug">调试操作</string>
+
+    <string name="add_jss_file_new">新文件实例</string>
+    <string name="add_jss_file_create">创建文件</string>    
+    <string name="add_jss_file_create_dir">创建文件夹</string>
+    <string name="add_jss_file_del">删除文件或文件夹</string>
+    <string name="add_jss_file_copy">复制文件或文件夹</string>
+    <string name="add_jss_file_listFile">列出指定目录下的所有文件路径（返回 array 类型）</string>
+    <string name="add_jss_file_list">列出指定目录下的所有文件名称（返回 array 类型）</string>
+    <string name="add_jss_file_getName">获取文件名</string>
+    <string name="add_jss_file_getPath">获取文件路径</string>
+    <string name="add_jss_file_getType">获取文件类型（返回为 string 类型，如\'png\',\'txt\'）</string>
+    <string name="add_jss_file_getParent">获取父目录路径（返回为 string 类型）</string>
+    <string name="add_jss_file_getParentFile">获取父目录</string>
+    <string name="add_jss_file_getProject">获取站点文件夹路径（返回为 string 类型）</string>
+    <string name="add_jss_file_getProjectFile">获取站点文件夹</string>
+    <string name="add_jss_file_isFile">判断是否为文件（返回为 boolean 类型）</string>
+    <string name="add_jss_file_isDir">判断是否为文件夹（返回为 boolean 类型）</string>
+    <string name="add_jss_file_exists">判断文件是否存在（返回为 boolean 类型）</string>
+    <string name="add_jss_file_rename">重命名文件</string>
+    <string name="add_jss_file_write">将字符串写入文件</string>
+    <string name="add_jss_file_read">读取文件内容为字符串</string>
+
+    <string name="add_jss_web_urlDatas">获取 URL 数据（返回为 JSON对象 类型字典）</string>
+    <string name="add_jss_web_stringEntity">返回字符串</string>
+    <string name="add_jss_web_fileEntity">返回文件</string>
+    <string name="add_jss_web_htmlCode">返回 HTML 代码</string>
+
+    <string name="add_jss_debug_dialog">显示对话框</string>
+    <string name="add_jss_debug_toast">弹出消息</string>    
+
+    <string name="read_manifest_cant">无法从配置文件中读取信息</string>
+    <string name="have_same_port">当前站点端口在服务器上已被占用</string>
+    
+    <string name="alert_handler_path">处理器路径</string>
+    <string name="alert_JSS_path">JSS 文件路径</string>
+    <string name="alert_msg">信息</string>
+
+    <string name="start_server_err">当前站点已启动或可连接，请几秒后重试</string>
+
+    <string name="encoder_title">选择目标语言</string>
+    <string name="encoder_main_title">编码与解码</string>
+    <string name="encoder">编码</string>
+    <string name="unencoder">解码</string>
+
+    <string name="website_inf">站点信息</string>
+
+    <string name="jsr_ver">JSS 解释器版本：</string>
+    <string name="ver_err">无法获取版本名称</string>
+
+    <string name="setting_title">功能配置与支持</string>
+    <string name="set_chars">快捷功能栏符号配置</string>
+    <string name="set_describle">使用空格字符间隔</string>
+    <string name="set_name">HTML 高亮关键字管理</string>
+    <string name="set_theme">界面主题控制</string>
+    <string name="need_reboot">需重启应用后生效</string>
+	<string name="set_darktheme">22:00 至次日 5:00 启动时将主题强制切换为「深邃·黑」</string>
+	<string name="enable">启用</string>
+	<string name="disable">禁用</string>
+    <string name="set_theme_blue">经典·蓝</string>
+    <string name="set_theme_black">深邃·黑</string>
+    <string name="set_theme_green">森色·绿</string>
+	<string name="set_theme_light">淡雅·粉</string>
+	<string name="set_theme_white">水墨·白</string>
+	<string name="js_res">外部框架库</string>
+	<string name="js_res_describle">下载、更新、管理外部框架</string>
+	<string name="js_res_network">联机获取框架</string>
+	<string name="js_res_manager">管理本地框架</string>
+	<string name="js_res_help">帮助说明</string>
+	<string name="set_php_ini">编辑 php.ini 文件</string>
+	<string name="open_file">打开文件</string>
+	<string name="show_nof">在通知栏显示 EasyWeb IDE 服务器状态</string>
+    <string name="backup_frequency">自动备份间隔时间(s)</string>
+	<string name="backup_frequency_describe">至少设置 10 秒</string>
+	<string name="wordwarp">编辑器自动换行</string>
+	<string name="quick_start">自定义「快速开始」页面</string>
+	<string name="quick_start_choose_zip">从本地站点 ZIP 压缩包中导入</string>
+	<string name="quick_start_recover">恢复默认</string>
+	<string name="quick_start_default">当前为默认页面。</string>
+	<string name="quick_start_custom">当前为自定义页面。</string>
+	
+	
+    <string name="micromsg_pay">微信支付</string>
+    <string name="alipay">支付宝</string>
+    <string name="star_love">评分支持</string>
+
+    <string name="weixin_toast">请在右上角菜单点击[从相册选择二维码]，点击第一张赞赏码图片进行捐助。</string>
+
+    <string name="have_port_msg">服务器已有同端口站点部署，是否替换？</string>
+
+    <string name="run_but_copy">你必须在服务器部署此站点后才能在浏览器运行。</string>
+    
+    <string name="run_but_on">未启用 EasyWeb Server</string>
+    
+    <string name="tip_ep_add_tt">帮助您分类项目文件</string>
+    <string name="tip_ep_add_msg">在「配置项目」对话框中填写所需的默认格式文件夹路径，在添加至项目时可将所选文件直接添加到指定的默认文件夹中，无需手动分类。</string>
+   
+    <string name="docs">帮助文档</string>
+    
+    <string name="ver">rel</string>
+    
+    <string name="my_username">我的用户存档</string>
+    <string name="hello">你好，</string>
+    <string name="control_username">！你可以在这里操作你的用户存档。</string>
+    <string name="user_item_rename">重新创建用户存档＞</string>
+    <string name="user_item_del">清除用户存档＞</string>
+    
+    <string name="del_user_title">确认清除用户存档</string>
+    <string name="del_user_msg">若清除用户存档，将会删除此用户在本地上关联的所有数据，您将不能享受更人性化的体验。</string>
+    
+    <string name="help_of_httpmanager">「Http 路径处理管理器」帮助目录</string>
+    
+    <string name="temp_tip">临时站点说明</string>
+    <string name="temp_inf">即将创建临时站点。请注意，你在临时站点所做的任何工作，在下一次创建时，这些数据将被删除。</string>
+    <string name="temp_website">临时站点</string>
+    
+    <string name="open_website_error">无法打开此站点，可能已被删除</string>
+    <string name="open_folder_error">无法打开此目录，可能已被删除</string>
+	
+    <string name="err_title">应用崩溃报告</string>
+    <string name="err_close">复制日志并重启</string>
+    
+    <string name="copy_much_err">此操作不能在原目录中进行，请选择其他文件夹</string>
+    
+    <string name="unzip_title">是否解压此文件至当前目录</string>
+    
+    <string name="server_import_help_title">如何部署站点到服务器</string>
+    <string name="server_import_help_msg">在站点管理器控制栏中点击[部署到服务器]图标，接着按照向导操作即可。\n如右图。</string>
+    
+    <string name="name_cannot_ignore">文件名不能为空</string>
+	
+	<string name="error_private_dirs">访问应用私有目录时出错，请检查 EasyWeb IDE 安装包是否被损坏</string>
+	<string name="error_private_inf">获取应用内部信息时出错，请检查 EasyWeb IDE 安装包是否被损坏</string>
+    <string name="explore_new_version_">此版本的变化</string>
+	
+	<string name="only_one_line">只能插入一行代码</string>
+	
+	<string name="debug_setting_urldata">URL数据模拟（适用于\'Response.getURLData()\'，填写格式如[\"name\":\"Apple\",\"type\":\"Fruit\"]对应[/xxx?name=Apple&amp;type=Fruit]）</string>
+	<string name="debug_setting_urldata_none">留空即不启用“URL 数据模拟”</string>
+	<string name="debug_setting_urldata_err">格式有误，将不启用“URL 数据模拟”</string>
+	
+	<string name="jquery">jQuery</string>
+	<string name="vuejs">Vue.js</string>
+	<string name="mui">MUI</string>
+	<string name="vconsole">vConsole</string>
+	<string name="mdui">MDUI</string>
+	<string name="bootstrap">Bootstrap</string>
+    <string name="art_template">art-template</string>
+    <string name="layui">Layui</string>
+	<string name="latest_ver">最新版本：</string>
+	<string name="get">获取</string>
+	<string name="download">下载</string>
+	<string name="download_or_update">下载/更新</string>
+	<string name="jquery_ad">jQuery 是一个快速、小型且功能丰富的 JavaScript 库。</string>
+	<string name="vue_ad">Vue 是一套用于构建用户界面的渐进式框架。</string>
+	<string name="mui_ad">MUI 是一个最接近原生 APP 体验的高性能前端框架。</string>
+	<string name="vconsole_ad">适用于移动网页的轻量级、可扩展的前端开发人员工具。</string>
+	<string name="mdui_ad">MDUI 是一套用于开发 Material Design 网页的前端框架。</string>
+	<string name="bootstrap_ad">Bootstrap 是 Twitter 推出的一个用于前端开发的开源工具包。</string>
+    <string name="art_template_ad">art-template 是一个简约、超快的模板引擎。\n\n它采用作用域预声明的技术来优化模板渲染速度，从而获得接近 JavaScript 极限的运行性能，并且同时支持 NodeJS 和浏览器。</string>
+    <string name="layui_ad">开源模块化前端 UI 框架。面向全层次的前后端开发者，易上手开源免费的 Web UI 组件库</string>
+    <string name="installation_ad">注册方式：直接下载并用 &lt;script&gt; 标签引入，此框架会被注册为一个全局变量。或者，在「站点管理器」中点击[注册框架]按钮， EasyWeb IDE 可帮助您一键完成框架的复制、注册步骤。</string>
+	<string name="installation_ad_lib">注册方式：此框架注册较为繁琐，推荐您在「站点管理器」中点击[注册框架]按钮一键注册。</string>
+	<string name="prod_build">生产环境版本</string>
+	<string name="prod_build_des">用于最终发布</string>
+	<string name="dev_build">开发环境版本</string>
+	<string name="dev_build_des">用于调试</string>
+	<string name="js_website">官方网站</string>
+	<string name="jsres_download_done">下载完成，请到「管理本地框架」页面查看</string>
+	<string name="prod">生产环境版本：</string>
+	<string name="dev">开发环境版本：</string>
+	<string name="no_jsres">在本地没有发现任何框架，请在「功能配置与支持」页面中下载</string>
+	<string name="jsres_touch_del">点击删除此版本本地框架</string>
+	<string name="jsres_touch_choose">点击选择此版本本地框架</string>
+	<string name="choose_jsres">选择本地框架</string>
+	<string name="choose">选择</string>
+	<string name="reg_jsres_close_file">为避免冲突，请先关闭所有已打开文件。</string>
+	<string name="reg_jsres_done">此站点下的所有HTML文件已注册框架。</string>
+	<string name="reg_bootstrap_tip">Bootstrap 依赖于 jQuery ，请确保已注册 jQuery 后继续。</string>
+	
+	<string name="review_element_head">头部元素(&lt;head&gt;)</string>
+	<string name="review_element_body">主体元素(&lt;body&gt;)</string>
+	<string name="review_element_child_elements">子元素：</string>
+	<string name="review_element_no_child_elements">无子元素</string>
+	<string name="review_element_add">增加新元素</string>
+	<string name="review_element_add_description">向此元素中添加子元素</string>
+	
+	<string name="review_element_attr">元素属性</string>
+	<string name="longclick_del">长按项以删除</string>
+	<string name="review_element_no_attrs">无属性</string>
+	<string name="review_element_attr_value">属性值</string>
+	<string name="review_element_attr_key">属性名</string>
+	<string name="review_element_edit_attr">编辑属性</string>
+	<string name="review_element_edit_attr_err">请填写属性名</string>
+	<string name="review_element_text">编辑元素内容</string>
+	<string name="review_element_add_attr">增加新属性</string>
+	<string name="review_element_add_attr_description">向此元素中添加属性</string>
+	<string name="review_element_no_texts">无内容</string>
+	<string name="edit">编辑</string>
+	<string name="review_element_parent">父元素</string>
+	<string name="review_element_del_qu1">确定删除元素[</string>
+	<string name="review_element_del_qu2">]？</string>
+	<string name="review_element_add_to">增加至</string>
+	<string name="review_element_add_name">元素名称</string>
+	<string name="review_element_add_attrs">元素属性</string>
+	<string name="review_element_add_attrs_describe">填写格式如[src=\"logo.png\" width=\"5px\"]</string>
+	<string name="review_element_add_name_err">未填写元素名称</string>
+	<string name="review_element_add_attrs_err">属性填写格式有误</string>
+	<string name="review_element_attrs_whos">的属性</string>
+	<string name="review_element_help">「审查元素」功能可以帮助您更加直观的操作HTML文件。\n若需删除某元素，只需长按其即可。</string>
+	
+	<string name="try_new_fun">尝试 EasyWeb IDE 的新功能</string>
+	
+	<string name="jsres_help1_title">使用框架优化你的工作效率</string>
+	<string name="jsres_help1_msg">使用外部框架可以大幅度地优化你的站点。\n EasyWeb IDE 目前支持多个框架的快捷下载与使用。\n\n在「功能配置与支持」界面中，你可以在[外部框架库]处一键下载框架及快捷管理本地框架。\n每个外部框架对应两个版本：生产环境版本与开发环境版本(部分除外)。生产环境版本体积小于开发环境版本，但在开发调试过程中，建议使用开发环境版本。站点发布时可再替换为生产环境版本。</string>
+	<string name="jsres_help2_title">EasyWeb IDE 帮助您一键注册框架</string>
+	<string name="jsres_help2_msg">下载完成框架后，在站点管理器菜单中选择[注册框架]项。\nEasyWeb IDE 可以自动地将指定的本地框架复制到站点根目录，并在此站点下每一个 HTML 文件的头部加入注册框架代码。\n当站点发布时，只需再次点击[注册框架]项，并选择对应框架的生产环境版本，即可完成覆盖。</string>
+	
+	<string name="jsres_download_error">很抱歉，外部框架库未能顺利下载。</string>
+	
+	<string name="editor_autocomplate_tip">现在，你可以尝试直接在编辑区内输入 HTML 元素名称， EasyWeb IDE 的自动补全会自动为您添加尖括号，提高您的工作效率。\n如右图。</string>
+	
+	<string name="editor_add_file_title">一键插入资源的相对路径</string>
+	<string name="editor_add_file_msg">想要引用外部资源文件？\n现在， EasyWeb IDE 为您提供了一键插入相对路径的功能。\n您只需在编辑时将光标移动到插入路径处，点击快捷功能栏的[文件]按钮，选择文件即可。\n如右图。</string>
+		
+	<string name="updating">正在下载更新，请稍等</string>
+	
+	<string name="supplement">补充代码</string>
+	<string name="supplement_rules_packed">内置规则</string>
+	<string name="supplement_rules_diy">自定义规则</string>
+
+	<string name="cant_connect_network">获取数据失败，请检查网络</string>
+	
+	<string name="find_and_replace">查找与替换</string>
+	<string name="find_hint">查找内容</string>
+	<string name="find_done">已经全部查找完成</string>
+	<string name="replace_hint">替换内容</string>
+	<string name="all">全部替换</string>
+	<string name="replace_err">替换失败</string>
+	<string name="rex">正则表达式</string>
+	<string name="no_case">不分大小写</string>
+	
+	<string name="go_to_line">跳转行</string>
+	<string name="line_num">行号</string>
+
+	<string name="join_chat">加入群聊</string>
+	
+	<string name="feedback_msg">请通过酷安客户端反馈或加入用户交流群反馈</string>
+	
+	<string name="php_msg">*此站点已设置为 PHP 站点。\n请在第三方服务器应用中正确配置站点根目录及端口，并保证第三方服务器应用在后台运行。\n你可以在「功能配置与支持」中配置 PHP 调试端口。</string>
+	<string name="no_php_server">此站点还未部署至第三方 PHP服务器。</string>
+	<string name="website_path">站点根目录路径</string>
+	
+	<string name="preview_without_php_website">此文件不在 PHP 站点中</string>
+	
+	<string name="none">无</string>
+	
+	<string name="easyweb_server_off">EasyWeb Server 未启用</string>
+	<string name="easyweb_server_on">EasyWeb Server 正在运行</string>
+	<string name="php_server_off">PHP Web Server 未启用</string>
+	<string name="php_server_on">PHP Web Server 正在运行</string>
+    <string name="click_to_show_more">点击查看站点连接状态</string>
+	
+	<string name="unknow_server">未知的服务器类型</string>
+	
+	<string name="select_text">选择文本</string>
+	
+	<string name="read_backup_err">读取备份失败</string>
+	
+	<string name="not_zip">非ZIP文件</string>
+	
+	<string name="exit">退出</string>
+	
+	<string name="full_mode">沉浸式编辑</string>
+	
+	<string name="full_screen">全屏</string>
+	
+	<string name="detail">详细</string>
+	<string name="message_c">信息：</string>
+	<string name="line_c">行：</string>
+	<string name="source_c">来源：</string>
+	<string name="importance_c">等级：</string>
+	<string name="no_items">你将在此看到所有的 Log 和 Alert。</string>
+	
+	<string name="start_intent_debug">[EasyWeb IDE] 未能成功启动指定 Activity，可能目标应用未安装。</string>
+	
+	<string name="edit_save_name">拟定保存名称</string>
+	
+	<string name="create_proj">创建站点项目</string>
+	<string name="create_temp_proj">创建临时站点项目</string>
+	<string name="create_file">新建文件</string>
+	<string name="example_proj">示例项目</string>
+	<string name="support_web">支持与帮助</string>
+	<string name="recent_projs">近期项目</string>
+	
+	<string name="no_recent">无近期项目</string>
+	<string name="open_recent">打开近期项目</string>
+	
+	<string name="pack_apk">转换为应用</string>
+	<string name="pack_apk_setting">应用设置</string>
+	<string name="pack_apk_name">应用名称</string>
+	<string name="pack_apk_packname">包名</string>
+	<string name="pack_apk_version">版本号</string>
+	<string name="pack_apk_versionCode">版本代码</string>
+	<string name="pack_apk_icon_tip">*点击左侧图像可自定义应用图标。\n*若项目中存在中文（或特殊字符）名文件，可能会导致转换失败。</string>
+	<string name="pack_apk_start">生成安装包</string>
+	<string name="pack_apk_choose_icon">仅支持 PNG 格式图像文件</string>
+    <string name="icon_need_to_be_moven">图标文件必须位于站点目录内，是否将此图标导入站点根目录？</string>
+	<string name="pack_apk_download">缺少必要的支持库，需要下载后才可正常使用，请确保当前处于联机状态。约 20MB。</string>
+	<string name="pack_apk_update">必要的支持库需更新，请确保当前处于联机状态。约 20MB。</string>
+	<string name="pack_apk_download_msg">必要的支持库已下载，现已可以使用此功能。</string>
+	<string name="pack_apk_download_error">很抱歉，必要的支持库未能顺利下载。</string>
+	<string name="super_settings">高级设置</string>
+    <string name="start_convert">生成安装包</string>
+    <string name="save_config">保存配置</string>
+    <string name="save_config_as_exe">是否将配置保存为可执行文件？</string>
+    <string name="save_config_successfully">已保存站点根目录下的 MakeAPK.easyweb 文件，你可以在「站点管理器」中点击此文件一键生成安装包。\n\n之后，打开此项目时可自动读取配置信息。</string>
+	<string name="titlebar_color">标题栏颜色</string>
+	<string name="titlebar_visible">隐藏标题栏</string>
+	<string name="long_onclick">网页长按</string>
+	<string name="show_wait_dialog">显示加载动画</string>
+	<string name="allow_zoom">允许缩放页面</string>
+    <string name="allow_easyapps">允许 EasyApp.js</string>
+    <string name="allow_easyapps_description">实现 JS 与 Android 交互</string>
+    <string name="easyapps_inf">EasyApp.js 信息</string>
+    <string name="easyapp_events_not_exist">由于启用了 EasyApp.js， [easyapp-events.js] 作为全局事件控制文件，被 EasyApp.js 所需要。\n是否立即在项目根目录创建此文件的默认版本？\n\n稍后会继续执行转换操作操作。</string>
+	
+	<string name="recover">恢复</string>
+	<string name="recover_msg">EasyWeb IDE 在上一次未能成功保存所有文件，但你可以点击这里恢复大部分内容。</string>
+	<string name="recover_1">是否恢复</string>
+	<string name="recover_2">的备份？</string>
+		
+	<string name="black_title">您的设备不再支持使用内测版本</string>
+	<string name="black_msg">可能由于您上一次未能通过验证。\n请卸载当前版本并安装最新发行版本。</string>
+	
+	<string name="password_title">验证您的内测密码</string>
+	<string name="password_msg">您当前使用的是 EasyWeb IDE 的内部测试版本。\n我们只希望内测成员使用此版本。如果您不是内测成员，请卸载此版本并安装最新发行版本。\n\n现在，请在下方选择您所获取到的内测密码。\n无内测密码？ 你可以在「EasyWeb IDE 用户交流」群中获取此密码。\n在未得知此密码前，请不要选择，若验证失败，您的设备将不能再使用任何内测版本。</string>
+	<string name="password_ok">确定选择此密码？若验证失败，您的设备将不能再使用任何内测版本。</string>
+	<string name="password_choose">选择当前版本的内测密码</string>
+	
+	<string name="open_binary_file">此文件包含无法解码的字符，是否继续打开？</string>
+	
+	<string name="get_hopweb1">专为 Web 开发初学者准备</string>
+	<string name="get_hopweb2">HopWeb Editor 是一款专为 Web 开发初学者设计的开发工具，适合开发小微项目。\n\n如果您初学 Web 开发，HopWeb Editor 一定是一个绝佳的选择。HopWeb Editor 使用了与 EasyWeb IDE 截然不同的设计与操作方案，毫无学习成本。\n如果您已熟练 Web 开发，您可继续使用 EasyWeb IDE，但是 EasyWeb IDE 更佳适合开发大型项目。</string>
+	<string name="get_hopweb">获取 HopWeb Editor</string>
+    <string name="get_hopweb_ad">了解这款轻量级 Web 编辑器！</string>
+	
+	<string name="continue_hw_1">在 HopWeb Editor 上继续</string>
+    <string name="continue_hw_2">EasyWeb IDE 与 HopWeb Editor 支持互相调用。\n\n当您在 HopWeb Editor 中完成编辑并返回 EasyWeb IDE 时，我们会自动更新当前项目，这使您可以无间断的随时切换开发应用。\n\n您的 HopWeb Editor 版本须至少为 2.2.2 。</string>
+    <string name="kept_newest">已保持最新</string>
+	
+	<string name="do_you_want_to_delete">是否删除记录[</string>
+	
+	<string name="bookmark">书签</string>
+	<string name="add_to_bookmark_qu">是否将此目录增加至书签？</string>
+	
+	<string name="projects">本地项目</string>
+	
+	<string name="full_preview">全屏预览</string>
+	
+	<string name="auto_preview_full">点击预览时自动全屏</string>
+	
+	<string name="has_same_cover">存在同名文件，是否覆盖？</string>
+	
+	<string name="save_dir">站点保存目录</string>
+	<string name="website_type">站点类型</string>
+	
+	<string name="allow_use_absolute_path">预览时保存文件</string>
+	<string name="allow_use_absolute_path_des">预览时将自动保存当前文件</string>
+	
+	<string name="solve_proj">解决方案</string>
+	
+	<string name="update_msg">我们会不定期的为您提供 EasyWeb IDE 的累积更新，这其中包含功能的修复与界面的优化。</string>
+	
+	<string name="hide_hopweb">不显示「在 HopWeb Editor 上继续」图标</string>
+	<string name="apply_in_a_few_time">不会立即生效</string>
+	
+	<string name="lose_php">下载 PHP 运行库</string>
+	<string name="get_php_msg">您的 PHP 运行库缺少或需更新。请确保下载时设备处于联网状态。约 16MB。</string>
+	<string name="php_download_done">PHP 运行库已下载，现已可以使用 PHP 功能。</string>
+	<string name="php_download_error">很抱歉，PHP 运行库未能顺利下载。</string>
+	<string name="download_error">EasyWeb IDE 无法访问远程服务器或加载超时。请检查网络连接；这也可能是我们的问题，你可以点击「解决方案」按钮查看我们为您提供的临时解决方案。</string>
+	
+	<string name="double_click_skip_to_termux">再次点击跳转到「控制台」</string>
+	
+	<string name="php_is_preparing">PHP 正在准备中，请稍候再试</string>
+	
+	<string name="cant_open_page">未能成功打开此页面</string>
+	<string name="description">详细信息：</string>
+	
+	<string name="save_manifest_err">保存配置文件时发生了错误</string>
+	<string name="create_website_err">无法创建此站点，请检查项目名称、保存路径是否错误，保存目录是否存在同名文件或目录</string>
+	
+	<string name="php_web_server_only_one">PHP Web Server 只支持部署一个站点</string>
+	<string name="continue_">继续</string>
+	
+	<string name="webview_version_low">你的系统组件版本过低</string>
+	<string name="webview_version_low_msg">我们发现你的 Android System WebView 组件版本过低。\nEasyWeb IDE 的大部分功能依赖于此组件。若继续使用，EasyWeb IDE 可能会发生未知的错误或异常。\n\n你可以点击 [解决方案] 按钮获取帮助。</string>
+	
+	<string name="webview_version_get_err">EasyWeb IDE 无法获取你的 Android System WebView 版本</string>
+	<string name="webview_version_get_err_msg">你可以继续使用，但也许会出现无法预料的错误。\n\n你可以点击 [解决方案] 按钮获取帮助。</string>
+	
+	<string name="cannot_use_webview">EasyWeb IDE 无法使用 Android System Webview</string>
+	<string name="cannot_use_webview_msg">EasyWeb IDE 在创建 WebView 对象时发生了错误，可能是系统设置的问题。\n我们不推荐你继续使用，这可能会发生异常。\n\n你可以点击 [解决方案] 按钮获取帮助。</string>
+	
+	<string name="stop_link_to_other_server">停止部署</string>
+	
+	<string name="review_origin">预览源</string>
+	<string name="review_from_locale">从本地预览</string>
+	<string name="review_from_website_server">从站点服务器预览（若未部署则从本地预览）</string>
+	<string name="review_from_custom">自定义</string>
+	
+	<string name="dec_baseurl">外部资源引用URL</string>
+	<string name="dec_mimeurl">指定预览文件的MIME类型</string>
+	<string name="dec_encoding">指定预览文件的编码</string>
+	<string name="dec_history">指定预览的历史URL</string>
+	
+	<string name="edit_by_ew">EasyWeb IDE 编辑器</string>
+	
+	<string name="fullscreen_edit">全屏编辑</string>
+	
+	<string name="origin">源</string>
+	<string name="message">信息</string>
+	
+	<string name="preview_other_webpage_err">当前文件所在站点未部署至第三方服务器</string>
+	
+	<string name="show_webview_alert">启动应用时检测 Android System WebView 并发出警告</string>
+	
+	<string name="examples_description">参考这些来自互联网的示例。</string>
+	<string name="html_website">HTML 站点</string>
+	<string name="php_website">PHP 站点</string>
+    <string name="easyapps_website">EasyApp.js 项目</string>
+	<string name="ewserver_website">依赖于 EasyWeb Server 的 HTML 站点</string>
+	<string name="other_website">其他类型站点</string>
+	<string name="contribution_plan">征集计划</string>
+	
+	<string name="copy_chat_num_done">已复制群号</string>
+	
+	<string name="ignore">忽略</string>
+	
+	<string name="zoom_as_pc">使用适应电脑屏幕的缩放</string>
+	<string name="zoom_as_mp">使用适应手机屏幕的缩放</string>
+
+    <string name="set_manage_files_permission">设置文件管理权限</string>
+    <string name="how_to_set_manage_files_permission">如何设置文件管理权限</string>
+    <string name="set_manage_files_permission_help">由于自 Android 11 开始引入的新机制，EasyWeb IDE 必须在你手动给予文件管理权限后才能正常使用。\n\n请依次点击 [设置文件管理权限]-[EasyWeb IDE]-[授予所有文件的管理权限] 以授予文件管理权限，然后回到 EasyWeb IDE ，点击 [继续] 图标。</string>
+
+    <string name="reconnecting">正在尝试重新连接...</string>
+
+    <string name="php_web_server_has_recovered">因上次关闭应用时未停止 PHP Web Server，现其已自动恢复运行。</string>
+
+    <string name="aapt_failed">转换为应用失败，请检查项目后重试</string>
+    <string name="check_error_msg">查看错误信息</string>
+    <string name="error_msg">错误信息</string>
+
+    <string name="about_easyapp">关于 EasyApp.js</string>
+    <string name="easyapp_introduction">EasyApp.js 是 EasyWeb IDE 为您提供的一套 JS 接口。其可以帮助你通过 JS 或 HTML 让 Web 转制的应用程序实现部分 Android 特性。\n例如：读写SD卡文件、动态控制应用界面、显示自定义窗口、显示弹出消息、发送通知等。\n\n你可以在编辑 HTML 或 JS 时点击 [插入] 按钮快速上手 EasyApp.js，或者你也可以查阅 API 表深入了解 EasyApp.js。</string>
+    <string name="version_info">版本信息＞</string>
+    <string name="video_demo">视频演示＞</string>
+    <string name="API_table">API 表＞</string>
+
+    <string name="easyapp_ver">EasyApp.js 版本：</string>
+    
+    <string name="insert_type">插入类型</string>
+    <string name="html_elements">HTML 元素</string>
+    <string name="js_codes">JavaScript 语句</string>
+    <string name="easyapps_funs">EasyApp.js 函数</string>
+
+    <string name="convert_to_app_in_config">已应用配置，是否根据保存的配置将此站点转换为应用？</string>
+
+    <string name="ad_of_easyapp_title">使用 EasyWeb IDE 开发你的第一个 APP</string>
+    <string name="ad_of_easyapp_inf">点击 [创建站点项目]，并将“站点类型”设置为“EasyApp 项目”即可创建你的第一个 Web 转制的 Android 应用程序项目！\n\n点击底栏的 [工具]-[EasyApp.js 信息] 可进一步了解。</string>
+
+    <string name="add_groups_description">我们在这里等你！加入我们的官方交流群与技术交流群，第一时间获取最新学习资源，抢先体验内测版本应用，后续诸多特权优先获得。</string>
+    <string name="web_club">Web 爱好者社区</string>
+    <string name="web_club_description">Web 开发疑难讨论，优质学习资源分享，软件问题帮助。</string>
+    <string name="users_feedback">EasyWeb IDE 用户交流</string>
+    <string name="users_feedback_2">EasyWeb IDE 用户交流 Ⅱ</string>
+    <string name="users_feedback_description">EasyWeb IDE 官方反馈与内测群。</string>
+    <string name="long_press_copy_groupid">长按复制群号</string>
+
+    <string name="join_chat_ad">聊天、讨论、提疑、解惑、下载……\n加入群聊，发现更多，收获更多。</string>
+
+    <string name="zip_rate">压缩比</string>
+    <string name="zip">压缩</string>
+
+    <string name="click_makeapk">点击以覆盖 EasyApp 配置并生成安装包</string>
+    <string name="manifest_json_de">EasyWeb IDE 站点配置文件</string>
+    <string name="easyapp_events_js_de">EasyApp.js 全局事件控制文件</string>
+    <string name="inf_easyweb_de">EasyWeb IDE 站点信息文件</string>
+
+    <string name="edit_path">编辑路径</string>
+    <string name="cannot_go_path">无法跳转到指定目录</string>
+
+    <string name="del_announcement">删除公告</string>
+</resources>

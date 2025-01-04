@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="top|center">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:background="@color/toolbar_color">
+
+		<HorizontalScrollView
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:id="@+id/hsv_ep">
+
+			<LinearLayout
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="left|center"
+				android:id="@+id/ly_ep_items_cup"/>
+
+		</HorizontalScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+

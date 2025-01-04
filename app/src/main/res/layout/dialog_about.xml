@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:padding="20.0dip"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center|left">
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fillViewport="true">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="40dp"
+						android:scaleType="fitStart"
+						android:src="@drawable/venter_brand"
+						android:tint="#00B0F0"
+						android:layout_marginBottom="30dp"/>
+
+					<TextView
+						android:textColor="@color/opposition"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:text="@string/app_name"
+						android:textSize="30sp"
+						/>
+
+					<TextView
+						android:textColor="@color/opposition"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:id="@+id/tv_ver"
+						android:padding="10dp"
+						android:textSize="15sp" />
+
+					<TextView
+						android:textColor="@color/opposition"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:padding="10dp"
+						android:textSize="15sp"
+						android:id="@+id/tv_ver_jsr" />
+
+					<TextView
+						android:textColor="@color/opposition"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="center"
+						android:padding="10dp"
+						android:textSize="15sp"
+						android:id="@+id/tv_ver_easyapp"
+						android:visibility="gone"/>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:gravity="center|left|top"
+					android:orientation="vertical"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10.0dip">
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_love"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/main_about_love"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_demo"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/main_about_demo"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_feedback"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/main_about_feedback"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_findupdate"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/main_about_findupdate"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_joinchat"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/join_chat"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_copyright"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/copyright"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+					<Button
+						android:textColor="@color/opposition"
+						android:id="@+id/btn_main_about_get_hopweb"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:text="@string/get_hopweb"
+						style="?android:attr/buttonBarButtonStyle"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</ScrollView>
+
+</LinearLayout>
+

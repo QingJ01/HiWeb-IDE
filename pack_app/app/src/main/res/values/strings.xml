@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">$appName$</string>
+    <string name="wait">请稍等</string>
+	<string name="error">出错了</string>
+
+</resources>

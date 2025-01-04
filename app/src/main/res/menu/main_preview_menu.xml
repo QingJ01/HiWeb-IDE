@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_main_More_preview_msg"
+        android:title="@string/main_menu_review_msg"/>
+    <item
+        android:id="@+id/menu_main_More_preview_refresh"
+        android:title="@string/main_menu_refresh"/>
+    <item
+        android:id="@+id/menu_main_More_preview_goback"
+        android:title="@string/main_More_preview_goback"/>
+	<item
+        android:id="@+id/menu_main_More_preview_go"
+        android:title="@string/main_More_preview_go"/>
+</menu>

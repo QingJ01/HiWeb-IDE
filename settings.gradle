@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    plugins {
+        id 'com.android.application' version '7.3.0-alpha07'
+        id 'com.android.library' version '7.3.0-alpha07'
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+include ':app',':CodeEditor',':colorpicker',':JSSRunner'
+rootProject.name = "EasyWeb IDE"

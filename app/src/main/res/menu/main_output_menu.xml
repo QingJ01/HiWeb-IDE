@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_main_Output_add"
+        android:title="@string/main_menu_js_add"/>
+    <item
+        android:id="@+id/menu_main_Output_clear"
+        android:title="@string/main_menu_clear"/>
+    <item
+        android:id="@+id/menu_main_Output_stop"
+        android:title="@string/main_menu_stop"/>
+</menu>

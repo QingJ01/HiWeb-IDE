@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_color">
+
+    <LinearLayout
+        android:id="@+id/ly_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/actionbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/toolbar_color"
+                    android:orientation="vertical" />
+
+                <com.venter.easyweb.EditorPage
+                    android:id="@+id/Ep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/split_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lighter_color"
+                    android:visibility="gone" />
+
+                <com.venter.easyweb.MenuBar
+                    android:id="@+id/editor_menu_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/toolbar_color"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/rl_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/main_color"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/ly_main_editor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/ly_editor_cup"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/iv_editor_background"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+
+                        <com.venter.easyweb.WelcomeWebView
+                            android:id="@+id/wwv_welcome"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ly_welcome_clean"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_editor_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone" />
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:id="@+id/coordinator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="com.venter.easyweb.MoveUpwardBehavior">
+
+                        <LinearLayout
+                            android:id="@+id/ly_editor_findandreplace"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="left|center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/et_editor_find"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:hint="@string/find_hint"
+                                    android:lines="1"
+                                    android:singleLine="true"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textColorHint="#FFDADADA"
+                                    android:theme="@style/WhiteEditText" />
+
+                                <Button
+                                    android:id="@+id/btn_editor_find"
+                                    style="?android:attr/buttonBarButtonStyle"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/next"
+                                    android:textColor="#FFFFFFFF" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/et_editor_replace"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:hint="@string/replace_hint"
+                                    android:singleLine="true"
+                                    android:textColor="#FFFFFFFF"
+                                    android:textColorHint="#FFDADADA"
+                                    android:theme="@style/WhiteEditText" />
+
+                                <Button
+                                    android:id="@+id/btn_editor_replace"
+                                    style="?android:attr/buttonBarButtonStyle"
+                                    android:layout_width="99dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/all"
+                                    android:textColor="#FFFFFFFF" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/cb_editor_replace_opt_rex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:text="@string/rex" />
+
+                                <CheckBox
+                                    android:id="@+id/cb_editor_replace_opt_no_case"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:text="@string/no_case" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ly_main_More"
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="40dp"
+                            android:background="@drawable/explorer_shape"
+                            android:gravity="top|center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="left|center"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1.0"
+                                        android:orientation="vertical">
+
+                                        <HorizontalScrollView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:id="@+id/tv_main_More_title"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/main_explorer"
+                                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                                android:textColor="@color/opposition" />
+
+                                        </HorizontalScrollView>
+
+                                        <HorizontalScrollView
+                                            android:id="@+id/hsv_main_explorer_subtitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="3dp">
+
+                                            <TextView
+                                                android:id="@+id/tv_main_More_subtitle"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                                android:textColor="@color/opposition" />
+
+                                        </HorizontalScrollView>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageButton
+                                            android:id="@+id/btn_main_more_switch"
+                                            style="?android:attr/buttonBarButtonStyle"
+                                            android:layout_width="45dp"
+                                            android:layout_height="45dp"
+                                            android:layout_marginRight="5dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/main_more_switch"
+                                            android:tint="@color/opposition"
+                                            android:visibility="gone" />
+
+                                        <ImageButton
+                                            android:id="@+id/btn_main_more_full"
+                                            style="?android:attr/buttonBarButtonStyle"
+                                            android:layout_width="45dp"
+                                            android:layout_height="45dp"
+                                            android:layout_marginRight="5dp"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/full"
+                                            android:tint="@color/opposition" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <com.venter.easyweb.MenuBar
+                                    android:id="@+id/explore_menu_bar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:id="@+id/ly_main_More_explorer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <com.venter.easyweb.ExplorerListView
+                                            android:id="@+id/elv_main_explorer_file"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ly_main_More_explorer_NoProject"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/main_More_explorer_NoProject"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textColor="@color/opposition" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/ly_main_More_preview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:id="@+id/ly_preview_bowl"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical">
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/ly_preview_error_bowl"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical">
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/ly_preview_alert"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentBottom="true"
+                                                android:background="@color/alpha_theme_color"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:padding="10dp"
+                                                android:visibility="gone">
+
+                                                <ImageButton
+                                                    android:id="@+id/ib_preview_alert"
+                                                    style="?android:attr/buttonBarButtonStyle"
+                                                    android:layout_width="40dp"
+                                                    android:layout_height="40dp"
+                                                    android:scaleType="centerInside"
+                                                    android:src="@drawable/close"
+                                                    android:tint="@color/title" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_preview_alert"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1.0"
+                                                    android:gravity="left|center"
+                                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                                    android:textColor="@color/title" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+
+                                    <com.venter.easyweb.Console
+                                        android:id="@+id/termux"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:visibility="gone" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="#FFB4B4B4" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ly_main_menu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/explorer_color"
+                                android:orientation="horizontal"
+                                android:paddingRight="85dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.venter.easyweb.MainMenuButton
+                                        android:id="@+id/btn_main_File"
+                                        style="?android:attr/buttonBarButtonStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="BottomOnClick" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <com.venter.easyweb.MainMenuButton
+                                        android:id="@+id/btn_main_Tools"
+                                        style="?android:attr/buttonBarButtonStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="BottomOnClick" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|right"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/btn_main_More"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/more_shape"
+                                android:elevation="4dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/main_more" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/shadow" />
+
+            </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pastebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pastebar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/title" />
+
+        <com.myopicmobile.textwarrior.android.CopyBored
+            android:id="@+id/pastebar_cb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

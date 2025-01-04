@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+	<item
+        android:id="@+id/menu_main_Explorer_add"
+        android:title="@string/main_create_add"/>
+    <item
+        android:id="@+id/menu_main_Explorer_mkdir"
+        android:title="@string/main_create_folder"/>
+    <item
+        android:id="@+id/menu_main_Explorer_pack"
+        android:title="@string/main_project_pack"/>
+    <item
+        android:id="@+id/menu_main_Explorer_manifest"
+        android:title="@string/main_project_manifest"/>
+	<item
+        android:id="@+id/menu_main_Explorer_server"
+        android:title="@string/main_project_service"/>
+	<item
+        android:id="@+id/menu_main_Explorer_reg_jsres"
+        android:title="@string/main_project_reg_jsres"/>
+	<item
+        android:id="@+id/menu_main_Explorer_pack_apk"
+        android:title="@string/pack_apk"/>
+    <item
+        android:id="@+id/menu_main_Explorer_home"
+        android:title="@string/home"/>
+	<item
+        android:id="@+id/menu_main_Explorer_refresh"
+        android:title="@string/main_menu_refresh"/>
+    
+	<item
+        android:id="@+id/menu_main_Explorer_close"
+        android:title="@string/main_explorer_close"/>
+</menu>

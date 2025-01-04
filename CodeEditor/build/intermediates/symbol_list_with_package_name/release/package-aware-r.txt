@@ -1,0 +1,13 @@
+com.myopicmobile.textwarrior
+anim push_bottom_in
+anim push_bottom_out
+drawable ed_attr
+drawable ed_css
+drawable ed_element
+drawable ed_function
+string copy
+string cut
+string paste
+string selectAll
+string selectTextMode
+style AnimBottom

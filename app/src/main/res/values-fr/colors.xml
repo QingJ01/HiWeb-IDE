@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_color">#FF282828</color>
+	<color name="toolbar_color">#FF282828</color>
+    <color name="display_color">#FFFFFFFF</color>
+    <color name="main_color">#FF000000</color>
+    <color name="deep_theme_color">#FF0C0C0C</color>
+    <color name="light_theme_color">#FF353535</color>
+    <color name="alpha_theme_color">#B5282828</color>
+    <color name="alpha_deep_theme_color">#B50c0c0c</color>
+	<color name="lighter_color">#FF919191</color>
+	<color name="explorer_color">#FF4F4F4F</color>
+	<color name="opposition">#FFFFFFFF</color>
+	<color name="sign">#FF232323</color>
+	<color name="ash">#FF303030</color>
+	<color name="pure">#FF000000</color>
+    <color name="snack_action_color">#FFFFFFFF</color>
+    <color name="ripple_ash">#B5FFFFFF</color>
+</resources>

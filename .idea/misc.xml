@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/drawable/bootstrap.xml" value="0.193" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/drawable/mdui.xml" value="0.2385" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/drawable/ripple_round_rectangular.xml" value="0.344" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/layout/error.xml" value="0.3625" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/layout/list_explorer_item.xml" value="0.3625" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/layout/list_items.xml" value="0.3625" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/layout/main.xml" value="0.19519927536231885" />
+        <entry key="..\:/Android Projects/EasyWebIDE/easy-web-ide/app/src/main/res/menu/main_tools_menu.xml" value="0.3625" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable-hdpi/dialog_round.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable/alert.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable/alert_manager.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable/ripple_round_rectangular.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable/round_rectangular_shape.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/drawable/venter.xml" value="0.2985" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/boot.xml" value="0.358695652173913" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/dialog_about.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/dialog_alert.xml" value="0.358695652173913" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/dialog_file_choose.xml" value="0.25" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/ep_item.xml" value="0.14722222222222223" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/list_explorer_item.xml" value="0.14722222222222223" />
+        <entry key="..\:/AndroidProjects/EasyWebIDE/app/src/main/res/layout/list_items.xml" value="0.14722222222222223" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

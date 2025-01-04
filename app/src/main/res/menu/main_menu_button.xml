@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_MainServer"
+        android:title="@string/server_manager"
+        android:showAsAction="always"
+        android:icon="@drawable/server_network"/>
+
+    <item
+        android:id="@+id/menu_MainAbout"
+        android:title="@string/setting_title"
+        android:showAsAction="always"
+        android:icon="@drawable/about"/>
+</menu>

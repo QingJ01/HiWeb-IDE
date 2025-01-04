@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/menu_main_Explorer_CreateProject"
+        android:title="@string/main_More_explorer_NoProject_menu_CreateProject"/>
+    
+</menu>
