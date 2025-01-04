@@ -3,14 +3,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file("D:\\OneDrive - ventercom\\Development\\Venter.keystore")
-            storePassword '0631MICROSOFT'
-            keyAlias 'venter.keystore'
-            keyPassword '0631MICROSOFT'
-        }
-    }
     compileSdk 31
 
     defaultConfig {
