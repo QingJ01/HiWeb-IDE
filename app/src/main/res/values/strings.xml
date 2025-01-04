@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">EasyWeb IDE</string>
+    <string name="app_name">HiWeb IDE</string>
     <string name="error">出错了</string>
     <string name="done">已完成</string>
     <string name="close">关闭</string>
@@ -16,7 +16,7 @@
     <string name="need_notic">需要注意</string>
 
     <string name="copyright">版权信息</string>
-    <string name="copyright_msg">开发者：Treep\n“酷安(coolapk.com)” 是 EasyWeb IDE 的主要发布渠道，请谨慎使用通过其他渠道获取的 EasyWeb IDE。\n©Venter 2022.</string>
+    <string name="copyright_msg">开发者：Treep\n"酷安(coolapk.com)" 是 EasyWeb IDE 的主要发布渠道，请谨慎使用通过其他渠道获取的 EasyWeb IDE。\n©Venter 2022.</string>
 
     <string name="manage_my_user">管理本地用户存档</string>
     <string name="user_create">创建用户存档</string>
@@ -199,7 +199,7 @@
 
     <string name="main_File_copy_msg">请输入有效网络文件地址</string>
     <string name="main_File_copy_cantconnect">无法启动克隆</string>
-    <string name="main_File_copy_example">如“http://hostname/index.html”</string>
+    <string name="main_File_copy_example">如"http://hostname/index.html"</string>
 
     <string name="main_check_msg">点击空白处关闭此窗口</string>
 
@@ -571,8 +571,8 @@
 	<string name="only_one_line">只能插入一行代码</string>
 	
 	<string name="debug_setting_urldata">URL数据模拟（适用于\'Response.getURLData()\'，填写格式如[\"name\":\"Apple\",\"type\":\"Fruit\"]对应[/xxx?name=Apple&amp;type=Fruit]）</string>
-	<string name="debug_setting_urldata_none">留空即不启用“URL 数据模拟”</string>
-	<string name="debug_setting_urldata_err">格式有误，将不启用“URL 数据模拟”</string>
+	<string name="debug_setting_urldata_none">留空即不启用"URL 数据模拟"</string>
+	<string name="debug_setting_urldata_err">格式有误，将不启用"URL 数据模拟"</string>
 	
 	<string name="jquery">jQuery</string>
 	<string name="vuejs">Vue.js</string>
@@ -904,7 +904,7 @@
     <string name="convert_to_app_in_config">已应用配置，是否根据保存的配置将此站点转换为应用？</string>
 
     <string name="ad_of_easyapp_title">使用 EasyWeb IDE 开发你的第一个 APP</string>
-    <string name="ad_of_easyapp_inf">点击 [创建站点项目]，并将“站点类型”设置为“EasyApp 项目”即可创建你的第一个 Web 转制的 Android 应用程序项目！\n\n点击底栏的 [工具]-[EasyApp.js 信息] 可进一步了解。</string>
+    <string name="ad_of_easyapp_inf">点击 [创建站点项目]，并将"站点类型"设置为"EasyApp 项目"即可创建你的第一个 Web 转制的 Android 应用程序项目！\n\n点击底栏的 [工具]-[EasyApp.js 信息] 可进一步了解。</string>
 
     <string name="add_groups_description">我们在这里等你！加入我们的官方交流群与技术交流群，第一时间获取最新学习资源，抢先体验内测版本应用，后续诸多特权优先获得。</string>
     <string name="web_club">Web 爱好者社区</string>
