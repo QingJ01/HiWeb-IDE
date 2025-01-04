@@ -4,35 +4,28 @@ import android.content.Context;
 import java.io.File;
 import java.io.IOException;
 
-public class TipsManager 
-{
+public class TipsManager {
     private Context ctx;
     private File signs;
-    
-    public TipsManager(Context c)
-    {
-        ctx=c;
-        signs=new File(ctx.getFilesDir(),"signs");
+
+    public TipsManager(Context c) {
+        ctx = c;
+        signs = new File(ctx.getFilesDir(), "signs");
         signs.mkdir();
     }
-    
-    public void create(String name)
-    {
-        try 
-        {
+
+    public void create(String name) {
+        try {
             new File(signs, name).createNewFile();
-        } 
-        catch (IOException e)
-        {}
+        } catch (IOException e) {
+        }
     }
 
-    public void delete(String name)
-    {
+    public void delete(String name) {
         new File(signs, name).delete();
     }
-    
-    public boolean isExists(String name)
-    {
-        return new File(signs,name).exists();
+
+    public boolean isExists(String name) {
+        return new File(signs, name).exists();
     }
 }

@@ -13,6 +13,7 @@ import java.io.File;
 public class EasyWebServerService extends Service {
 
     private ServerNotification serverNotification;
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -23,27 +24,25 @@ public class EasyWebServerService extends Service {
         if (Vers.isServerOn)
             return;
 
-        for (int port : Vers.easyWebServerWebsitesMap.keySet())
-        {
+        for (int port : Vers.easyWebServerWebsitesMap.keySet()) {
             createWebsiteAndPut(port);
         }
 
         Vers.isServerOn = true;
 
-        serverNotification = new ServerNotification(this,0);
-        serverNotification.mNotifyMgr.notify(0,serverNotification.notification);
+        serverNotification = new ServerNotification(this, 0);
+        serverNotification.mNotifyMgr.notify(0, serverNotification.notification);
     }
 
-    private void createWebsiteAndPut(int port)
-    {
+    private void createWebsiteAndPut(int port) {
         File file = (File) Vers.easyWebServerWebsitesMap.get(port)[1];
         String websiteDirectory = file.getAbsolutePath();
         boolean form = (boolean) Vers.easyWebServerWebsitesMap.get(port)[0];
         boolean isHttps = (boolean) Vers.easyWebServerWebsitesMap.get(port)[2];
 
-        Server server= Do.createServer(port, form, websiteDirectory, isHttps);
-        Object[] objects=new Object[]{form,file,isHttps,Vers.easyWebServerWebsitesMap.get(port)[3],server};
-        Vers.easyWebServerWebsitesMap.put(port,objects);
+        Server server = Do.createServer(port, form, websiteDirectory, isHttps);
+        Object[] objects = new Object[] { form, file, isHttps, Vers.easyWebServerWebsitesMap.get(port)[3], server };
+        Vers.easyWebServerWebsitesMap.put(port, objects);
         new Thread(() -> {
             server.startup();
         }).start();
@@ -54,7 +53,7 @@ public class EasyWebServerService extends Service {
         if (intent.getBooleanExtra("startServer", false)) {
             startServer();
         } else if (intent.getBooleanExtra("shutdownWebsite", false)) {
-            Server server = (Server) Vers.easyWebServerWebsitesMap.get(intent.getIntExtra("port",-1))[4];
+            Server server = (Server) Vers.easyWebServerWebsitesMap.get(intent.getIntExtra("port", -1))[4];
             server.shutdown();
         } else if (intent.getBooleanExtra("startWebsite", false)) {
             final int port = intent.getIntExtra("port", -1);
@@ -67,11 +66,10 @@ public class EasyWebServerService extends Service {
     @Override
     public void onDestroy() {
         serverNotification.cancle(0);
-        for(final int i:Vers.easyWebServerWebsitesMap.keySet())
-        {
-            if(Vers.easyWebServerWebsitesMap.get(i).length<5)
+        for (final int i : Vers.easyWebServerWebsitesMap.keySet()) {
+            if (Vers.easyWebServerWebsitesMap.get(i).length < 5)
                 continue;
-            Server S=(Server) (Vers.easyWebServerWebsitesMap.get(i)[4]);
+            Server S = (Server) (Vers.easyWebServerWebsitesMap.get(i)[4]);
 
             S.shutdown();
         }

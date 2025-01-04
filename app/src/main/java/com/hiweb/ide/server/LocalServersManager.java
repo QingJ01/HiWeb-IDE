@@ -68,13 +68,14 @@ public class LocalServersManager {
             @Override
             public void onClick(DialogInterface p1, int p2) {
                 Vers.i.hasShownServerDialog = false;
-                Do.showImgDialog(c, R.string.server_import_help_title, R.string.server_import_help_msg, R.drawable.server_help);
+                Do.showImgDialog(c, R.string.server_import_help_title, R.string.server_import_help_msg,
+                        R.drawable.server_help);
             }
         });
         final AlertDialog ad = Adb.create();
 
         {
-            //EasyWeb Server
+            // EasyWeb Server
             ObjectLayout ol = new ObjectLayout(c);
             ol.build(-1, null, R.string.easyweb_server, null);
             ol.Ly.setPadding(Do.dp2px(c, 10), Do.dp2px(c, 10), Do.dp2px(c, 10), Do.dp2px(c, 10));
@@ -83,10 +84,12 @@ public class LocalServersManager {
             Do.setMargin(ol, 0, Do.dp2px(c, 10), 0, Do.dp2px(c, 10));
             ListCup Lc = new ListCup(c);
 
-            if (Vers.isServerOn || (Vers.easyWebServerWebsitesMap != null && !Vers.easyWebServerWebsitesMap.isEmpty())) {
+            if (Vers.isServerOn
+                    || (Vers.easyWebServerWebsitesMap != null && !Vers.easyWebServerWebsitesMap.isEmpty())) {
                 Switch sOpen = new Switch(c);
                 sOpen.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
-                sOpen.setText(Vers.isServerOn ? c.getString(R.string.enable_easyweb_server) : c.getString(R.string.disable_easyweb_server));
+                sOpen.setText(Vers.isServerOn ? c.getString(R.string.enable_easyweb_server)
+                        : c.getString(R.string.disable_easyweb_server));
                 sOpen.setChecked(Vers.isServerOn);
                 sOpen.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -111,7 +114,8 @@ public class LocalServersManager {
                 Set S = Vers.easyWebServerWebsitesMap.keySet();
                 for (Object i : S) {
                     try {
-                        ((LinearLayout) (((ServerItem) (Vers.easyWebServerWebsitesMap.get(i)[3])).getParent())).removeView(((ServerItem) (Vers.easyWebServerWebsitesMap.get(i)[3])));
+                        ((LinearLayout) (((ServerItem) (Vers.easyWebServerWebsitesMap.get(i)[3])).getParent()))
+                                .removeView(((ServerItem) (Vers.easyWebServerWebsitesMap.get(i)[3])));
                     } catch (Exception e) {
                     }
                     Lc.addLyView((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(i)[3]));
@@ -128,7 +132,7 @@ public class LocalServersManager {
         }
 
         {
-            //PHP Web Server
+            // PHP Web Server
             ObjectLayout ol = new ObjectLayout(c);
             ol.build(-1, null, R.string.php_web_server, null);
             ol.Ly.setPadding(Do.dp2px(c, 10), Do.dp2px(c, 10), Do.dp2px(c, 10), Do.dp2px(c, 10));
@@ -140,7 +144,8 @@ public class LocalServersManager {
                 Set S = Vers.phpServerWebsitesMap.keySet();
                 for (Object i : S) {
                     try {
-                        ((LinearLayout) (((ServerItem) (Vers.phpServerWebsitesMap.get(i)[1])).getParent())).removeView(((ServerItem) (Vers.phpServerWebsitesMap.get(i)[1])));
+                        ((LinearLayout) (((ServerItem) (Vers.phpServerWebsitesMap.get(i)[1])).getParent()))
+                                .removeView(((ServerItem) (Vers.phpServerWebsitesMap.get(i)[1])));
                     } catch (Exception e) {
                     }
                     Lc.addLyView((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(i)[1]));
@@ -190,7 +195,9 @@ public class LocalServersManager {
                     Ly.addView(NlPort);
 
                     final ChoiceLayout ClForm = new ChoiceLayout(c);
-                    ClForm.build(false, 1, null, R.string.server_wifi_website_form, c.getString(R.string.server_wifi_website_form_page) + "|" + c.getString(R.string.server_wifi_website_form_explorer));
+                    ClForm.build(false, 1, null, R.string.server_wifi_website_form,
+                            c.getString(R.string.server_wifi_website_form_page) + "|"
+                                    + c.getString(R.string.server_wifi_website_form_explorer));
                     if ((boolean) (Vers.easyWebServerWebsitesMap.get(port)[0])) {
                         ClForm.Acs.setSelection(0, true);
                     } else {
@@ -233,7 +240,8 @@ public class LocalServersManager {
 
                                 LinearLayout lySiBefore = null;
                                 try {
-                                    lySiBefore = ((LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap.get(port)[3])).getParent()));
+                                    lySiBefore = ((LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap
+                                            .get(port)[3])).getParent()));
                                 } catch (Exception e) {
                                 }
 
@@ -244,21 +252,21 @@ public class LocalServersManager {
                                     oldRegs = (Map) Vers.easyWebServerRegsMap.get(port);
 
                                 if (INewPort != port) {
-                                    boolean isNowWebsite=false;
+                                    boolean isNowWebsite = false;
                                     if (port == Vers.i.nowWebsitePort) {
-                                        isNowWebsite=true;
+                                        isNowWebsite = true;
                                     }
                                     EasyWebServerReceiver.deleteWebsite(true, port);
 
-                                    if(isNowWebsite)
-                                    {
+                                    if (isNowWebsite) {
                                         Vers.i.nowWebsitePort = port;
                                         Vers.i.nowProjectServerType = 0;
                                     }
                                 } else {
                                     EasyWebServerReceiver.controlWebsite(MainActivity.main, false, INewPort);
                                     try {
-                                        final LinearLayout parent = ((LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap.get(port)[3])).getParent()));
+                                        final LinearLayout parent = ((LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap
+                                                .get(port)[3])).getParent()));
                                         parent.removeView(((ViewGroup) (Vers.easyWebServerWebsitesMap.get(port)[3])));
                                     } catch (Exception e) {
                                     }
@@ -275,7 +283,8 @@ public class LocalServersManager {
                     AdbManifest.show();
                 }
 
-                public void saveChangeManifest(int IOldPort, int INewPort, boolean BIsWebsite, boolean isHttps, LinearLayout lySiParent, Object[] old, Map oldRegs) throws IOException {
+                public void saveChangeManifest(int IOldPort, int INewPort, boolean BIsWebsite, boolean isHttps,
+                        LinearLayout lySiParent, Object[] old, Map oldRegs) throws IOException {
                     File FPortManifest = new File((File) old[1], "manifest.json");
 
                     if (!FPortManifest.exists()) {
@@ -284,7 +293,7 @@ public class LocalServersManager {
                     }
                     {
                         try {
-                            //保存到manifest.json
+                            // 保存到manifest.json
                             String SJson = Do.getText(FPortManifest);
 
                             JsonObject JoAll;
@@ -299,10 +308,10 @@ public class LocalServersManager {
 
                             JoServer.remove("port");
                             JoServer.remove("form");
-                            //JoServer.remove("https");
+                            // JoServer.remove("https");
                             JoServer.addProperty("port", INewPort);
                             JoServer.addProperty("form", BIsWebsite);
-                            //JoServer.addProperty("https",isHttps);
+                            // JoServer.addProperty("https",isHttps);
 
                             JoAll.remove("server");
                             JoAll.add("server", JoServer);
@@ -326,7 +335,8 @@ public class LocalServersManager {
                         Vers.i.nowProjectServerType = 0;
                     }
                     try {
-                        lySiParent.addView((LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap.get(INewPort)[3]))));
+                        lySiParent.addView(
+                                (LinearLayout) (((ViewGroup) (Vers.easyWebServerWebsitesMap.get(INewPort)[3]))));
                     } catch (Exception e) {
                     }
                 }
@@ -334,13 +344,19 @@ public class LocalServersManager {
                 Dl AdbCon = new Dl(MainActivity.main);
                 String[] Sa;
                 if (Vers.isServerOn) {
-                    if (((ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).getIcon() == ServerItem.STATUS_OFF) {
-                        Sa = new String[]{MainActivity.main.getString(R.string.show_register_handler), MainActivity.main.getString(R.string.server_delete_website), MainActivity.main.getString(R.string.server_on_website)};
+                    if (((ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3]))
+                            .getIcon() == ServerItem.STATUS_OFF) {
+                        Sa = new String[] { MainActivity.main.getString(R.string.show_register_handler),
+                                MainActivity.main.getString(R.string.server_delete_website),
+                                MainActivity.main.getString(R.string.server_on_website) };
                     } else {
-                        Sa = new String[]{MainActivity.main.getString(R.string.show_register_handler), MainActivity.main.getString(R.string.server_delete_website), MainActivity.main.getString(R.string.server_off_website)};
+                        Sa = new String[] { MainActivity.main.getString(R.string.show_register_handler),
+                                MainActivity.main.getString(R.string.server_delete_website),
+                                MainActivity.main.getString(R.string.server_off_website) };
                     }
                 } else {
-                    Sa = new String[]{MainActivity.main.getString(R.string.show_register_handler), MainActivity.main.getString(R.string.server_delete_website)};
+                    Sa = new String[] { MainActivity.main.getString(R.string.show_register_handler),
+                            MainActivity.main.getString(R.string.server_delete_website) };
                 }
                 AdbCon.builder.setItems(Sa, new DialogInterface.OnClickListener() {
 
@@ -348,21 +364,22 @@ public class LocalServersManager {
                     public void onClick(DialogInterface p1, int p2) {
                         switch (p2) {
                             case 0:
-                                //注册处理器
+                            // 注册处理器
                             {
                                 EasyWebServerReceiver.showRegManager(port);
                             }
-                            break;
+                                break;
                             case 1:
                                 EasyWebServerReceiver.deleteWebsite(true, port);
                                 break;
                             case 2:
                                 if (Vers.isServerOn) {
-                                    if (((ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).getIcon() == ServerItem.STATUS_OFF) {
-                                        //启用
+                                    if (((ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3]))
+                                            .getIcon() == ServerItem.STATUS_OFF) {
+                                        // 启用
                                         EasyWebServerReceiver.controlWebsite(MainActivity.main, true, port);
                                     } else {
-                                        //停止
+                                        // 停止
                                         EasyWebServerReceiver.controlWebsite(MainActivity.main, false, port);
                                     }
                                 }
@@ -378,8 +395,10 @@ public class LocalServersManager {
                 try {
                     String error = Do.getText(errorFile);
                     errorFile.delete();
-                    ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(port)[1])).setIcon(LocalServersManager.ServerItem.STATUS_ALERT);
-                    ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(port)[1])).SAlert = error.toString().replace("Error: ", "");
+                    ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(port)[1]))
+                            .setIcon(LocalServersManager.ServerItem.STATUS_ALERT);
+                    ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(port)[1])).SAlert = error
+                            .toString().replace("Error: ", "");
                 } catch (IOException e) {
                 }
             }
@@ -429,7 +448,8 @@ public class LocalServersManager {
 
                                 LinearLayout lySiBefore = null;
                                 try {
-                                    lySiBefore = ((LinearLayout) (((ViewGroup) (Vers.phpServerWebsitesMap.get(port)[1])).getParent()));
+                                    lySiBefore = ((LinearLayout) (((ViewGroup) (Vers.phpServerWebsitesMap.get(port)[1]))
+                                            .getParent()));
                                 } catch (Exception e) {
                                 }
 
@@ -437,14 +457,13 @@ public class LocalServersManager {
 
                                 PHPServerReceiver.stopServer(port);
                                 if (INewPort != port) {
-                                    boolean isNowWebsite=false;
+                                    boolean isNowWebsite = false;
                                     if (port == Vers.i.nowWebsitePort) {
-                                        isNowWebsite=true;
+                                        isNowWebsite = true;
                                     }
                                     PHPServerReceiver.deleteWebsite(port);
 
-                                    if(isNowWebsite)
-                                    {
+                                    if (isNowWebsite) {
                                         Vers.i.nowWebsitePort = port;
                                         Vers.i.nowProjectServerType = 1;
                                     }
@@ -457,7 +476,8 @@ public class LocalServersManager {
                             }
                         }
 
-                        public void saveChangeManifest(int IOldPort, int INewPort, LinearLayout lySiParent, Object[] old) throws IOException {
+                        public void saveChangeManifest(int IOldPort, int INewPort, LinearLayout lySiParent,
+                                Object[] old) throws IOException {
                             File FPortManifest = new File((File) old[0], "manifest.json");
 
                             if (!FPortManifest.exists()) {
@@ -466,7 +486,7 @@ public class LocalServersManager {
                             }
                             {
                                 try {
-                                    //保存到manifest.json
+                                    // 保存到manifest.json
                                     String SJson = Do.getText(FPortManifest);
 
                                     JsonObject JoAll;
@@ -501,7 +521,8 @@ public class LocalServersManager {
                             try {
                                 if (Vers.phpServerWebsitesMap.size() == 1)
                                     lySiParent.removeAllViews();
-                                lySiParent.addView((LinearLayout) (((ViewGroup) (Vers.phpServerWebsitesMap.get(INewPort)[1]))));
+                                lySiParent.addView(
+                                        (LinearLayout) (((ViewGroup) (Vers.phpServerWebsitesMap.get(INewPort)[1]))));
                             } catch (Exception e) {
                             }
                         }
@@ -514,11 +535,14 @@ public class LocalServersManager {
                 public void run() {
                     Dl AdbCon = new Dl(MainActivity.main);
                     String[] Sa;
-                    final boolean isWebsiteRunning = ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap.get(port)[1])).getIcon() == LocalServersManager.ServerItem.STATUS_RUNNING;
+                    final boolean isWebsiteRunning = ((LocalServersManager.ServerItem) (Vers.phpServerWebsitesMap
+                            .get(port)[1])).getIcon() == LocalServersManager.ServerItem.STATUS_RUNNING;
                     if (isWebsiteRunning) {
-                        Sa = new String[]{MainActivity.main.getString(R.string.server_delete_website), MainActivity.main.getString(R.string.server_off_website)};
+                        Sa = new String[] { MainActivity.main.getString(R.string.server_delete_website),
+                                MainActivity.main.getString(R.string.server_off_website) };
                     } else {
-                        Sa = new String[]{MainActivity.main.getString(R.string.server_delete_website), MainActivity.main.getString(R.string.server_on_website)};
+                        Sa = new String[] { MainActivity.main.getString(R.string.server_delete_website),
+                                MainActivity.main.getString(R.string.server_on_website) };
                     }
                     AdbCon.builder.setItems(Sa, new DialogInterface.OnClickListener() {
 
@@ -532,7 +556,7 @@ public class LocalServersManager {
                                     if (isWebsiteRunning) {
                                         PHPServerReceiver.stopServer(port);
                                     } else {
-                                        PHPServerReceiver.startServer(MainActivity.main,port,false);
+                                        PHPServerReceiver.startServer(MainActivity.main, port, false);
                                     }
                                     break;
                             }
@@ -562,7 +586,8 @@ public class LocalServersManager {
         return Si;
     }
 
-    public static void showWebsiteDialog(final Context c, final LocalServersManager.ServerItem Si, final int port, final Runnable manifestRun, final Runnable controlRun) {
+    public static void showWebsiteDialog(final Context c, final LocalServersManager.ServerItem Si, final int port,
+            final Runnable manifestRun, final Runnable controlRun) {
         LinearLayout Ly;
         ScrollView Sv = new ScrollView(c);
         Sv.setFillViewport(true);

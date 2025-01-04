@@ -39,6 +39,7 @@ public class MoveUpwardBehavior extends CoordinatorLayout.Behavior {
         return true;
 
     }
+
     @Override
 
     public void onDependentViewRemoved(CoordinatorLayout parent, View child, View dependency) {

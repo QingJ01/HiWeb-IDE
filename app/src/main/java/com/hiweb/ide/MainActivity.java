@@ -49,10 +49,10 @@ public class MainActivity extends BaseActivity {
     int MoreMode = 0;
     int MoreMenu = R.menu.main_explorer_no_project;
     /*
-	 0:站点管理器
-	 1:网页预览
-     2:输出
-	 */
+     * 0:站点管理器
+     * 1:网页预览
+     * 2:输出
+     */
 
     public static MainActivity main;
 
@@ -97,11 +97,11 @@ public class MainActivity extends BaseActivity {
         } else if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
 
         }
-        //检测实体键盘的状态：推出或者合上
+        // 检测实体键盘的状态：推出或者合上
         if (newConfig.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_NO) {
-            //实体键盘处于推出状态，在此处添加额外的处理代码
+            // 实体键盘处于推出状态，在此处添加额外的处理代码
         } else if (newConfig.hardKeyboardHidden == Configuration.HARDKEYBOARDHIDDEN_YES) {
-            //实体键盘处于合上状态，在此处添加额外的处理代码
+            // 实体键盘处于合上状态，在此处添加额外的处理代码
         }
     }
 
@@ -114,7 +114,8 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-        SignCheck signCheck = new SignCheck(MainActivity.this, "41:AC:53:CE:33:2C:C8:1F:6D:38:D2:12:51:AF:BB:24:CE:8B:EE:0D");
+        SignCheck signCheck = new SignCheck(MainActivity.this,
+                "41:AC:53:CE:33:2C:C8:1F:6D:38:D2:12:51:AF:BB:24:CE:8B:EE:0D");
         if (!signCheck.check()) {
             String msg = "EasyWeb IDE \u7684\u5B89\u88C5\u5305\u4F3C\u4E4E\u53D7\u5230\u4E86\u635F\u574F\u3002\n\n\u8BF7\u68C0\u67E5\u60A8\u83B7\u53D6 EasyWeb IDE \u7684\u6765\u6E90\u3002\u82E5\u975E\u5B98\u65B9\u6E20\u9053\uFF0C\u8BF7\u901A\u8FC7\u4E0B\u65B9\u94FE\u63A5\u83B7\u53D6\u5B98\u65B9\u7248\u672C\u91CD\u65B0\u5B89\u88C5\u3002\n\u8BF7\u6CE8\u610F\uFF0C\u82E5\u5B89\u88C5\u5931\u8D25\uFF0C\u8BF7\u5378\u8F7D\u5F53\u524D\u7248\u672C\u91CD\u8BD5\u3002\n\nhttps://www.coolapk.com/apk/241241";
             Intent i = new Intent();
@@ -128,16 +129,17 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-            binding = MainBinding.inflate(getLayoutInflater());
+        binding = MainBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
 
-        coordinatorLayout=binding.coordinator;
+        coordinatorLayout = binding.coordinator;
 
         Vers.i.hasRunned = true;
 
         Spannable text = new SpannableString(getTitle());
-        text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(),
+                Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         setTitle(text);
 
         reGetCharsAdder();
@@ -220,8 +222,8 @@ public class MainActivity extends BaseActivity {
                     binding.btnMainMore.setVisibility(View.VISIBLE);
                 }
 
-                RelativeLayout.LayoutParams params =
-                        (RelativeLayout.LayoutParams) binding.lyEditorButtons.getLayoutParams();
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.lyEditorButtons
+                        .getLayoutParams();
                 params.removeRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 params.addRule(RelativeLayout.ALIGN_PARENT_TOP);
                 binding.lyEditorButtons.setLayoutParams(params);
@@ -257,8 +259,8 @@ public class MainActivity extends BaseActivity {
                     binding.btnMainMore.setVisibility(View.GONE);
                 }
 
-                RelativeLayout.LayoutParams params =
-                        (RelativeLayout.LayoutParams) binding.lyEditorButtons.getLayoutParams();
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.lyEditorButtons
+                        .getLayoutParams();
                 params.removeRule(RelativeLayout.ALIGN_PARENT_TOP);
                 params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 binding.lyEditorButtons.setLayoutParams(params);
@@ -331,7 +333,7 @@ public class MainActivity extends BaseActivity {
         main = this;
 
         {
-            //当应用意外关闭后，检测 PHP Web Server 是否开启。
+            // 当应用意外关闭后，检测 PHP Web Server 是否开启。
             File profitFile = new File(getFilesDir(), "php_profit");
             if (profitFile.exists()) {
                 try {
@@ -341,13 +343,14 @@ public class MainActivity extends BaseActivity {
 
                     if (Vers.phpServerWebsitesMap == null)
                         Vers.phpServerWebsitesMap = new HashMap<Integer, Object[]>();
-                    Vers.phpServerWebsitesMap.put(port, new Object[]{new File(path), LocalServersManager.getServerItem(1, port, new File(path))});
+                    Vers.phpServerWebsitesMap.put(port, new Object[] { new File(path),
+                            LocalServersManager.getServerItem(1, port, new File(path)) });
 
                     PHPServerReceiver.startServer(this, port, false);
                 } catch (Exception e) {
 
                 }
-                Vers.i.isAutoStartPHPServer=true;
+                Vers.i.isAutoStartPHPServer = true;
             }
         }
 
@@ -360,25 +363,21 @@ public class MainActivity extends BaseActivity {
         findUpdate(false);
 
         try {
-            if(SettingsClass.bgFile!=null)
-            {
+            if (SettingsClass.bgFile != null) {
                 binding.ivEditorBackground.setVisibility(View.VISIBLE);
                 binding.ivEditorBackground.setImageBitmap(Do.getLoacalBitmap(SettingsClass.bgFile));
                 binding.ivEditorBackground.setAlpha(SettingsClass.bgAlpha);
-                if(SettingsClass.bgScale!=null)
+                if (SettingsClass.bgScale != null)
                     binding.ivEditorBackground.setScaleType(ImageView.ScaleType.valueOf(SettingsClass.bgScale));
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
 
         }
 
         new Thread(() -> {
-            while(true)
-            {
-                Vers.i.newestAnnouncementInf=AnnouncementManager.getServerInf();
-                if(Vers.i.newestAnnouncementInf!=null)
+            while (true) {
+                Vers.i.newestAnnouncementInf = AnnouncementManager.getServerInf();
+                if (Vers.i.newestAnnouncementInf != null)
                     break;
                 try {
                     Thread.sleep(60000);
@@ -387,9 +386,9 @@ public class MainActivity extends BaseActivity {
                 }
             }
 
-            Vers.i.newestAnnouncementInf=AnnouncementManager.getServerInf();
+            Vers.i.newestAnnouncementInf = AnnouncementManager.getServerInf();
 
-            MainActivity.this.runOnUiThread(()->{
+            MainActivity.this.runOnUiThread(() -> {
                 binding.wwvWelcome.loadWhenShowWelcome();
             });
         }).start();
@@ -401,17 +400,17 @@ public class MainActivity extends BaseActivity {
 
         if (Vers.i.skipTpProjectFile != null) {
             OpenWeb(Vers.i.skipTpProjectFile, true);
-            if(Vers.i.skipTpOpenFile!=null)
+            if (Vers.i.skipTpOpenFile != null)
                 OpenFile(Vers.i.skipTpOpenFile);
         }
 
         Vers.i.skipTpProjectFile = null;
-        Vers.i.skipTpOpenFile=null;
+        Vers.i.skipTpOpenFile = null;
     }
 
     public void recoverController(boolean isExit) {
-        //在EasyWeb中打开一个文件时在私有目录创建一个文件，正常关闭打开的文件时删除私有目录的文件
-        //下一次启动时，若文件存在则进入Recover模式
+        // 在EasyWeb中打开一个文件时在私有目录创建一个文件，正常关闭打开的文件时删除私有目录的文件
+        // 下一次启动时，若文件存在则进入Recover模式
         File file = new File(getFilesDir(), "recover.sign");
         if (isExit) {
             BackupManager.stop();
@@ -435,10 +434,11 @@ public class MainActivity extends BaseActivity {
 
     public void showUser() {
         {
-            //显示用户名
+            // 显示用户名
             binding.toolbar.setNavigationIcon(null);
             Spannable text = new SpannableString(getTitle());
-            text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+            text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(),
+                    Spannable.SPAN_INCLUSIVE_INCLUSIVE);
             binding.toolbar.setTitle(text);
 
             if (Vers.i.userName != null) {
@@ -447,7 +447,8 @@ public class MainActivity extends BaseActivity {
                 binding.toolbar.setNavigationIcon(iconDrawable);
                 if (!Vers.i.userName.equals("admin")) {
                     text = new SpannableString(Vers.i.userName);
-                    text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                    text.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.title)), 0, text.length(),
+                            Spannable.SPAN_INCLUSIVE_INCLUSIVE);
                     binding.toolbar.setSubtitle(text);
                 } else {
                     binding.toolbar.setSubtitle(null);
@@ -507,9 +508,9 @@ public class MainActivity extends BaseActivity {
         }
 
         if (Vers.i.OpenFile == null || relatedPath.trim().equals("")) {
-            Sa = new String[]{SFull, SWebsite};
+            Sa = new String[] { SFull, SWebsite };
         } else {
-            Sa = new String[]{SFull, SWebsite, SRelatedFile};
+            Sa = new String[] { SFull, SWebsite, SRelatedFile };
         }
 
         LinearLayout Ly = new LinearLayout(this);
@@ -520,7 +521,8 @@ public class MainActivity extends BaseActivity {
         Ly = new LinearLayout(this);
         Ly.setLayoutParams(new RelativeLayout.LayoutParams(-1, -2));
         Ly.setOrientation(LinearLayout.VERTICAL);
-        Ly.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+        Ly.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                Do.dp2px(MainActivity.this, 10));
         Sv.addView(Rl);
         Rl.addView(Ly);
 
@@ -538,7 +540,8 @@ public class MainActivity extends BaseActivity {
                     Bl.descriptionTv.setText(file.getPath());
                     break;
                 case 1:
-                    Bl.descriptionTv.setText(file.getPath().substring(Vers.i.ProjectDir.getPath().length() + 1, file.getPath().length()));
+                    Bl.descriptionTv.setText(file.getPath().substring(Vers.i.ProjectDir.getPath().length() + 1,
+                            file.getPath().length()));
                     break;
                 case 2:
                     Bl.descriptionTv.setText(relatedPath);
@@ -556,26 +559,26 @@ public class MainActivity extends BaseActivity {
             Ly.addView(Bl);
         }
 
-
     }
 
     public boolean IsNowFileWebsiteFile() {
-        if (Vers.i.OpenFile != null && Vers.i.OpenFile.getPath().length() > Vers.i.ProjectDir.getPath().length() && Vers.i.OpenFile.getPath().substring(0, Vers.i.ProjectDir.getPath().length()).equals(Vers.i.ProjectDir.getPath())) {
-            //↑判断当前文件是否是站点中的文件（如果是False，则当前文件是站点外的文件）
+        if (Vers.i.OpenFile != null && Vers.i.OpenFile.getPath().length() > Vers.i.ProjectDir.getPath().length()
+                && Vers.i.OpenFile.getPath().substring(0, Vers.i.ProjectDir.getPath().length())
+                        .equals(Vers.i.ProjectDir.getPath())) {
+            // ↑判断当前文件是否是站点中的文件（如果是False，则当前文件是站点外的文件）
             return true;
         }
         return false;
     }
 
     public void showPreview(String SMsg, String SUrl) {
-        Vers.i.AlertList.add(new String[]{Do.getTime("HH:mm:ss"), SMsg, SUrl});
+        Vers.i.AlertList.add(new String[] { Do.getTime("HH:mm:ss"), SMsg, SUrl });
         binding.tvPreviewAlert.setText(SMsg);
         binding.lyPreviewAlert.setVisibility(View.VISIBLE);
     }
 
     public void fullMore() {
-        RelativeLayout.LayoutParams params =
-                (RelativeLayout.LayoutParams) binding.lyMainMore.getLayoutParams();
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.lyMainMore.getLayoutParams();
         params.height = LayoutParams.MATCH_PARENT;
         binding.lyMainMore.setLayoutParams(params);
         binding.lyMainMore.setBackgroundColor(ContextCompat.getColor(this, R.color.explorer_color));
@@ -584,8 +587,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void unFullMore() {
-        RelativeLayout.LayoutParams params =
-                (RelativeLayout.LayoutParams) binding.lyMainMore.getLayoutParams();
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) binding.lyMainMore.getLayoutParams();
         params.height = Do.dp2px(this, 250);
         binding.lyMainMore.setLayoutParams(params);
         binding.lyMainMore.setBackgroundDrawable(getDrawable(R.drawable.explorer_shape));
@@ -631,104 +633,111 @@ public class MainActivity extends BaseActivity {
 
         Dl dl = new Dl(MainActivity.this);
         dl.builder.setTitle(R.string.main_File_create);
-        dl.builder.setItems(new String[]{getString(R.string.empty_file), getString(R.string.main_create_html), getString(R.string.main_create_css), getString(R.string.main_create_js), getString(R.string.main_create_php), getString(R.string.main_create_php_web), getString(R.string.main_create_xml), getString(R.string.main_create_jss)}, new DialogInterface.OnClickListener() {
+        dl.builder.setItems(
+                new String[] { getString(R.string.empty_file), getString(R.string.main_create_html),
+                        getString(R.string.main_create_css), getString(R.string.main_create_js),
+                        getString(R.string.main_create_php), getString(R.string.main_create_php_web),
+                        getString(R.string.main_create_xml), getString(R.string.main_create_jss) },
+                new DialogInterface.OnClickListener() {
 
-            @Override
-            public void onClick(DialogInterface p1, int p2) {
-                try {
-                    switch (p2) {
-                        case 0:
-                            WriteFile = "";
-                            CreateMode = "";
-                            break;
-                        case 1:
-                            WriteFile = "create_html.html";
-                            CreateMode = ".html";
-                            break;
-                        case 2:
-                            WriteFile = "create_css.css";
-                            CreateMode = ".css";
-                            break;
-                        case 3:
-                            WriteFile = "create_js.js";
-                            CreateMode = ".js";
-                            break;
-                        case 4:
-                            WriteFile = "create_php.php";
-                            CreateMode = ".php";
-                            break;
-                        case 5:
-                            WriteFile = "create_php_web.php";
-                            CreateMode = ".php";
-                            break;
-                        case 6:
-                            WriteFile = "create_xml.xml";
-                            CreateMode = ".xml";
-                            break;
-                        case 7:
-                            WriteFile = "create_jss.jss";
-                            CreateMode = ".jss";
-                            break;
-                    }
-                    final EditText Edittext = new EditText(MainActivity.this);
-                    Edittext.setText(getString(R.string.main_new_file_json_name) + CreateMode);
-
-                    Dl dl = new Dl(MainActivity.this);
-                    dl.builder.setTitle(getString(R.string.main_new_file_name));
-                    dl.builder.setCancelable(false);
-                    dl.builder.setView(Edittext);
-                    dl.builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-
-                        @Override
-                        public void onClick(DialogInterface p1, int p2) {
-                            final String FileName = Edittext.getText().toString();
-                            FileChoose = new FileChooseClass();
-                            FileChoose.Type(false);
-                            if (Vers.i.IsOpenProject) {
-                                FileChoose.setOpenPath(Vers.i.ProjectDir);
-                            } else {
-                                FileChoose.setOpenPath(Environment.getExternalStorageDirectory());
+                    @Override
+                    public void onClick(DialogInterface p1, int p2) {
+                        try {
+                            switch (p2) {
+                                case 0:
+                                    WriteFile = "";
+                                    CreateMode = "";
+                                    break;
+                                case 1:
+                                    WriteFile = "create_html.html";
+                                    CreateMode = ".html";
+                                    break;
+                                case 2:
+                                    WriteFile = "create_css.css";
+                                    CreateMode = ".css";
+                                    break;
+                                case 3:
+                                    WriteFile = "create_js.js";
+                                    CreateMode = ".js";
+                                    break;
+                                case 4:
+                                    WriteFile = "create_php.php";
+                                    CreateMode = ".php";
+                                    break;
+                                case 5:
+                                    WriteFile = "create_php_web.php";
+                                    CreateMode = ".php";
+                                    break;
+                                case 6:
+                                    WriteFile = "create_xml.xml";
+                                    CreateMode = ".xml";
+                                    break;
+                                case 7:
+                                    WriteFile = "create_jss.jss";
+                                    CreateMode = ".jss";
+                                    break;
                             }
-                            FileChoose.setOnClickListener(new View.OnClickListener() {
+                            final EditText Edittext = new EditText(MainActivity.this);
+                            Edittext.setText(getString(R.string.main_new_file_json_name) + CreateMode);
+
+                            Dl dl = new Dl(MainActivity.this);
+                            dl.builder.setTitle(getString(R.string.main_new_file_name));
+                            dl.builder.setCancelable(false);
+                            dl.builder.setView(Edittext);
+                            dl.builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 
                                 @Override
-                                public void onClick(View p1) {
-                                    try {
-                                        File NewFile = new File(FileChoose.nowPath.getPath(), FileName);
-                                        if (!NewFile.exists()) {
-                                            FileChoose.dialog.dismiss();
-                                            if (WriteFile.equals("")) {
-                                                NewFile.createNewFile();
-                                            } else {
-                                                AssetsClass.copyBigDataToSD(MainActivity.this, WriteFile, NewFile.getPath());
-                                            }
-                                            if (Vers.i.IsOpenProject && (Vers.i.ProjectDir.getPath() + Vers.i.ExplorerPath).equals(NewFile.getParent())) {
-                                                binding.elvMainExplorerFile.toExplorer(NewFile.getParentFile());
-                                            }
-                                            OpenFile(NewFile);
-                                        } else {
-                                            toast(R.string.main_new_file_exists);
-                                        }
-
-                                    } catch (Exception e) {
-                                        toast(R.string.main_new_file_cannot_create);
+                                public void onClick(DialogInterface p1, int p2) {
+                                    final String FileName = Edittext.getText().toString();
+                                    FileChoose = new FileChooseClass();
+                                    FileChoose.Type(false);
+                                    if (Vers.i.IsOpenProject) {
+                                        FileChoose.setOpenPath(Vers.i.ProjectDir);
+                                    } else {
+                                        FileChoose.setOpenPath(Environment.getExternalStorageDirectory());
                                     }
+                                    FileChoose.setOnClickListener(new View.OnClickListener() {
+
+                                        @Override
+                                        public void onClick(View p1) {
+                                            try {
+                                                File NewFile = new File(FileChoose.nowPath.getPath(), FileName);
+                                                if (!NewFile.exists()) {
+                                                    FileChoose.dialog.dismiss();
+                                                    if (WriteFile.equals("")) {
+                                                        NewFile.createNewFile();
+                                                    } else {
+                                                        AssetsClass.copyBigDataToSD(MainActivity.this, WriteFile,
+                                                                NewFile.getPath());
+                                                    }
+                                                    if (Vers.i.IsOpenProject
+                                                            && (Vers.i.ProjectDir.getPath() + Vers.i.ExplorerPath)
+                                                                    .equals(NewFile.getParent())) {
+                                                        binding.elvMainExplorerFile.toExplorer(NewFile.getParentFile());
+                                                    }
+                                                    OpenFile(NewFile);
+                                                } else {
+                                                    toast(R.string.main_new_file_exists);
+                                                }
+
+                                            } catch (Exception e) {
+                                                toast(R.string.main_new_file_cannot_create);
+                                            }
+                                        }
+                                    });
+                                    FileChoose.Show(MainActivity.this);
                                 }
                             });
-                            FileChoose.Show(MainActivity.this);
-                        }
-                    });
 
-                    dl.builder.setNegativeButton(R.string.cancel, null);
-                    dl.show();
-                } catch (Exception e) {
-                    toast(R.string.main_new_file_cannot_create);
-                }
-            }
-        });
+                            dl.builder.setNegativeButton(R.string.cancel, null);
+                            dl.show();
+                        } catch (Exception e) {
+                            toast(R.string.main_new_file_cannot_create);
+                        }
+                    }
+                });
         dl.show();
     }
-
 
     public void BottomOnClick(View v) {
         PopupMenu popupMenu;
@@ -758,11 +767,13 @@ public class MainActivity extends BaseActivity {
                                     public void onClick(final File ChooseFile, final AlertDialog dialog) {
 
                                         if (ChooseFile.getName().lastIndexOf(".") != -1) {
-                                            String fileType = ChooseFile.getName().substring(ChooseFile.getName().lastIndexOf(".") + 1).toLowerCase();
+                                            String fileType = ChooseFile.getName()
+                                                    .substring(ChooseFile.getName().lastIndexOf(".") + 1).toLowerCase();
                                             try {
                                                 boolean isTextFile = Do.isTextFile(ChooseFile);
                                                 if (isTextFile) {
-                                                    if (Vers.i.IsOpeningFile && Vers.i.OpenFile.getPath().equals(ChooseFile.getPath())) {
+                                                    if (Vers.i.IsOpeningFile
+                                                            && Vers.i.OpenFile.getPath().equals(ChooseFile.getPath())) {
                                                         toast(R.string.main_open_opened);
                                                     } else {
                                                         File OpenFile = ChooseFile;
@@ -773,19 +784,21 @@ public class MainActivity extends BaseActivity {
                                                 } else {
                                                     Dl dl = new Dl(MainActivity.this);
                                                     dl.builder.setTitle(R.string.open_binary_file);
-                                                    dl.builder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                                                    dl.builder.setPositiveButton(R.string.yes,
+                                                            new DialogInterface.OnClickListener() {
 
-                                                        @Override
-                                                        public void onClick(DialogInterface p1, int p2) {
-                                                            if (Vers.i.IsOpeningFile && Vers.i.OpenFile.getPath().equals(ChooseFile.getPath())) {
-                                                                toast(R.string.main_open_opened);
-                                                            } else {
-                                                                File OpenFile = ChooseFile;
-                                                                dialog.dismiss();
-                                                                OpenFile(OpenFile);
-                                                            }
-                                                        }
-                                                    });
+                                                                @Override
+                                                                public void onClick(DialogInterface p1, int p2) {
+                                                                    if (Vers.i.IsOpeningFile && Vers.i.OpenFile
+                                                                            .getPath().equals(ChooseFile.getPath())) {
+                                                                        toast(R.string.main_open_opened);
+                                                                    } else {
+                                                                        File OpenFile = ChooseFile;
+                                                                        dialog.dismiss();
+                                                                        OpenFile(OpenFile);
+                                                                    }
+                                                                }
+                                                            });
                                                     dl.show();
                                                 }
                                             } catch (Exception e) {
@@ -793,7 +806,8 @@ public class MainActivity extends BaseActivity {
                                             }
 
                                         } else {
-                                            if (Vers.i.IsOpeningFile && Vers.i.OpenFile.getPath().equals(ChooseFile.getPath())) {
+                                            if (Vers.i.IsOpeningFile
+                                                    && Vers.i.OpenFile.getPath().equals(ChooseFile.getPath())) {
                                                 toast(R.string.main_open_opened);
                                             } else {
                                                 File OpenFile = ChooseFile;
@@ -803,9 +817,9 @@ public class MainActivity extends BaseActivity {
                                         }
                                     }
 
-
                                 });
-                                FileChoose.Show(MainActivity.this, MainActivity.this.getString(R.string.main_File_open));
+                                FileChoose.Show(MainActivity.this,
+                                        MainActivity.this.getString(R.string.main_File_open));
 
                                 break;
                             case R.id.menu_main_File_copy:
@@ -813,144 +827,186 @@ public class MainActivity extends BaseActivity {
                                 WebInputAb.builder.setTitle(R.string.main_File_copy);
                                 final TextLayout TlCopy = new TextLayout(MainActivity.this);
                                 TlCopy.build(0, null, R.string.main_File_copy_msg, R.string.main_File_copy_example);
-                                TlCopy.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+                                TlCopy.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                                        Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
                                 WebInputAb.builder.setView(TlCopy);
                                 WebInputAb.builder.setPositiveButton(R.string.ok, null);
                                 final AlertDialog WebInputAd = WebInputAb.create();
                                 WebInputAd.show();
 
-                                WebInputAd.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+                                WebInputAd.getButton(AlertDialog.BUTTON_POSITIVE)
+                                        .setOnClickListener(new View.OnClickListener() {
 
-                                    @Override
-                                    public void onClick(View p1) {
-                                        try {
-                                            {
-                                                WebInputAd.dismiss();
+                                            @Override
+                                            public void onClick(View p1) {
+                                                try {
+                                                    {
+                                                        WebInputAd.dismiss();
 
-                                                final EditText Acet = new EditText(MainActivity.this);
-                                                Acet.setText(TlCopy.getText("$").split("/")[TlCopy.getText("$").split("/").length - 1].trim());
-                                                final Dl AdbName = new Dl(MainActivity.this);
-                                                AdbName.builder.setView(Acet);
-                                                AdbName.builder.setTitle(R.string.edit_save_name);
-                                                AdbName.builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                                                        final EditText Acet = new EditText(MainActivity.this);
+                                                        Acet.setText(TlCopy.getText("$")
+                                                                .split("/")[TlCopy.getText("$").split("/").length - 1]
+                                                                .trim());
+                                                        final Dl AdbName = new Dl(MainActivity.this);
+                                                        AdbName.builder.setView(Acet);
+                                                        AdbName.builder.setTitle(R.string.edit_save_name);
+                                                        AdbName.builder.setPositiveButton(R.string.ok,
+                                                                new DialogInterface.OnClickListener() {
 
-                                                    @Override
-                                                    public void onClick(DialogInterface p1, int p2) {
-                                                        try {
-                                                            if (Acet.getText().toString().trim().equals("")) {
-                                                                throw new Exception();
-                                                            }
-                                                            final FileChooseClass FileChoose = new FileChooseClass();
-                                                            FileChoose.Type(false);
-                                                            if (Vers.i.IsOpenProject) {
-                                                                FileChoose.setOpenPath(Vers.i.ProjectDir);
-                                                            } else {
-                                                                FileChoose.setOpenPath(Environment.getExternalStorageDirectory());
-                                                            }
-                                                            FileChoose.setOnClickListener(new View.OnClickListener() {
-
-                                                                @Override
-                                                                public void onClick(View p1) {
-                                                                    Do.showWaitAndRunInThread(false, new Runnable() {
-
-                                                                        @Override
-                                                                        public void run() {
-                                                                            try {
-                                                                                final File NewFile = new File(FileChoose.nowPath.getPath(), Acet.getText().toString().trim());
-                                                                                if (!NewFile.exists()) {
-                                                                                    FileChoose.dialog.dismiss();
-                                                                                    if (!NewFile.createNewFile())
-                                                                                        throw new IOException();
-
-                                                                                    try {
-                                                                                        Do.downloadNet(TlCopy.getText("$"), NewFile.getPath());
-                                                                                    } catch (final Exception e) {
-
-                                                                                        MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                                                            @Override
-                                                                                            public void run() {
-                                                                                                Do.finishWaiting();
-                                                                                                Do.showErrDialog(MainActivity.this, e);
-                                                                                            }
-                                                                                        });
-                                                                                        return;
-                                                                                    }
-
-                                                                                    MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                                                        @Override
-                                                                                        public void run() {
-                                                                                            Do.finishWaiting();
-                                                                                            if (Vers.i.IsOpenProject && (Vers.i.ProjectDir.getPath() + Vers.i.ExplorerPath).equals(NewFile.getParent())) {
-                                                                                                binding.elvMainExplorerFile.toExplorer(NewFile.getParentFile());
-                                                                                            }
-                                                                                            toast(R.string.done);
-                                                                                        }
-                                                                                    });
-                                                                                } else {
-                                                                                    MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                                                        @Override
-                                                                                        public void run() {
-                                                                                            Do.finishWaiting();
-                                                                                            toast(R.string.main_new_file_exists);
-                                                                                        }
-                                                                                    });
-                                                                                }
-
-                                                                            } catch (IOException e) {
-                                                                                MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                                                    @Override
-                                                                                    public void run() {
-                                                                                        Do.finishWaiting();
-                                                                                        toast( R.string.main_new_file_cannot_create);
-                                                                                    }
-                                                                                });
+                                                                    @Override
+                                                                    public void onClick(DialogInterface p1, int p2) {
+                                                                        try {
+                                                                            if (Acet.getText().toString().trim()
+                                                                                    .equals("")) {
+                                                                                throw new Exception();
                                                                             }
+                                                                            final FileChooseClass FileChoose = new FileChooseClass();
+                                                                            FileChoose.Type(false);
+                                                                            if (Vers.i.IsOpenProject) {
+                                                                                FileChoose
+                                                                                        .setOpenPath(Vers.i.ProjectDir);
+                                                                            } else {
+                                                                                FileChoose.setOpenPath(Environment
+                                                                                        .getExternalStorageDirectory());
+                                                                            }
+                                                                            FileChoose.setOnClickListener(
+                                                                                    new View.OnClickListener() {
+
+                                                                                        @Override
+                                                                                        public void onClick(View p1) {
+                                                                                            Do.showWaitAndRunInThread(
+                                                                                                    false,
+                                                                                                    new Runnable() {
+
+                                                                                                        @Override
+                                                                                                        public void run() {
+                                                                                                            try {
+                                                                                                                final File NewFile = new File(
+                                                                                                                        FileChoose.nowPath
+                                                                                                                                .getPath(),
+                                                                                                                        Acet.getText()
+                                                                                                                                .toString()
+                                                                                                                                .trim());
+                                                                                                                if (!NewFile
+                                                                                                                        .exists()) {
+                                                                                                                    FileChoose.dialog
+                                                                                                                            .dismiss();
+                                                                                                                    if (!NewFile
+                                                                                                                            .createNewFile())
+                                                                                                                        throw new IOException();
+
+                                                                                                                    try {
+                                                                                                                        Do.downloadNet(
+                                                                                                                                TlCopy.getText(
+                                                                                                                                        "$"),
+                                                                                                                                NewFile.getPath());
+                                                                                                                    } catch (final Exception e) {
+
+                                                                                                                        MainActivity.this
+                                                                                                                                .runOnUiThread(
+                                                                                                                                        new Runnable() {
+
+                                                                                                                                            @Override
+                                                                                                                                            public void run() {
+                                                                                                                                                Do.finishWaiting();
+                                                                                                                                                Do.showErrDialog(
+                                                                                                                                                        MainActivity.this,
+                                                                                                                                                        e);
+                                                                                                                                            }
+                                                                                                                                        });
+                                                                                                                        return;
+                                                                                                                    }
+
+                                                                                                                    MainActivity.this
+                                                                                                                            .runOnUiThread(
+                                                                                                                                    new Runnable() {
+
+                                                                                                                                        @Override
+                                                                                                                                        public void run() {
+                                                                                                                                            Do.finishWaiting();
+                                                                                                                                            if (Vers.i.IsOpenProject
+                                                                                                                                                    && (Vers.i.ProjectDir
+                                                                                                                                                            .getPath()
+                                                                                                                                                            + Vers.i.ExplorerPath)
+                                                                                                                                                            .equals(NewFile
+                                                                                                                                                                    .getParent())) {
+                                                                                                                                                binding.elvMainExplorerFile
+                                                                                                                                                        .toExplorer(
+                                                                                                                                                                NewFile.getParentFile());
+                                                                                                                                            }
+                                                                                                                                            toast(R.string.done);
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                } else {
+                                                                                                                    MainActivity.this
+                                                                                                                            .runOnUiThread(
+                                                                                                                                    new Runnable() {
+
+                                                                                                                                        @Override
+                                                                                                                                        public void run() {
+                                                                                                                                            Do.finishWaiting();
+                                                                                                                                            toast(R.string.main_new_file_exists);
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                }
+
+                                                                                                            } catch (IOException e) {
+                                                                                                                MainActivity.this
+                                                                                                                        .runOnUiThread(
+                                                                                                                                new Runnable() {
+
+                                                                                                                                    @Override
+                                                                                                                                    public void run() {
+                                                                                                                                        Do.finishWaiting();
+                                                                                                                                        toast(R.string.main_new_file_cannot_create);
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                            }
+                                                                                                        }
+                                                                                                    });
+                                                                                        }
+                                                                                    });
+                                                                            MainActivity.this
+                                                                                    .runOnUiThread(new Runnable() {
+
+                                                                                        @Override
+                                                                                        public void run() {
+                                                                                            FileChoose.Show(
+                                                                                                    MainActivity.this);
+                                                                                        }
+                                                                                    });
+                                                                        } catch (Exception e) {
+                                                                            MainActivity.this
+                                                                                    .runOnUiThread(new Runnable() {
+
+                                                                                        @Override
+                                                                                        public void run() {
+                                                                                            toast(R.string.main_new_file_cannot_create);
+                                                                                        }
+                                                                                    });
                                                                         }
-                                                                    });
-                                                                }
-                                                            });
-                                                            MainActivity.this.runOnUiThread(new Runnable() {
+                                                                    }
+                                                                });
+                                                        MainActivity.this.runOnUiThread(new Runnable() {
 
-                                                                @Override
-                                                                public void run() {
-                                                                    FileChoose.Show(MainActivity.this);
-                                                                }
-                                                            });
-                                                        } catch (Exception e) {
-                                                            MainActivity.this.runOnUiThread(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                AdbName.show();
+                                                            }
+                                                        });
+                                                    }
+                                                } catch (Exception e) {
+                                                    MainActivity.this.runOnUiThread(new Runnable() {
 
-                                                                @Override
-                                                                public void run() {
-                                                                    toast( R.string.main_new_file_cannot_create);
-                                                                }
-                                                            });
+                                                        @Override
+                                                        public void run() {
+                                                            Do.finishWaiting();
+                                                            toast(R.string.main_File_copy_cantconnect);
                                                         }
-                                                    }
-                                                });
-                                                MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                    @Override
-                                                    public void run() {
-                                                        AdbName.show();
-                                                    }
-                                                });
-                                            }
-                                        } catch (Exception e) {
-                                            MainActivity.this.runOnUiThread(new Runnable() {
-
-                                                @Override
-                                                public void run() {
-                                                    Do.finishWaiting();
-                                                    toast(R.string.main_File_copy_cantconnect);
+                                                    });
                                                 }
-                                            });
-                                        }
-                                    }
-                                });
+                                            }
+                                        });
                                 break;
                             case R.id.menu_main_File_example:
                                 ExamplesClass.showMainDialog();
@@ -1019,7 +1075,7 @@ public class MainActivity extends BaseActivity {
         Vers.i.nowHWPPath = null;
         Vers.i.nowWebsitePort = -1;
         Vers.i.nowProjectServerType = -1;
-        Vers.i.nowProjectPackMachine=null;
+        Vers.i.nowProjectPackMachine = null;
 
         NoViewExplorer();
     }
@@ -1100,7 +1156,7 @@ public class MainActivity extends BaseActivity {
                 manifestFile.renameTo(new File(manifestFile.getParentFile(), "manifest.json.bak"));
                 toast(R.string.read_manifest_cant);
             }
-            Vers.i.nowProjectPackMachine=new PackMachine();
+            Vers.i.nowProjectPackMachine = new PackMachine();
             Vers.i.IsOpenProject = true;
             ViewExplorer();
 
@@ -1120,9 +1176,9 @@ public class MainActivity extends BaseActivity {
 
             }
 
-            File makeAPKEasyweb = new File(Vers.i.ProjectDir,"MakeAPK.easyweb");
-            if(makeAPKEasyweb.exists()){
-                Vers.i.nowProjectPackMachine.runMakeAPK(makeAPKEasyweb,true);
+            File makeAPKEasyweb = new File(Vers.i.ProjectDir, "MakeAPK.hiweb");
+            if (makeAPKEasyweb.exists()) {
+                Vers.i.nowProjectPackMachine.runMakeAPK(makeAPKEasyweb, true);
             }
 
         } catch (Exception e) {
@@ -1131,7 +1187,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void showInf() throws IOException {
-        File F = new File(Vers.i.ProjectDir.getPath() + "/$INF$.easyweb");
+        File F = new File(Vers.i.ProjectDir.getPath() + "/$INF$.hiweb");
         if (F.exists()) {
             Dl Adb = new Dl(this);
             Adb.builder.setTitle(R.string.website_inf);
@@ -1161,7 +1217,7 @@ public class MainActivity extends BaseActivity {
                         @Override
                         public void run() {
                             Do.finishWaiting();
-                            toast( R.string.main_open_error);
+                            toast(R.string.main_open_error);
                         }
                     });
                 }
@@ -1189,7 +1245,6 @@ public class MainActivity extends BaseActivity {
 
         showUser();
     }
-
 
     public Editor getNowEditor() {
         return ((Editor) (((Object[]) (binding.Ep.MSID.get(Vers.i.INowEpSID)))[1]));
@@ -1291,7 +1346,7 @@ public class MainActivity extends BaseActivity {
                     throw new BError();
 
                 } catch (BError e) {
-                    //未部署
+                    // 未部署
 
                     MainActivity.this.runOnUiThread(new Runnable() {
 
@@ -1301,23 +1356,24 @@ public class MainActivity extends BaseActivity {
                             Dl Adb = new Dl(MainActivity.this);
                             Adb.builder.setTitle(R.string.inf);
                             Adb.builder.setMessage(R.string.run_but_copy);
-                            Adb.builder.setPositiveButton(R.string.main_project_service, new DialogInterface.OnClickListener() {
+                            Adb.builder.setPositiveButton(R.string.main_project_service,
+                                    new DialogInterface.OnClickListener() {
 
-                                @Override
-                                public void onClick(DialogInterface p1, int p2) {
-                                    try {
-                                        new ServerMain().main();
-                                    } catch (Exception e) {
-                                        Do.showErrDialog(MainActivity.this, e);
-                                    }
-                                }
-                            });
+                                        @Override
+                                        public void onClick(DialogInterface p1, int p2) {
+                                            try {
+                                                new ServerMain().main();
+                                            } catch (Exception e) {
+                                                Do.showErrDialog(MainActivity.this, e);
+                                            }
+                                        }
+                                    });
                             Adb.show();
                         }
                     });
                     return;
                 } catch (AError e) {
-                    //已部署
+                    // 已部署
 
                     MainActivity.this.runOnUiThread(new Runnable() {
 
@@ -1389,26 +1445,32 @@ public class MainActivity extends BaseActivity {
                 }
                 if (FileTypeClass.FileTypeMap().containsKey(SAfter.trim().toLowerCase())) {
                     int I = (int) FileTypeClass.FileTypeMap().get(SAfter.trim().toLowerCase());
-                    if (Vers.i.ProjectImg != null && I == FileTypeClass.TYPE_IMG && !Vers.i.ExplorerPath.equals(Vers.i.SProjectImg)) {
+                    if (Vers.i.ProjectImg != null && I == FileTypeClass.TYPE_IMG
+                            && !Vers.i.ExplorerPath.equals(Vers.i.SProjectImg)) {
                         Ab.builder.setMessage(R.string.add_file_img);
                         SToPath = Vers.i.SProjectImg;
                         Ab.show();
-                    } else if (Vers.i.ProjectJs != null && I == FileTypeClass.TYPE_JS && !Vers.i.ExplorerPath.equals(Vers.i.SProjectJs)) {
+                    } else if (Vers.i.ProjectJs != null && I == FileTypeClass.TYPE_JS
+                            && !Vers.i.ExplorerPath.equals(Vers.i.SProjectJs)) {
                         Ab.builder.setMessage(R.string.add_file_js);
                         SToPath = Vers.i.SProjectJs;
                         Ab.show();
-                    } else if (Vers.i.ProjectDownload != null && I == FileTypeClass.TYPE_DOWN && !Vers.i.ExplorerPath.equals(Vers.i.SProjectDownload)) {
+                    } else if (Vers.i.ProjectDownload != null && I == FileTypeClass.TYPE_DOWN
+                            && !Vers.i.ExplorerPath.equals(Vers.i.SProjectDownload)) {
                         Ab.builder.setMessage(R.string.add_file_down);
                         SToPath = Vers.i.SProjectDownload;
                         Ab.show();
-                    } else if (Vers.i.ProjectVideo != null && I == FileTypeClass.TYPE_VIDEO && !Vers.i.ExplorerPath.equals(Vers.i.SProjectVideo)) {
+                    } else if (Vers.i.ProjectVideo != null && I == FileTypeClass.TYPE_VIDEO
+                            && !Vers.i.ExplorerPath.equals(Vers.i.SProjectVideo)) {
                         Ab.builder.setMessage(R.string.add_file_video);
                         SToPath = Vers.i.SProjectVideo;
                         Ab.show();
                     } else if (I == FileTypeClass.TYPE_WEB) {
                         SToPath = Vers.i.ExplorerPath;
                         StartCopy(ChooseFile);
-                    } else if (Vers.i.ProjectDownload != null && !FileTypeClass.FileTypeMap().containsKey(SAfter.trim().toLowerCase()) && !Vers.i.ExplorerPath.equals(Vers.i.SProjectDownload)) {
+                    } else if (Vers.i.ProjectDownload != null
+                            && !FileTypeClass.FileTypeMap().containsKey(SAfter.trim().toLowerCase())
+                            && !Vers.i.ExplorerPath.equals(Vers.i.SProjectDownload)) {
                         Ab.builder.setMessage(R.string.add_file_down);
                         SToPath = Vers.i.SProjectDownload;
                         Ab.show();
@@ -1432,14 +1494,15 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void run() {
                         try {
-                            Do.copySdcardFile(ChooseFile.getPath(), new File(Vers.i.ProjectDir + SToPath + "/" + ChooseFile.getName()).getPath());
+                            Do.copySdcardFile(ChooseFile.getPath(),
+                                    new File(Vers.i.ProjectDir + SToPath + "/" + ChooseFile.getName()).getPath());
                             MainActivity.this.runOnUiThread(new Runnable() {
 
                                 @Override
                                 public void run() {
                                     binding.elvMainExplorerFile.toExplorer(new File(Vers.i.ProjectDir + SToPath));
                                     Do.finishWaiting();
-                                    toast( R.string.done);
+                                    toast(R.string.done);
                                 }
                             });
 
@@ -1514,7 +1577,8 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onClick(View p1) {
-                final File toFile = new File(FileChoose.nowPath, (Vers.i.ProjectName == null ? Vers.i.ProjectDir.getName() : Vers.i.ProjectName) + ".zip");
+                final File toFile = new File(FileChoose.nowPath,
+                        (Vers.i.ProjectName == null ? Vers.i.ProjectDir.getName() : Vers.i.ProjectName) + ".zip");
                 if (FileChoose.nowPath.getPath().startsWith(Vers.i.ProjectDir.getPath())) {
                     toast(R.string.copy_much_err);
                 } else if (toFile.exists()) {
@@ -1532,7 +1596,7 @@ public class MainActivity extends BaseActivity {
 
                                     @Override
                                     public void run() {
-                                    toast(R.string.done);
+                                        toast(R.string.done);
                                     }
                                 });
                             } catch (final Exception e) {
@@ -1563,7 +1627,8 @@ public class MainActivity extends BaseActivity {
             final LinearLayout LyManifest = new LinearLayout(MainActivity.this);
             LyManifest.setOrientation(LinearLayout.VERTICAL);
             LyManifest.setGravity(Gravity.CENTER);
-            LyManifest.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+            LyManifest.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                    Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
             LyManifest.setLayoutParams(new ScrollView.LayoutParams(-1, -1));
             Sv.addView(LyManifest);
             {
@@ -1604,7 +1669,8 @@ public class MainActivity extends BaseActivity {
                 LyManifest.addView(TlVideo);
 
                 if (new File(Vers.i.ProjectDir, "manifest.json").exists())
-                    JoAll = (JsonObject) JsonParser.parseString(Do.getText(new File(Vers.i.ProjectDir, "manifest.json")));
+                    JoAll = (JsonObject) JsonParser
+                            .parseString(Do.getText(new File(Vers.i.ProjectDir, "manifest.json")));
                 else {
                     JoAll = new JsonObject();
                 }
@@ -1618,7 +1684,8 @@ public class MainActivity extends BaseActivity {
                 vLyServer.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
                 vLyServer.setGravity(Gravity.CENTER | Gravity.LEFT);
                 vLyServer.setOrientation(LinearLayout.VERTICAL);
-                vLyServer.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+                vLyServer.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                        Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
                 final TextView vActvServer = new TextView(MainActivity.this);
                 final Button vAcbtnClearServer = new Button(MainActivity.this, null, R.attr.buttonBarButtonStyle);
                 vAcbtnClearServer.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
@@ -1712,7 +1779,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("name", SaVars[0]);
                             } else {
                                 Vers.i.ProjectName = null;
-                                if (object.has("name")) object.remove("name");
+                                if (object.has("name"))
+                                    object.remove("name");
                             }
 
                             if (SaVars[1] != null) {
@@ -1720,7 +1788,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("author", SaVars[1]);
                             } else {
                                 Vers.i.ProjectAuthor = null;
-                                if (object.has("auther")) object.remove("auther");
+                                if (object.has("auther"))
+                                    object.remove("auther");
                             }
                             if (SaVars[2] != null) {
                                 Vers.i.ProjectImg = new File(Vers.i.ProjectDir.getPath() + SaVars[2]);
@@ -1728,7 +1797,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("image", SaVars[2]);
                             } else {
                                 Vers.i.ProjectImg = null;
-                                if (object.has("image")) object.remove("image");
+                                if (object.has("image"))
+                                    object.remove("image");
                             }
                             if (SaVars[3] != null) {
                                 Vers.i.ProjectJs = new File(Vers.i.ProjectDir.getPath() + SaVars[3]);
@@ -1736,7 +1806,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("javascript", SaVars[3]);
                             } else {
                                 Vers.i.ProjectJs = null;
-                                if (object.has("javascript")) object.remove("javascript");
+                                if (object.has("javascript"))
+                                    object.remove("javascript");
                             }
                             if (SaVars[4] != null) {
                                 Vers.i.ProjectDownload = new File(Vers.i.ProjectDir.getPath() + SaVars[4]);
@@ -1744,7 +1815,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("download", SaVars[4]);
                             } else {
                                 Vers.i.ProjectDownload = null;
-                                if (object.has("download")) object.remove("download");
+                                if (object.has("download"))
+                                    object.remove("download");
                             }
                             if (SaVars[5] != null) {
                                 Vers.i.ProjectVideo = new File(Vers.i.ProjectDir.getPath() + SaVars[5]);
@@ -1752,7 +1824,8 @@ public class MainActivity extends BaseActivity {
                                 object.addProperty("video", SaVars[5]);
                             } else {
                                 Vers.i.ProjectVideo = null;
-                                if (object.has("video")) object.remove("video");
+                                if (object.has("video"))
+                                    object.remove("video");
                             }
 
                             Do.write(object.toString(), Vers.i.nowHWPPath);
@@ -1873,10 +1946,10 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_main_more_switch:
                 if (Vers.i.FileType == 0 || Vers.i.FileType == 3 || Vers.i.FileType == 7) {
-                    PopupMenu popup = new PopupMenu(this, v);//第二个参数是绑定的那个view
-                    //获取菜单填充器
+                    PopupMenu popup = new PopupMenu(this, v);// 第二个参数是绑定的那个view
+                    // 获取菜单填充器
                     MenuInflater inflater = popup.getMenuInflater();
-                    //填充菜单
+                    // 填充菜单
                     inflater.inflate(R.menu.switch_menu, popup.getMenu());
 
                     popup.getMenu().getItem(MoreMode).setVisible(false);
@@ -1931,7 +2004,6 @@ public class MainActivity extends BaseActivity {
 
     public void showRecentProjects() {
 
-
         final JsonArray ja = binding.wwvWelcome.getRecentArray();
         if (ja == null || ja.size() == 0) {
             toast(R.string.no_recent);
@@ -1945,7 +2017,8 @@ public class MainActivity extends BaseActivity {
         sv.addView(rl);
         LinearLayout ly = new LinearLayout(this);
         ly.setLayoutParams(new RelativeLayout.LayoutParams(-1, -1));
-        ly.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+        ly.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                Do.dp2px(MainActivity.this, 10));
         ly.setOrientation(LinearLayout.VERTICAL);
         rl.addView(ly);
 
@@ -1973,7 +2046,9 @@ public class MainActivity extends BaseActivity {
                 @Override
                 public boolean onLongClick(View p1) {
                     Dl dl = new Dl(MainActivity.this);
-                    dl.builder.setTitle(MainActivity.this.getString(R.string.do_you_want_to_delete) + ((JsonObject) (ja.get(time))).get("name").getAsString() + MainActivity.this.getString(R.string.review_element_del_qu2));
+                    dl.builder.setTitle(MainActivity.this.getString(R.string.do_you_want_to_delete)
+                            + ((JsonObject) (ja.get(time))).get("name").getAsString()
+                            + MainActivity.this.getString(R.string.review_element_del_qu2));
                     dl.builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface p1, int p2) {
@@ -2007,7 +2082,8 @@ public class MainActivity extends BaseActivity {
 
                         @Override
                         public void run() {
-                            createWebsite(FTempWebsite.getPath(), getString(R.string.temp_website), false, true, Vers.i.USUAL_HTML_PROJ);
+                            createWebsite(FTempWebsite.getPath(), getString(R.string.temp_website), false, true,
+                                    Vers.i.USUAL_HTML_PROJ);
                         }
                     });
                 }
@@ -2023,7 +2099,8 @@ public class MainActivity extends BaseActivity {
 
                 @Override
                 public void run() {
-                    createWebsite(FTempWebsite.getPath(), getString(R.string.temp_website), false, true, Vers.i.USUAL_HTML_PROJ);
+                    createWebsite(FTempWebsite.getPath(), getString(R.string.temp_website), false, true,
+                            Vers.i.USUAL_HTML_PROJ);
                 }
             });
         }
@@ -2048,7 +2125,8 @@ public class MainActivity extends BaseActivity {
         fileLayout.Acet.setText(Vers.i.FProjects.getPath());
         ly.addView(fileLayout);
         final ChoiceLayout choiceLayout = new ChoiceLayout(this);
-        choiceLayout.build(false, -1, null, R.string.website_type, getString(R.string.new_proj_usual) + "|" + getString(R.string.new_proj_php) + "|" + getString(R.string.new_proj_easyapp));
+        choiceLayout.build(false, -1, null, R.string.website_type, getString(R.string.new_proj_usual) + "|"
+                + getString(R.string.new_proj_php) + "|" + getString(R.string.new_proj_easyapp));
         ly.addView(choiceLayout);
         Dl dl = new Dl(this);
         dl.builder
@@ -2058,28 +2136,31 @@ public class MainActivity extends BaseActivity {
 
                     @Override
                     public void onClick(DialogInterface p1, int p2) {
-                        if (tlProjName.getText("$") == null || fileLayout.getText("$") == null || new File(fileLayout.getText("$") + "/" + tlProjName.getText("$")).exists()) {
+                        if (tlProjName.getText("$") == null || fileLayout.getText("$") == null
+                                || new File(fileLayout.getText("$") + "/" + tlProjName.getText("$")).exists()) {
                             toast(R.string.create_website_err);
                             return;
                         }
 
                         try {
-                            if(choiceLayout.Acs.getSelectedItemPosition() == 2 && !new PackMachine().checkAndDownload())
-                            {
+                            if (choiceLayout.Acs.getSelectedItemPosition() == 2
+                                    && !new PackMachine().checkAndDownload()) {
                                 return;
                             }
                         } catch (Exception e) {
-                            Do.showErrDialog(MainActivity.this,e);
+                            Do.showErrDialog(MainActivity.this, e);
                             return;
                         }
 
-                        createWebsite(fileLayout.getText("$") + "/" + tlProjName.getText("$"), tlProjName.getText("$"), false, true, choiceLayout.Acs.getSelectedItemPosition());
+                        createWebsite(fileLayout.getText("$") + "/" + tlProjName.getText("$"), tlProjName.getText("$"),
+                                false, true, choiceLayout.Acs.getSelectedItemPosition());
                     }
                 });
         dl.show();
     }
 
-    public void createWebsite(final String path, final String websiteName, boolean isSelected, final boolean isOpenWeb, final int type) {
+    public void createWebsite(final String path, final String websiteName, boolean isSelected, final boolean isOpenWeb,
+            final int type) {
         try {
             final File WebPathHWPFile = new File(path + "/manifest.json");
             if (!WebPathHWPFile.getParentFile().exists()) {
@@ -2097,26 +2178,31 @@ public class MainActivity extends BaseActivity {
                 try {
                     Do.write(object.toString(), WebPathHWPFile);
 
-                    String SPath = (type == Vers.i.PHP_PROJ ? WebPathHWPFile.getParent() + "/index.php" : WebPathHWPFile.getParent() + "/index.html");
+                    String SPath = (type == Vers.i.PHP_PROJ ? WebPathHWPFile.getParent() + "/index.php"
+                            : WebPathHWPFile.getParent() + "/index.html");
 
                     String SHTMLText = "";
                     if (type == Vers.i.USUAL_HTML_PROJ || type == Vers.i.EASYAPP_PROJ) {
                         if (Vers.i.userName != null) {
-                            AssetsClass.copyBigDataToSD(MainActivity.this, "create_html_project.html", getFilesDir().getPath() + "/temp_webpage");
+                            AssetsClass.copyBigDataToSD(MainActivity.this, "create_html_project.html",
+                                    getFilesDir().getPath() + "/temp_webpage");
 
                             SHTMLText = Do.getText(new File(getFilesDir().getPath() + "/temp_webpage"));
 
                             SHTMLText = SHTMLText.replace("<website_name>", StringEscapeUtils.escapeHtml4(websiteName));
 
                             SimpleDateFormat df = new SimpleDateFormat("yyyy");
-                            SHTMLText = SHTMLText.replace("<user_name>", "Copyright &copy; " + df.format(new Date()) + " " + StringEscapeUtils.escapeHtml4(Vers.i.userName) + ".");
+                            SHTMLText = SHTMLText.replace("<user_name>", "Copyright &copy; " + df.format(new Date())
+                                    + " " + StringEscapeUtils.escapeHtml4(Vers.i.userName) + ".");
                         } else {
-                            AssetsClass.copyBigDataToSD(MainActivity.this, "create_html.html", getFilesDir().getPath() + "/temp_webpage");
+                            AssetsClass.copyBigDataToSD(MainActivity.this, "create_html.html",
+                                    getFilesDir().getPath() + "/temp_webpage");
 
                             SHTMLText = Do.getText(new File(getFilesDir().getPath() + "/temp_webpage"));
                         }
-                    } else if(type == Vers.i.PHP_PROJ) {
-                        AssetsClass.copyBigDataToSD(MainActivity.this, "create_php_web.php", getFilesDir().getPath() + "/temp_webpage");
+                    } else if (type == Vers.i.PHP_PROJ) {
+                        AssetsClass.copyBigDataToSD(MainActivity.this, "create_php_web.php",
+                                getFilesDir().getPath() + "/temp_webpage");
 
                         SHTMLText = Do.getText(new File(getFilesDir().getPath() + "/temp_webpage"));
                     }
@@ -2131,7 +2217,8 @@ public class MainActivity extends BaseActivity {
 
                     if (isOpenWeb)
                         OpenWeb(WebPathHWPFile.getParentFile(), true);
-                    OpenFile(new File(WebPathHWPFile.getParent() + (type == Vers.i.PHP_PROJ ? "/index.php" : "/index.html")));
+                    OpenFile(new File(
+                            WebPathHWPFile.getParent() + (type == Vers.i.PHP_PROJ ? "/index.php" : "/index.html")));
                 } catch (Exception e) {
                     toast(R.string.main_new_file_exists);
                 }
@@ -2139,11 +2226,11 @@ public class MainActivity extends BaseActivity {
                 toast(R.string.main_new_file_exists);
             }
 
-            if(type == Vers.i.EASYAPP_PROJ) {
+            if (type == Vers.i.EASYAPP_PROJ) {
                 Vers.i.nowProjectPackMachine.show(true);
-                File easyAppEvents = new File(Vers.i.nowProjectPackMachine.packLibDir,"easyapp-events.js");
-                File easyAppEventsSite = new File(Vers.i.ProjectDir,"easyapp-events.js");
-                Do.copySdcardFile(easyAppEvents.getPath(),easyAppEventsSite.getPath());
+                File easyAppEvents = new File(Vers.i.nowProjectPackMachine.packLibDir, "easyapp-events.js");
+                File easyAppEventsSite = new File(Vers.i.ProjectDir, "easyapp-events.js");
+                Do.copySdcardFile(easyAppEvents.getPath(), easyAppEventsSite.getPath());
             }
 
         } catch (Exception e) {
@@ -2300,7 +2387,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //填充选项菜单（读取XML文件、解析、加载到Menu组件上）
+        // 填充选项菜单（读取XML文件、解析、加载到Menu组件上）
         super.onCreateOptionsMenu(menu);
         Vers.i.MainMenu = menu;
 
@@ -2309,13 +2396,13 @@ public class MainActivity extends BaseActivity {
         menu.findItem(R.id.menu_MainAbout).setVisible(true);
         menu.findItem(R.id.menu_MainServer).getIcon().setTint(ContextCompat.getColor(this, R.color.title));
         menu.findItem(R.id.menu_MainAbout).getIcon().setTint(ContextCompat.getColor(this, R.color.title));
-        //通过代码的方式来添加Menu
-        //添加菜单项（组ID，菜单项ID，排序，标题）
-//        menu.add(0, 2, 200, "Over");
-        //添加子菜单
-//        SubMenu sub1 = menu.addSubMenu("setting");
-//        sub1.add(1, SET_ITEM1, 300, "声音设置");
-//        sub1.add(1, SET_ITEM2, 400, "背景设置");
+        // 通过代码的方式来添加Menu
+        // 添加菜单项（组ID，菜单项ID，排序，标题）
+        // menu.add(0, 2, 200, "Over");
+        // 添加子菜单
+        // SubMenu sub1 = menu.addSubMenu("setting");
+        // sub1.add(1, SET_ITEM1, 300, "声音设置");
+        // sub1.add(1, SET_ITEM2, 400, "背景设置");
 
         return true;
     }
@@ -2361,7 +2448,6 @@ public class MainActivity extends BaseActivity {
 
                     }
 
-
                 }
             }).start();
 
@@ -2374,92 +2460,96 @@ public class MainActivity extends BaseActivity {
         switch (Vers.i.FileType) {
             case 0:
             case 3:
-                //HTML
-                {
-                    String[] typesArray={
-                            getString(R.string.html_elements),
-                            getString(R.string.js_codes),
-                            getString(R.string.easyapps_funs)
-                    };
-                    Dl dl=new Dl(this);
-                    dl.builder
-                            .setTitle(R.string.insert_type)
-                            .setItems(typesArray, (dialog, which) -> {
-                                switch (which)
-                                {
-                                    case 0:
-                                        new AddClass(MainActivity.this, MainActivity.this.getNowEditor()).builder();
-                                        break;
-                                    case 1:
-                                        new AddScript(MainActivity.this, Vers.i.OaAddJS,true);
-                                        break;
-                                    case 2:
-                                        new AddEasyApp();
-                                        break;
-                                }
-                            });
-                    dl.show();
-                }
+            // HTML
+            {
+                String[] typesArray = {
+                        getString(R.string.html_elements),
+                        getString(R.string.js_codes),
+                        getString(R.string.easyapps_funs)
+                };
+                Dl dl = new Dl(this);
+                dl.builder
+                        .setTitle(R.string.insert_type)
+                        .setItems(typesArray, (dialog, which) -> {
+                            switch (which) {
+                                case 0:
+                                    new AddClass(MainActivity.this, MainActivity.this.getNowEditor()).builder();
+                                    break;
+                                case 1:
+                                    new AddScript(MainActivity.this, Vers.i.OaAddJS, true);
+                                    break;
+                                case 2:
+                                    new AddEasyApp();
+                                    break;
+                            }
+                        });
+                dl.show();
+            }
                 break;
             case 1:
-                //JS
-                {
-                    String[] typesArray={
-                            getString(R.string.js_codes),
-                            getString(R.string.easyapps_funs)
-                    };
-                    Dl dl=new Dl(this);
-                    dl.builder
-                            .setTitle(R.string.insert_type)
-                            .setItems(typesArray, (dialog, which) -> {
-                                switch (which)
-                                {
-                                    case 0:
-                                        new AddScript(MainActivity.this, Vers.i.OaAddJS,true);
-                                        break;
-                                    case 1:
-                                        new AddEasyApp();
-                                        break;
-                                }
-                            });
-                    dl.show();
-                }
+            // JS
+            {
+                String[] typesArray = {
+                        getString(R.string.js_codes),
+                        getString(R.string.easyapps_funs)
+                };
+                Dl dl = new Dl(this);
+                dl.builder
+                        .setTitle(R.string.insert_type)
+                        .setItems(typesArray, (dialog, which) -> {
+                            switch (which) {
+                                case 0:
+                                    new AddScript(MainActivity.this, Vers.i.OaAddJS, true);
+                                    break;
+                                case 1:
+                                    new AddEasyApp();
+                                    break;
+                            }
+                        });
+                dl.show();
+            }
                 break;
             case 2:
-                //CSS
+                // CSS
                 Dl AbList = new Dl(MainActivity.this);
                 AbList.builder.setTitle(R.string.main_menu_add_title);
-                AbList.builder.setItems(new String[]{getString((Integer) Vers.i.OaAdd[10][0]) + "(" + Vers.i.OaAdd[10][1] + ")"}, new DialogInterface.OnClickListener() {
+                AbList.builder.setItems(
+                        new String[] { getString((Integer) Vers.i.OaAdd[10][0]) + "(" + Vers.i.OaAdd[10][1] + ")" },
+                        new DialogInterface.OnClickListener() {
 
-                    @Override
-                    public void onClick(DialogInterface p1, int p2) {
-                        new AddCSS(MainActivity.this, MainActivity.this.getNowEditor());
-                    }
-                });
+                            @Override
+                            public void onClick(DialogInterface p1, int p2) {
+                                new AddCSS(MainActivity.this, MainActivity.this.getNowEditor());
+                            }
+                        });
                 AbList.show();
                 break;
             case 5:
-                //JSS
+                // JSS
                 Dl AdbAddTypes = new Dl(MainActivity.this);
                 AdbAddTypes.builder
                         .setTitle(R.string.main_menu_add_title)
-                        .setItems(new String[]{MainActivity.this.getString(R.string.add_jss_file), MainActivity.this.getString(R.string.add_jss_web), MainActivity.this.getString(R.string.add_jss_debug)}, new DialogInterface.OnClickListener() {
+                        .setItems(
+                                new String[] { MainActivity.this.getString(R.string.add_jss_file),
+                                        MainActivity.this.getString(R.string.add_jss_web),
+                                        MainActivity.this.getString(R.string.add_jss_debug) },
+                                new DialogInterface.OnClickListener() {
 
-                    @Override
-                    public void onClick(DialogInterface p1, int p2) {
-                        switch (p2) {
-                            case 0:
-                                new AddScript(MainActivity.this, Vers.i.OaAddJSSFile,true);
-                                break;
-                            case 1:
-                                new AddScript(MainActivity.this, Vers.i.OaAddJSSWeb,true);
-                                break;
-                            case 2:
-                                new AddScript(MainActivity.this, Vers.i.OaAddJSSDebug,true);
-                                break;
-                        }
-                    }
-                });
+                                    @Override
+                                    public void onClick(DialogInterface p1, int p2) {
+                                        switch (p2) {
+                                            case 0:
+                                                new AddScript(MainActivity.this, Vers.i.OaAddJSSFile, true);
+                                                break;
+                                            case 1:
+                                                new AddScript(MainActivity.this, Vers.i.OaAddJSSWeb, true);
+                                                break;
+                                            case 2:
+                                                new AddScript(MainActivity.this, Vers.i.OaAddJSSDebug, true);
+                                                break;
+                                        }
+                                    }
+                                });
                 AdbAddTypes.show();
 
                 break;
@@ -2490,7 +2580,7 @@ public class MainActivity extends BaseActivity {
         switch (Vers.i.FileType) {
             case 1:
             case 5:
-                //JS JSS
+                // JS JSS
                 Vers.i.RunIsViewDone = true;
                 binding.editorMenuBar.visible(Menus.PAUSE_JS);
                 binding.termux.reset();
@@ -2513,7 +2603,8 @@ public class MainActivity extends BaseActivity {
                         File tempJSFile = new File(getFilesDir(), "temp_javascript");
                         tempJSFile.createNewFile();
                         Do.write(editorText, tempJSFile);
-                        JsWv.loadDataWithBaseURL("file://" + getNowEpi().getFile().getParent() + "/", "<script src='" + tempJSFile.getPath() + "'></script>", "text/html", "utf-8", null);
+                        JsWv.loadDataWithBaseURL("file://" + getNowEpi().getFile().getParent() + "/",
+                                "<script src='" + tempJSFile.getPath() + "'></script>", "text/html", "utf-8", null);
                     } catch (Exception e) {
                         toast(R.string.error_private_dirs);
                     }
@@ -2524,7 +2615,8 @@ public class MainActivity extends BaseActivity {
                     final TextLayout TlUrldata = new TextLayout(MainActivity.this);
                     TlUrldata.build(0, null, R.string.debug_setting_urldata, R.string.debug_setting_urldata_none);
                     TlUrldata.Acet.setText(Vers.i.urlSetting);
-                    TlUrldata.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
+                    TlUrldata.setPadding(Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10),
+                            Do.dp2px(MainActivity.this, 10), Do.dp2px(MainActivity.this, 10));
                     Adb.builder.setView(TlUrldata);
                     Adb.builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
 
@@ -2538,15 +2630,17 @@ public class MainActivity extends BaseActivity {
                                     JsonObject Jo = (JsonObject) JsonParser.parseString(data);
 
                                     for (Map.Entry<String, JsonElement> key : Jo.entrySet()) {
-                                        urlData.put(key.getKey(), key.getValue().toString().substring(1, key.getValue().toString().length() - 1));
+                                        urlData.put(key.getKey(), key.getValue().toString().substring(1,
+                                                key.getValue().toString().length() - 1));
                                     }
                                 }
                             } catch (Exception e) {
-                                toast( R.string.debug_setting_urldata_err);
+                                toast(R.string.debug_setting_urldata_err);
                             }
                             ViewOutput();
                             Jr = new JssRunner(getApplicationContext());
-                            Jr.run(binding.termux.wcc, MainActivity.this, editorText, getNowEpi().getFile().getParentFile(), urlData, null, -1, null, null);
+                            Jr.run(binding.termux.wcc, MainActivity.this, editorText,
+                                    getNowEpi().getFile().getParentFile(), urlData, null, -1, null, null);
                         }
                     });
                     Adb.show();
@@ -2802,7 +2896,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        //释放资源
+        // 释放资源
         try {
             stopService(Do.getEasyWebServerServiceIntent());
         } catch (Exception e) {

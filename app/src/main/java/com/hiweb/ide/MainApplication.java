@@ -1,4 +1,5 @@
 package com.hiweb.ide;
+
 import android.app.Application;
 import android.content.Context;
 import android.os.Environment;
@@ -7,12 +8,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class MainApplication extends Application
-{
+public class MainApplication extends Application {
 
 	@Override
-	public void onCreate()
-	{
+	public void onCreate() {
 		super.onCreate();
 	}
 }

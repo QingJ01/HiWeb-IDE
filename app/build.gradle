@@ -3,14 +3,22 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file("D:\\OneDrive - ventercom\\Development\\Venter.keystore")
+            storePassword '0631MICROSOFT'
+            keyAlias 'venter.keystore'
+            keyPassword '0631MICROSOFT'
+        }
+    }
     compileSdk 31
 
     defaultConfig {
         applicationId "com.hiweb.ide"
         minSdk 21
         targetSdk 28
-        versionCode 1000
-        versionName "1.0.0"
+        versionCode 106
+        versionName "2.6.8.FIXED4.NEU"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

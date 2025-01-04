@@ -155,30 +155,30 @@ public class Do {
 
     public static int copyDir(String fromFile, String toFile) throws Exception {
 
-        //要复制的文件目录
+        // 要复制的文件目录
         File[] currentFiles;
         File root = new File(fromFile);
-        //如同判断SD卡是否存在或者文件是否存在
-        //如果不存在则 return出去
+        // 如同判断SD卡是否存在或者文件是否存在
+        // 如果不存在则 return出去
         if (!root.exists()) {
             return -1;
         }
-        //如果存在则获取当前目录下的全部文件 填充数组
+        // 如果存在则获取当前目录下的全部文件 填充数组
         currentFiles = root.listFiles();
 
-        //目标目录
+        // 目标目录
         File targetDir = new File(toFile);
-        //创建目录
+        // 创建目录
         if (!targetDir.exists()) {
             targetDir.mkdirs();
         }
-        //遍历要复制该目录下的全部文件
+        // 遍历要复制该目录下的全部文件
         for (int i = 0; i < currentFiles.length; i++) {
-            if (currentFiles[i].isDirectory())//如果当前项为子目录 进行递归
+            if (currentFiles[i].isDirectory())// 如果当前项为子目录 进行递归
             {
                 copyDir(currentFiles[i].getPath() + "/", toFile + "/" + currentFiles[i].getName() + "/");
 
-            } else//如果当前项为文件则进行文件拷贝
+            } else// 如果当前项为文件则进行文件拷贝
             {
                 copySdcardFile(currentFiles[i].getPath(), toFile + "/" + currentFiles[i].getName());
             }
@@ -236,7 +236,6 @@ public class Do {
         inputFile.close();
         return Base64.encodeToString(buffer, Base64.DEFAULT);
 
-
     }
 
     public static void debase64file(String p, String path) throws IOException {
@@ -251,7 +250,7 @@ public class Do {
 
     public static int getMFileKey(HashMap<Integer, File> map, File value) {
         int key = -1;
-        //Map,HashMap并没有实现Iteratable接口.不能用于增强for循环.
+        // Map,HashMap并没有实现Iteratable接口.不能用于增强for循环.
         for (int getKey : map.keySet()) {
             if (((File) (map.get(getKey))).getPath().equals(value.getPath())) {
                 key = getKey;
@@ -259,7 +258,7 @@ public class Do {
             }
         }
         return key;
-        //这个key肯定是第一个满足该条件的key.
+        // 这个key肯定是第一个满足该条件的key.
     }
 
     public static void copyText(Context c, String content) {
@@ -286,7 +285,7 @@ public class Do {
     public static boolean upZipFileDir(File zipFile, File folderFile) {
         ZipFile zfile = null;
         try {
-            //转码为GBK格式，支持中文
+            // 转码为GBK格式，支持中文
             zfile = new ZipFile(zipFile, "GBK");
         } catch (IOException e) {
             e.printStackTrace();
@@ -297,7 +296,7 @@ public class Do {
         byte[] buf = new byte[1024];
         while (zList.hasMoreElements()) {
             ze = (ZipEntry) zList.nextElement();
-            //列举的压缩文件里面的各个文件，判断是否为目录
+            // 列举的压缩文件里面的各个文件，判断是否为目录
             if (ze.isDirectory()) {
                 String dirstr = folderFile.getPath() + "/" + ze.getName();
                 dirstr.trim();
@@ -324,7 +323,7 @@ public class Do {
                 return false;
             }
             int readLen = 0;
-            //进行一些内容复制操作
+            // 进行一些内容复制操作
             try {
                 while ((readLen = is.read(buf, 0, 1024)) != -1) {
                     os.write(buf, 0, readLen);
@@ -480,7 +479,7 @@ public class Do {
                 .replace(")", "%29")
                 .replace("+", "%2B")
                 .replace(",", "%2C")
-                //.replace("/","%2F")
+                // .replace("/","%2F")
                 .replace(":", "%3A")
                 .replace(";", "%3B")
                 .replace("<", "%3C")
@@ -502,10 +501,10 @@ public class Do {
 
     public static String getIpAddressString() throws SocketException {
         for (Enumeration<NetworkInterface> enNetI = NetworkInterface
-                .getNetworkInterfaces(); enNetI.hasMoreElements(); ) {
+                .getNetworkInterfaces(); enNetI.hasMoreElements();) {
             NetworkInterface netI = enNetI.nextElement();
             for (Enumeration<InetAddress> enumIpAddr = netI
-                    .getInetAddresses(); enumIpAddr.hasMoreElements(); ) {
+                    .getInetAddresses(); enumIpAddr.hasMoreElements();) {
                 InetAddress inetAddress = enumIpAddr.nextElement();
                 if (inetAddress instanceof Inet4Address && !inetAddress.isLoopbackAddress()) {
                     return inetAddress.getHostAddress();
@@ -529,7 +528,8 @@ public class Do {
                     @Override
                     public void run() {
                         try {
-                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).setIcon(LocalServersManager.ServerItem.STATUS_RUNNING);
+                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3]))
+                                    .setIcon(LocalServersManager.ServerItem.STATUS_RUNNING);
                         } catch (Exception e) {
 
                         }
@@ -544,7 +544,8 @@ public class Do {
                     @Override
                     public void run() {
                         try {
-                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).setIcon(LocalServersManager.ServerItem.STATUS_OFF);
+                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3]))
+                                    .setIcon(LocalServersManager.ServerItem.STATUS_OFF);
                         } catch (Exception e) {
 
                         }
@@ -559,8 +560,10 @@ public class Do {
                     @Override
                     public void run() {
                         try {
-                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).setIcon(LocalServersManager.ServerItem.STATUS_ALERT);
-                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).SAlert = e.toString();
+                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3]))
+                                    .setIcon(LocalServersManager.ServerItem.STATUS_ALERT);
+                            ((LocalServersManager.ServerItem) (Vers.easyWebServerWebsitesMap.get(port)[3])).SAlert = e
+                                    .toString();
                         } catch (Exception e) {
 
                         }
@@ -571,8 +574,8 @@ public class Do {
     }
 
     public static class Webpage {
-        private String pageUrl;//定义需要操作的网页地址
-        private String pageEncode = "UTF8";//定义需要操作的网页的编码
+        private String pageUrl;// 定义需要操作的网页地址
+        private String pageEncode = "UTF8";// 定义需要操作的网页的编码
 
         public String getPageUrl() {
             return pageUrl;
@@ -590,16 +593,16 @@ public class Do {
             this.pageEncode = pageEncode;
         }
 
-        //定义取源码的方法
+        // 定义取源码的方法
         public String getPageSource() {
             StringBuffer sb = new StringBuffer();
             try {
-                //构建一URL对象
+                // 构建一URL对象
                 URL url = new URL(pageUrl);
-                //使用openStream得到一输入流并由此构造一个BufferedReader对象
+                // 使用openStream得到一输入流并由此构造一个BufferedReader对象
                 BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(), pageEncode));
                 String line;
-                //读取www资源
+                // 读取www资源
                 while ((line = in.readLine()) != null) {
                     sb.append(line);
                 }
@@ -610,13 +613,13 @@ public class Do {
             return sb.toString();
         }
 
-        //定义一个把HTML标签删除过的源码的方法
+        // 定义一个把HTML标签删除过的源码的方法
         public String getPageSourceWithoutHtml() {
             final String regEx_script = "<script[^>]*?>[\\s\\S]*?<\\/script>"; // 定义script的正则表达式
             final String regEx_style = "<style[^>]*?>[\\s\\S]*?<\\/style>"; // 定义style的正则表达式
             final String regEx_html = "<[^>]+>"; // 定义HTML标签的正则表达式
-            final String regEx_space = "\\s*|\t|\r|\n";//定义空格回车换行符
-            String htmlStr = getPageSource();//获取未处理过的源码
+            final String regEx_space = "\\s*|\t|\r|\n";// 定义空格回车换行符
+            String htmlStr = getPageSource();// 获取未处理过的源码
             Pattern p_script = Pattern.compile(regEx_script, Pattern.CASE_INSENSITIVE);
             Matcher m_script = p_script.matcher(htmlStr);
             htmlStr = m_script.replaceAll(""); // 过滤script标签
@@ -641,7 +644,10 @@ public class Do {
         if (Vers.easyWebServerRegsMap.containsKey(IPort)) {
             Map MNow = ((Map) (Vers.easyWebServerRegsMap.get(IPort)));
             for (Object SPath : MNow.keySet())
-                Sb.registerHandler((String) SPath, new StartHandler(IPort, ((File) (((Object[]) MNow.get(SPath))[0])), (Integer) (((Object[]) MNow.get(SPath))[1]), (String) SPath, new JssRunner(MainActivity.main), true));
+                Sb.registerHandler((String) SPath,
+                        new StartHandler(IPort, ((File) (((Object[]) MNow.get(SPath))[0])),
+                                (Integer) (((Object[]) MNow.get(SPath))[1]), (String) SPath,
+                                new JssRunner(MainActivity.main), true));
         }
         Server S = SbNew.build();
         return S;
@@ -679,7 +685,8 @@ public class Do {
     public static void showLocalServerHelp() throws IOException {
         String SName;
         SName = "zh.txt";
-        copyDataToSD(MainActivity.main, "server_help/" + SName, MainActivity.main.getFilesDir().getPath() + "/help.txt");
+        copyDataToSD(MainActivity.main, "server_help/" + SName,
+                MainActivity.main.getFilesDir().getPath() + "/help.txt");
         String SText = getText(new File(MainActivity.main.getFilesDir(), "help.txt"));
         final String[] SaMenu = (SText.split("<split>")[0]).split("<menu>");
         final String[] SaArticle = (SText.split("<split>")[1]).split("<unit>");
@@ -766,7 +773,6 @@ public class Do {
         }
     };
 
-
     public static Context getThemeContext(Context a) {
         Locale l = getTheme();
         Resources res = a.getResources();
@@ -793,27 +799,27 @@ public class Do {
         Locale l = null;
         switch (SettingsClass.ITheme) {
             case -1:
-                //默认
+                // 默认
                 l = new Locale("zh");
                 break;
             case 0:
-                //经典
+                // 经典
                 l = new Locale("en");
                 break;
             case 1:
-                //深邃
+                // 深邃
                 l = new Locale("fr");
                 break;
             case 2:
-                //森色
+                // 森色
                 l = new Locale("de");
                 break;
             case 3:
-                //淡雅
+                // 淡雅
                 l = new Locale("it");
                 break;
             case 4:
-                //水墨
+                // 水墨
                 l = new Locale("ru");
                 break;
         }
@@ -831,17 +837,17 @@ public class Do {
         Intent intent = new Intent(c, activity);
         ComponentName cmpName = intent.resolveActivity(c.getPackageManager());
         boolean flag = false;
-        if (cmpName != null) { // 说明系统中存在这个activity    
+        if (cmpName != null) { //  说明系统中存在这个activity    
             ActivityManager am = (ActivityManager) c.getSystemService(c.ACTIVITY_SERVICE);
             List<ActivityManager.RunningTaskInfo> taskInfoList = am.getRunningTasks(10);
 
-            ActivityManager.RunningTaskInfo runningTaskInfo = taskInfoList.get(0);// 只是拿          当前运行的栈
+            ActivityManager.RunningTaskInfo runningTaskInfo = taskInfoList.get(0);// 只是拿 当前运行的栈
             int numActivities = taskInfoList.get(0).numActivities;
 
             for (ActivityManager.RunningTaskInfo taskInfo : taskInfoList) {
                 if (taskInfo.baseActivity.equals(cmpName)) {// 说明它已经启动了
                     flag = true;
-                    break;//跳出循环，优化效率
+                    break;// 跳出循环，优化效率
                 }
             }
         }
@@ -849,17 +855,17 @@ public class Do {
 
     }
 
-    public static void openFile(Context context,File file) {
+    public static void openFile(Context context, File file) {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri uriForFile;
-        if (Build.VERSION.SDK_INT > 23){
+        if (Build.VERSION.SDK_INT > 23) {
             uriForFile = FileProvider.getUriForFile(context, "com.hiweb.ide.provider", file);
-            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        }else {
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        } else {
             uriForFile = Uri.fromFile(file);
         }
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setDataAndType(uriForFile,"*/*");
+        intent.setDataAndType(uriForFile, "*/*");
         context.startActivity(intent);
     }
 
@@ -867,7 +873,8 @@ public class Do {
         showImgDialogCust(c, c.getString(title), msg, img, R.string.ok, null, false);
     }
 
-    public static void showImgDialogCust(Context c, String title, int msg, int img, int p, DialogInterface.OnClickListener click, boolean cancelable) {
+    public static void showImgDialogCust(Context c, String title, int msg, int img, int p,
+            DialogInterface.OnClickListener click, boolean cancelable) {
         LinearLayout Ly = new LinearLayout(c);
         ScrollView Sv = new ScrollView(c);
         Sv.setFillViewport(true);
@@ -986,7 +993,6 @@ public class Do {
             }
         }
 
-
         String[] outputArray = new String[originMap.size()];
         for (Object ii : originMap.keySet()) {
             outputArray[(int) ii] = (String) originMap.get(ii);
@@ -1004,9 +1010,9 @@ public class Do {
         List<String> nowList = new ArrayList<String>();
         List<String> targetList = new ArrayList<String>();
 
-        int minLength = nowArr.length < targetArr.length ? nowArr.length : targetArr.length;//比较两个路径哪个短
+        int minLength = nowArr.length < targetArr.length ? nowArr.length : targetArr.length;// 比较两个路径哪个短
         for (int i = 0; i < minLength; i++) {
-            //消除两个路径相同的地方
+            // 消除两个路径相同的地方
             if (nowArr[i].equals(targetArr[i])) {
                 nowArr[i] = "";
                 targetArr[i] = "";
@@ -1025,58 +1031,58 @@ public class Do {
                 targetList.add(targetArr[i]);
             }
         }
-		
-		/*
-		 情况1
-		 NOW /a/file
-		 TAR /a/b/file2
-		 消后 
-		 NOW file(长=1)
-		 TAR b/file2(长>1)
-		*/
+
+        /*
+         * 情况1
+         * NOW /a/file
+         * TAR /a/b/file2
+         * 消后
+         * NOW file(长=1)
+         * TAR b/file2(长>1)
+         */
         if (nowList.size() == 1 && targetList.size() > 1) {
             for (int i = 0; i < targetList.size(); i++) {
                 sb.append(targetList.get(i) + "/");
             }
         }
-		
-		/*
-		 情况2
-		 NOW /a/file
-		 TAR /a/file2
-		 消后 
-		 NOW file(长=1)
-		 TAR file2(长=1)
-		 */
+
+        /*
+         * 情况2
+         * NOW /a/file
+         * TAR /a/file2
+         * 消后
+         * NOW file(长=1)
+         * TAR file2(长=1)
+         */
         else if (nowList.size() == 1 && targetList.size() == 1) {
-            sb.append(targetList.get(0) + "#");//'#'没任何意义，只是用来占位，下同
+            sb.append(targetList.get(0) + "#");// '#'没任何意义，只是用来占位，下同
         }
-		 
-		/*
-		 情况3
-		 NOW /a/file
-		 TAR /file2
-		 消后 
-		 NOW a/file(长>1)
-		 TAR file2(长=1)
-		 */
+
+        /*
+         * 情况3
+         * NOW /a/file
+         * TAR /file2
+         * 消后
+         * NOW a/file(长>1)
+         * TAR file2(长=1)
+         */
         else if (nowList.size() > 1 && targetList.size() == 1) {
             for (int i = 0; i < nowList.size() - 1; i++) {
                 sb.append("../");
             }
             sb.append(targetList.get(0) + "#");
         }
-		 
-		/*
-		 情况4
-		 NOW /a/file
-		 TAR /a2/file2
-		 消后 
-		 NOW a/file(长>1)
-		 TAR a2/file2(长>1)
-		 
-		 与情况3雷同
-		 */
+
+        /*
+         * 情况4
+         * NOW /a/file
+         * TAR /a2/file2
+         * 消后
+         * NOW a/file(长>1)
+         * TAR a2/file2(长>1)
+         * 
+         * 与情况3雷同
+         */
         else if (nowList.size() > 1 && targetList.size() > 1) {
             for (int i = 0; i < nowList.size() - 1; i++) {
                 sb.append("../");
@@ -1085,27 +1091,27 @@ public class Do {
                 sb.append(targetList.get(i) + "/");
             }
         }
-		 
-		/*
-		 情况5
-		 NOW /a/file
-		 TAR /a/file
-		 消后 
-		 NOW (长=0)
-		 TAR (长=0)
-		 */
+
+        /*
+         * 情况5
+         * NOW /a/file
+         * TAR /a/file
+         * 消后
+         * NOW (长=0)
+         * TAR (长=0)
+         */
         else if (nowList.size() == 0 && targetList.size() == 0) {
             sb.append("#");
         }
-		 
-		/*
-		 情况6
-		 NOW /a/b/file
-		 TAR /a
-		 消后 
-		 NOW b/file(长>0)
-		 TAR (长=0)
-		 */
+
+        /*
+         * 情况6
+         * NOW /a/b/file
+         * TAR /a
+         * 消后
+         * NOW b/file(长>0)
+         * TAR (长=0)
+         */
         else if (nowList.size() > 0 && targetList.size() == 0) {
             for (int i = 0; i < nowList.size(); i++) {
                 sb.append("../");
@@ -1121,14 +1127,14 @@ public class Do {
         File file = new File(filePath);
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri uriForFile;
-        if (Build.VERSION.SDK_INT > 23){
+        if (Build.VERSION.SDK_INT > 23) {
             uriForFile = FileProvider.getUriForFile(context, "com.hiweb.ide.provider", file);
-            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        }else {
+            intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        } else {
             uriForFile = Uri.fromFile(file);
         }
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setDataAndType(uriForFile,"application/vnd.android.package-archive");
+        intent.setDataAndType(uriForFile, "application/vnd.android.package-archive");
         context.startActivity(intent);
     }
 
@@ -1160,11 +1166,12 @@ public class Do {
      */
     public static boolean joinQQGroup(Context context, String key) {
         try {
-            String url = "mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3D" + key;
+            String url = "mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26k%3D"
+                    + key;
             Intent intent = new Intent();
             intent.setData(Uri.parse(url));
             // 此Flag可根据具体产品需要自定义，如设置，则在加群界面按返回，返回手Q主界面，不设置，按返回会返回到呼起产品界面
-            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            // intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
             return true;
         } catch (ActivityNotFoundException e) {
@@ -1176,13 +1183,13 @@ public class Do {
         Vers.i.hasRunned = false;
         MainActivity.main.finish();
 
-//		Intent i=new Intent(c,PreActivity.class);
-//		i.putExtra("isExit",true);
-//		c.startActivity(i);
+        // Intent i=new Intent(c,PreActivity.class);
+        // i.putExtra("isExit",true);
+        // c.startActivity(i);
     }
 
     public static void killAppProcess(Activity a) {
-        //注意：不能先杀掉主进程，否则逻辑代码无法继续执行，需先杀掉相关进程最后杀掉主进程
+        // 注意：不能先杀掉主进程，否则逻辑代码无法继续执行，需先杀掉相关进程最后杀掉主进程
         ActivityManager mActivityManager = (ActivityManager) a.getSystemService(Context.ACTIVITY_SERVICE);
         List<ActivityManager.RunningAppProcessInfo> mList = mActivityManager.getRunningAppProcesses();
         for (ActivityManager.RunningAppProcessInfo runningAppProcessInfo : mList) {
@@ -1226,7 +1233,7 @@ public class Do {
         if (chars != null)
             et.setKeyListener(DigitsKeyListener.getInstance(chars));
         if (length != -1)
-            et.setFilters(new InputFilter[]{new InputFilter.LengthFilter(length)});
+            et.setFilters(new InputFilter[] { new InputFilter.LengthFilter(length) });
     }
 
     public static String runCommand(String[] cmds) throws Exception {
@@ -1262,7 +1269,8 @@ public class Do {
 
     public static void hideIME() {
         if (MainActivity.main.getCurrentFocus() != null) {
-            InputMethodManager editorImm = (InputMethodManager) MainActivity.main.getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager editorImm = (InputMethodManager) MainActivity.main
+                    .getSystemService(Context.INPUT_METHOD_SERVICE);
             editorImm.hideSoftInputFromWindow(MainActivity.main.getCurrentFocus().getWindowToken(), 0);
         }
     }
@@ -1286,8 +1294,8 @@ public class Do {
 
     public static String getVersionName() {
         try {
-            return MainActivity.main.getPackageManager().
-                    getPackageInfo(MainActivity.main.getPackageName(), 0).versionName;
+            return MainActivity.main.getPackageManager().getPackageInfo(MainActivity.main.getPackageName(),
+                    0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
             return "App Version";
         }
@@ -1295,8 +1303,8 @@ public class Do {
 
     public static int getVersionCode() {
         try {
-            return MainActivity.main.getPackageManager().
-                    getPackageInfo(MainActivity.main.getPackageName(), 0).versionCode;
+            return MainActivity.main.getPackageManager().getPackageInfo(MainActivity.main.getPackageName(),
+                    0).versionCode;
         } catch (PackageManager.NameNotFoundException e) {
             return 0;
         }
@@ -1349,7 +1357,7 @@ public class Do {
         List<ActivityManager.RunningAppProcessInfo> lists = am.getRunningAppProcesses();
         for (ActivityManager.RunningAppProcessInfo info : lists) {
             if (info.processName.equals(proessName)) {
-                //Log.i("Service2进程", ""+info.processName);
+                // Log.i("Service2进程", ""+info.processName);
                 isRunning = true;
             }
         }
@@ -1392,12 +1400,11 @@ public class Do {
     public static boolean isLightColor(int color) {
         if (0.213 * Color.red(color) +
                 0.715 * Color.green(color) +
-                0.072 * Color.blue(color) >
-                255 / 2) {
-            //浅色
+                0.072 * Color.blue(color) > 255 / 2) {
+            // 浅色
             return true;
         } else {
-            //深色
+            // 深色
             return false;
         }
     }
@@ -1411,12 +1418,12 @@ public class Do {
     }
 
     public static void setAlphaAnimation(View v, boolean direction, int time, final Runnable endRun) {
-        //direction==true : 渐出
-        //简单渐变动画
+        // direction==true : 渐出
+        // 简单渐变动画
 
-        AlphaAnimation alphaAnimation = new AlphaAnimation(direction ? 1 : 0, direction ? 0 : 1);//渐变度从0到1
+        AlphaAnimation alphaAnimation = new AlphaAnimation(direction ? 1 : 0, direction ? 0 : 1);// 渐变度从0到1
 
-        alphaAnimation.setDuration(time);//动画持续时间：2000毫秒
+        alphaAnimation.setDuration(time);// 动画持续时间：2000毫秒
 
         alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
 
@@ -1442,7 +1449,7 @@ public class Do {
     public static void showPermissions(Activity activity) {
         try {
             ActivityCompat.requestPermissions(activity,
-                    new String[]{
+                    new String[] {
                             Manifest.permission.WRITE_EXTERNAL_STORAGE,
                             Manifest.permission.REQUEST_INSTALL_PACKAGES,
                             Manifest.permission.INTERNET,
@@ -1478,7 +1485,7 @@ public class Do {
      */
     public static int getElementLevel(Element htmlElement) {
         Element nowElement = htmlElement;
-        for (int level = 1; ; level++) {
+        for (int level = 1;; level++) {
             if (nowElement.tagName().equals("body") || nowElement.tagName().equals("head"))
                 return level;
             else {
@@ -1503,7 +1510,7 @@ public class Do {
             website = new FileBrowser(websiteDirectory);
         }
 
-// 创建服务器。
+        // 创建服务器。
         final Server.Builder mServer = AndServer.serverBuilder()
                 .port(port)
                 .website(website)
@@ -1562,15 +1569,16 @@ public class Do {
         String[] version1Array = version1.split("\\.");
         String[] version2Array = version2.split("\\.");
         int index = 0;
-        //获取最小长度值
+        // 获取最小长度值
         int minLen = Math.min(version1Array.length, version2Array.length);
         int diff = 0;
-        //循环判断每位的大小
-        while (index < minLen && (diff = Integer.parseInt(version1Array[index]) - Integer.parseInt(version2Array[index])) == 0) {
+        // 循环判断每位的大小
+        while (index < minLen
+                && (diff = Integer.parseInt(version1Array[index]) - Integer.parseInt(version2Array[index])) == 0) {
             index++;
         }
         if (diff == 0) {
-            //如果位数不一致，比较多余位数
+            // 如果位数不一致，比较多余位数
             for (int i = index; i < version1Array.length; i++) {
                 if (Integer.parseInt(version1Array[i]) > 0) {
                     return 1;
@@ -1587,31 +1595,34 @@ public class Do {
             return diff > 0 ? 1 : -1;
         }
     }
-    public static void setPaddings(View view,int valuePx)
-    {
-        view.setPadding(valuePx,valuePx,valuePx,valuePx);
+
+    public static void setPaddings(View view, int valuePx) {
+        view.setPadding(valuePx, valuePx, valuePx, valuePx);
     }
-    public static void showGroup(BaseActivity activity)
-    {
-        LinearLayout Ly=new LinearLayout(activity);
-        ScrollView Sv=new ScrollView(activity);
+
+    public static void showGroup(BaseActivity activity) {
+        LinearLayout Ly = new LinearLayout(activity);
+        ScrollView Sv = new ScrollView(activity);
         Sv.setFillViewport(true);
-        RelativeLayout Rl=new RelativeLayout(activity);
-        Rl.setLayoutParams(new ScrollView.LayoutParams(-1,-2));
-        Ly=new LinearLayout(activity);
-        Ly.setLayoutParams(new RelativeLayout.LayoutParams(-1,-2));
+        RelativeLayout Rl = new RelativeLayout(activity);
+        Rl.setLayoutParams(new ScrollView.LayoutParams(-1, -2));
+        Ly = new LinearLayout(activity);
+        Ly.setLayoutParams(new RelativeLayout.LayoutParams(-1, -2));
         Ly.setOrientation(LinearLayout.VERTICAL);
-        Ly.setPadding(30,30,30,30);
+        Ly.setPadding(30, 30, 30, 30);
         Sv.addView(Rl);
         Rl.addView(Ly);
 
-        FeedButton userFeedbackBtn=new FeedButton(activity,R.string.users_feedback,R.string.users_feedback_description,activity.getDrawable(R.drawable.icon_color));
-        FeedButton userFeedback2Btn=new FeedButton(activity,R.string.users_feedback_2,R.string.users_feedback_description,activity.getDrawable(R.drawable.easyweb_2));
-        FeedButton webClubBtn=new FeedButton(activity,R.string.web_club,R.string.web_club_description,activity.getDrawable(R.drawable.web_club));
-        TextView textView=new TextView(activity);
-        textView.setLayoutParams(new LinearLayout.LayoutParams(-1,-2));
+        FeedButton userFeedbackBtn = new FeedButton(activity, R.string.users_feedback,
+                R.string.users_feedback_description, activity.getDrawable(R.drawable.icon_color));
+        FeedButton userFeedback2Btn = new FeedButton(activity, R.string.users_feedback_2,
+                R.string.users_feedback_description, activity.getDrawable(R.drawable.easyweb_2));
+        FeedButton webClubBtn = new FeedButton(activity, R.string.web_club, R.string.web_club_description,
+                activity.getDrawable(R.drawable.web_club));
+        TextView textView = new TextView(activity);
+        textView.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
         textView.setGravity(Gravity.CENTER);
-        textView.setTextColor(Do.getColor(activity,R.color.opposition));
+        textView.setTextColor(Do.getColor(activity, R.color.opposition));
         textView.setText(R.string.long_press_copy_groupid);
 
         Ly.addView(userFeedbackBtn);
@@ -1619,7 +1630,7 @@ public class Do {
         Ly.addView(webClubBtn);
         Ly.addView(textView);
 
-        Dl dl=new Dl(activity);
+        Dl dl = new Dl(activity);
         dl.builder
                 .setTitle(R.string.join_chat)
                 .setMessage(R.string.add_groups_description)
@@ -1628,34 +1639,35 @@ public class Do {
 
         userFeedbackBtn.setOnClickListener((p1) -> {
             ad.dismiss();
-            Do.joinQQGroup(activity,"igAxAeGxMnD3udAlpVOA9bzeTb2m3Fwq");
+            Do.joinQQGroup(activity, "igAxAeGxMnD3udAlpVOA9bzeTb2m3Fwq");
         });
         userFeedbackBtn.setOnLongClickListener((p1) -> {
-            Do.copyText(activity,"589618066");
+            Do.copyText(activity, "589618066");
             activity.toast(R.string.done);
             return true;
         });
 
         userFeedback2Btn.setOnClickListener((p1) -> {
             ad.dismiss();
-            Do.joinQQGroup(activity,"6W_3rBTTvxbM105tn2UOU4dqDSg27cel");
+            Do.joinQQGroup(activity, "6W_3rBTTvxbM105tn2UOU4dqDSg27cel");
         });
         userFeedback2Btn.setOnLongClickListener((p1) -> {
-            Do.copyText(activity,"853826466");
+            Do.copyText(activity, "853826466");
             activity.toast(R.string.done);
             return true;
         });
 
         webClubBtn.setOnClickListener((p1) -> {
             ad.dismiss();
-            Do.joinQQGroup(activity,"iV5SZxa_ix86ykBlSZ0l8z2f4drz0C7y");
+            Do.joinQQGroup(activity, "iV5SZxa_ix86ykBlSZ0l8z2f4drz0C7y");
         });
         webClubBtn.setOnLongClickListener((p1) -> {
-            Do.copyText(activity,"959871852");
+            Do.copyText(activity, "959871852");
             activity.toast(R.string.done);
             return true;
         });
     }
+
     public static Bitmap getLoacalBitmap(File file) {
         try {
             FileInputStream fis = new FileInputStream(file.getPath());

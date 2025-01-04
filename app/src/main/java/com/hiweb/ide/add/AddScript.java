@@ -6,24 +6,21 @@ import com.hiweb.ide.MainActivity;
 import com.hiweb.ide.R;
 import com.hiweb.ide.Dl;
 
-public class AddScript 
-{
-    public AddScript(Context ctx,final Object[][] Oa,boolean isID)
-    {
-        String[] SaName=new String[Oa.length];
-        for(int i=0;i<Oa.length;i++)
-        {
-            SaName[i]=isID ? ctx.getString((int)Oa[i][0]) : (String) Oa[i][0];
+public class AddScript {
+    public AddScript(Context ctx, final Object[][] Oa, boolean isID) {
+        String[] SaName = new String[Oa.length];
+        for (int i = 0; i < Oa.length; i++) {
+            SaName[i] = isID ? ctx.getString((int) Oa[i][0]) : (String) Oa[i][0];
         }
-        Dl AbAddList=new Dl(ctx);
+        Dl AbAddList = new Dl(ctx);
         AbAddList.builder.setTitle(R.string.main_menu_add_title);
-        AbAddList.builder.setItems(SaName, new DialogInterface.OnClickListener(){
+        AbAddList.builder.setItems(SaName, new DialogInterface.OnClickListener() {
 
-                @Override
-                public void onClick(DialogInterface p1, int p2) {
-                    MainActivity.main.getNowEditor().insert((String)Oa[p2][1]);
-                }
-            });
+            @Override
+            public void onClick(DialogInterface p1, int p2) {
+                MainActivity.main.getNowEditor().insert((String) Oa[p2][1]);
+            }
+        });
         AbAddList.show();
     }
 }
