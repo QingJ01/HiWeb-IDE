@@ -1,4 +1,4 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -7,13 +7,13 @@ import android.widget.FrameLayout.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import com.venter.easyweb.Editor;
-import com.venter.easyweb.MainActivity;
-import com.venter.easyweb.R;
-import com.venter.easyweb.add.addViewWidget.ChoiceLayout;
-import com.venter.easyweb.add.addViewWidget.NumLayout;
-import com.venter.easyweb.add.addViewWidget.TextLayout;
-import com.venter.easyweb.Dl;
+import com.hiweb.ide.Editor;
+import com.hiweb.ide.MainActivity;
+import com.hiweb.ide.R;
+import com.hiweb.ide.add.addViewWidget.ChoiceLayout;
+import com.hiweb.ide.add.addViewWidget.NumLayout;
+import com.hiweb.ide.add.addViewWidget.TextLayout;
+import com.hiweb.ide.Dl;
 
 public class AddTable {
 	public static boolean isShowNums=false;

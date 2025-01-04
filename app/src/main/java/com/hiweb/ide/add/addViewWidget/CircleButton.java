@@ -1,9 +1,9 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 import android.content.*;
 import android.graphics.drawable.*;
 import android.widget.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.edit.*;
 import android.view.*;
 import android.graphics.*;
 

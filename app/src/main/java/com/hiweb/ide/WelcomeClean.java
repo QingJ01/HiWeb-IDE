@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -13,9 +13,9 @@ import androidx.core.content.ContextCompat;
 
 import java.io.File;
 
-import com.venter.easyweb.add.addViewWidget.FeedButton;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.server.LocalServersManager;
+import com.hiweb.ide.add.addViewWidget.FeedButton;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.server.LocalServersManager;
 
 public class WelcomeClean
 {

@@ -1,4 +1,4 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.venter.easyweb.R;
-import com.venter.easyweb.add.ChooseColor;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.R;
+import com.hiweb.ide.add.ChooseColor;
+import com.hiweb.ide.edit.Do;
 import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;

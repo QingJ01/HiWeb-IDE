@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -14,7 +14,7 @@ import java.util.Map;
 
 import com.myopicmobile.textwarrior.common.LanguageNonProg;
 import com.myopicmobile.textwarrior.common.LanguageCpp;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 
 import androidx.core.content.ContextCompat;
 

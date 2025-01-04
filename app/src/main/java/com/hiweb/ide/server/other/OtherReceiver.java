@@ -1,4 +1,4 @@
-package com.venter.easyweb.server.other;
+package com.hiweb.ide.server.other;
 
 import android.app.*;
 import android.graphics.*;
@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 import com.google.gson.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.add.addViewWidget.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.add.addViewWidget.*;
+import com.hiweb.ide.edit.*;
 import java.io.*;
 import java.net.*;
-import com.venter.easyweb.server.*;
+import com.hiweb.ide.server.*;
 
 public class OtherReceiver
 {

@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
@@ -13,20 +13,20 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.venter.easyweb.databinding.BootBinding;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.edit.StyleUtils;
+import com.hiweb.ide.databinding.BootBinding;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.edit.StyleUtils;
 import java.io.File;
 import java.io.IOException;
-import com.venter.easyweb.add.AddStyle;
+import com.hiweb.ide.add.AddStyle;
 import android.os.Environment;
-import com.venter.easyweb.add.addViewWidget.ChoiceLayout;
+import com.hiweb.ide.add.addViewWidget.ChoiceLayout;
 import android.content.DialogInterface;
 import android.webkit.*;
 import java.util.*;
 
 import android.graphics.drawable.*;
-import com.venter.easyweb.add.addViewWidget.*;
+import com.hiweb.ide.add.addViewWidget.*;
 
 public class BootActivity extends BaseActivity
 {

@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -13,8 +13,8 @@ import com.flask.colorpicker.ColorPickerView;
 import com.flask.colorpicker.OnColorSelectedListener;
 import com.flask.colorpicker.builder.ColorPickerClickListener;
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
-import com.venter.easyweb.add.addViewWidget.StyleLayout;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.add.addViewWidget.StyleLayout;
+import com.hiweb.ide.edit.Do;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -122,7 +122,7 @@ public class CharsAdder extends LinearLayout
 							   {
 								   ColorPickerDialogBuilder
 									   .with(MainActivity.main)
-									   .setTitle(com.venter.easyweb.R.string.main_menu_add_choose_color_title)
+									   .setTitle(com.hiweb.ide.R.string.main_menu_add_choose_color_title)
 									   .initialColor(Color.parseColor(Vers.i.defaultChooseColor))
 									   .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
 									   .setCancelable(false)

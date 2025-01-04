@@ -1,8 +1,8 @@
-package com.venter.easyweb;
-import com.venter.easyweb.edit.*;
+package com.hiweb.ide;
+import com.hiweb.ide.edit.*;
 import com.google.gson.*;
 import android.widget.*;
-import com.venter.easyweb.add.addViewWidget.*;
+import com.hiweb.ide.add.addViewWidget.*;
 import android.app.*;
 import android.view.*;
 import java.io.*;

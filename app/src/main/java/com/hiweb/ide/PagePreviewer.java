@@ -1,12 +1,12 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import java.io.*;
 
 import android.widget.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.edit.*;
 import java.net.*;
 import android.content.*;
 import android.app.*;
-import com.venter.easyweb.add.addViewWidget.*;
+import com.hiweb.ide.add.addViewWidget.*;
 import android.view.*;
 
 public class PagePreviewer

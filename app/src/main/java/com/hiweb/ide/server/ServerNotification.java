@@ -1,10 +1,10 @@
-package com.venter.easyweb.server;
+package com.hiweb.ide.server;
 
 import android.app.*;
 import android.content.*;
 import android.graphics.*;
 import android.os.*;
-import com.venter.easyweb.*;
+import com.hiweb.ide.*;
 import java.util.*;
 
 public class ServerNotification {

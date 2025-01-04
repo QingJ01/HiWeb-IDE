@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.provider.Settings;
@@ -12,9 +12,9 @@ import com.myopicmobile.textwarrior.TextEditor;
 import com.myopicmobile.textwarrior.common.Language;
 import com.myopicmobile.textwarrior.common.LanguageCpp;
 import com.myopicmobile.textwarrior.common.LanguageNonProg;
-import com.venter.easyweb.add.addViewWidget.TextLayout;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.edit.JavaForm;
+import com.hiweb.ide.add.addViewWidget.TextLayout;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.edit.JavaForm;
 import java.util.Arrays;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

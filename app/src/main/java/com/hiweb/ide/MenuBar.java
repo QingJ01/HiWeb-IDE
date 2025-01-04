@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.widget.LinearLayout;
 import android.widget.HorizontalScrollView;
 import android.view.Gravity;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.view.View;
 import android.graphics.drawable.Drawable;
 import android.widget.Toast;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import android.widget.ImageView;
 
 public class MenuBar extends LinearLayout

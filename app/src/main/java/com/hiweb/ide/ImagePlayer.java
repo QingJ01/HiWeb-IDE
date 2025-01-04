@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import id.zelory.compressor.Compressor;
 import java.io.File;
 import java.io.FileInputStream;

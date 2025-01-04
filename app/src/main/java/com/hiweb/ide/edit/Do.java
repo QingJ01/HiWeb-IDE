@@ -1,4 +1,4 @@
-package com.venter.easyweb.edit;
+package com.hiweb.ide.edit;
 
 import android.Manifest;
 import android.app.*;
@@ -13,10 +13,10 @@ import android.view.*;
 import android.view.inputmethod.*;
 import android.webkit.*;
 import com.google.gson.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.R;
-import com.venter.easyweb.add.addViewWidget.FeedButton;
-import com.venter.easyweb.server.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.R;
+import com.hiweb.ide.add.addViewWidget.FeedButton;
+import com.hiweb.ide.server.*;
 import com.venter.jssrunner.*;
 import com.yanzhenjie.andserver.*;
 import java.io.*;
@@ -29,12 +29,12 @@ import java.util.regex.*;
 import android.content.ClipboardManager;
 import android.util.Base64;
 
-import com.venter.easyweb.ProgressDialog;
+import com.hiweb.ide.ProgressDialog;
 
 import java.io.File;
 import java.lang.Process;
 
-import com.venter.easyweb.server.easyweb_server.*;
+import com.hiweb.ide.server.easyweb_server.*;
 import com.yanzhenjie.andserver.website.FileBrowser;
 import com.yanzhenjie.andserver.website.StorageWebsite;
 import com.yanzhenjie.andserver.website.WebSite;
@@ -666,13 +666,13 @@ public class Do {
 
     public static Intent getEasyWebServerServiceIntent() {
         Intent I = new Intent();
-        I.setClassName("com.venter.easyweb", "com.venter.easyweb.server.easyweb_server.EasyWebServerService");
+        I.setClassName("com.hiweb.ide", "com.hiweb.ide.server.easyweb_server.EasyWebServerService");
         return I;
     }
 
     public static Intent getPHPServerProcessIntent() {
         Intent I = new Intent();
-        I.setClassName("com.venter.easyweb", "com.venter.easyweb.server.php_server.PHPServerProcess");
+        I.setClassName("com.hiweb.ide", "com.hiweb.ide.server.php_server.PHPServerProcess");
         return I;
     }
 
@@ -853,7 +853,7 @@ public class Do {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri uriForFile;
         if (Build.VERSION.SDK_INT > 23){
-            uriForFile = FileProvider.getUriForFile(context, "com.venter.easyweb.provider", file);
+            uriForFile = FileProvider.getUriForFile(context, "com.hiweb.ide.provider", file);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION);
         }else {
             uriForFile = Uri.fromFile(file);
@@ -1122,7 +1122,7 @@ public class Do {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         Uri uriForFile;
         if (Build.VERSION.SDK_INT > 23){
-            uriForFile = FileProvider.getUriForFile(context, "com.venter.easyweb.provider", file);
+            uriForFile = FileProvider.getUriForFile(context, "com.hiweb.ide.provider", file);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION|Intent.FLAG_GRANT_READ_URI_PERMISSION);
         }else {
             uriForFile = Uri.fromFile(file);

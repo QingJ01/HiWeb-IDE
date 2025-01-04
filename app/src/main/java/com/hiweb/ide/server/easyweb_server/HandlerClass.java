@@ -1,7 +1,7 @@
-package com.venter.easyweb.server.easyweb_server;
+package com.hiweb.ide.server.easyweb_server;
 
-import com.venter.easyweb.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.edit.*;
 import com.venter.jssrunner.*;
 import com.yanzhenjie.andserver.util.*;
 import java.io.*;

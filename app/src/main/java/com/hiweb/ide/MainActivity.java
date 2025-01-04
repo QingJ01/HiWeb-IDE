@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.app.*;
 import android.content.*;
@@ -24,13 +24,13 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.core.content.ContextCompat;
 
 import com.google.gson.*;
-import com.venter.easyweb.add.*;
-import com.venter.easyweb.add.addViewWidget.*;
-import com.venter.easyweb.databinding.MainBinding;
-import com.venter.easyweb.edit.*;
-import com.venter.easyweb.server.*;
-import com.venter.easyweb.server.php_server.PHPServerReceiver;
-import com.venter.jssrunner.*;
+import com.hiweb.ide.add.*;
+import com.hiweb.ide.add.addViewWidget.*;
+import com.hiweb.ide.databinding.MainBinding;
+import com.hiweb.ide.edit.*;
+import com.hiweb.ide.server.*;
+import com.hiweb.ide.server.php_server.PHPServerReceiver;
+import com.hiweb.jssrunner.*;
 
 import java.io.*;
 import java.net.*;

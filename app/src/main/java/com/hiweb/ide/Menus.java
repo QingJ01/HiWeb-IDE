@@ -1,8 +1,8 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.*;
 import android.view.*;
-import com.venter.easyweb.edit.*;
-import com.venter.easyweb.server.*;
+import com.hiweb.ide.edit.*;
+import com.hiweb.ide.server.*;
 import java.io.*;
 import java.util.Objects;
 

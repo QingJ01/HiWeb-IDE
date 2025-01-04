@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.app.Activity;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.venter.easyweb.databinding.ErrorBinding;
+import com.hiweb.ide.databinding.ErrorBinding;
 
 import java.util.Locale;
 

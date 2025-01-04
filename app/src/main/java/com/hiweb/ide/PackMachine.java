@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -20,11 +20,11 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.venter.easyweb.add.addViewWidget.ChoiceLayout;
-import com.venter.easyweb.add.addViewWidget.ColorLayout;
-import com.venter.easyweb.add.addViewWidget.TextLayout;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.edit.ZipUtil;
+import com.hiweb.ide.add.addViewWidget.ChoiceLayout;
+import com.hiweb.ide.add.addViewWidget.ColorLayout;
+import com.hiweb.ide.add.addViewWidget.TextLayout;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.edit.ZipUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;

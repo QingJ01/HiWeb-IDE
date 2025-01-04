@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.*;
 import java.text.*;
 import java.util.*;

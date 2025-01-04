@@ -1,4 +1,4 @@
-package com.venter.easyweb.edit;
+package com.hiweb.ide.edit;
 
 import java.util.EmptyStackException;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 
 import android.content.Context;
 import android.view.View;
@@ -9,10 +9,10 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.venter.easyweb.R;
-import com.venter.easyweb.add.AddStyle;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.Vers;
+import com.hiweb.ide.R;
+import com.hiweb.ide.add.AddStyle;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.Vers;
 
 public class StyleLayout extends LinearLayout 
 {

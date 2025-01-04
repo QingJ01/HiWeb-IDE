@@ -1,6 +1,6 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 import android.content.*;
-import com.venter.easyweb.*;
+import com.hiweb.ide.*;
 import com.flask.colorpicker.builder.*;
 import com.flask.colorpicker.*;
 
@@ -33,7 +33,7 @@ public class ChooseColor
 		}
 		ColorPickerDialogBuilder
 			.with(c)
-			.setTitle(com.venter.easyweb.R.string.main_menu_add_choose_color_title)
+			.setTitle(com.hiweb.ide.R.string.main_menu_add_choose_color_title)
 			.initialColor(Color.parseColor(ToColor))
 			.wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
 			.setCancelable(false)
@@ -45,7 +45,7 @@ public class ChooseColor
 					HEXText= convertToRGB(selectedColor,IsWell);
 				}
 			})
-			.setPositiveButton(com.venter.easyweb.R.string.ok, new ColorPickerClickListener() {
+			.setPositiveButton(com.hiweb.ide.R.string.ok, new ColorPickerClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int selectedColor, Integer[] allColors) {
 					HEXText= convertToRGB(selectedColor,IsWell);
@@ -53,7 +53,7 @@ public class ChooseColor
 					dialogEdit.setText(colorString);
 				}
 			})
-			.setNegativeButton(com.venter.easyweb.R.string.cancel, new DialogInterface.OnClickListener() {
+			.setNegativeButton(com.hiweb.ide.R.string.cancel, new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 				}

@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.text.Spannable;
@@ -12,7 +12,7 @@ import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import java.util.HashMap;
 import java.util.Map;
 import android.widget.AdapterView;

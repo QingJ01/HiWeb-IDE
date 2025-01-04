@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import java.util.HashMap;
 import java.util.Map;
 

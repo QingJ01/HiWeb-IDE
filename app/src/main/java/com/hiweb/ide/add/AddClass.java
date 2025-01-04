@@ -1,19 +1,19 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import com.venter.easyweb.Editor;
-import com.venter.easyweb.R;
-import com.venter.easyweb.Vers;
-import com.venter.easyweb.add.addViewWidget.ChoiceLayout;
-import com.venter.easyweb.add.addViewWidget.NumLayout;
-import com.venter.easyweb.add.addViewWidget.StyleLayout;
-import com.venter.easyweb.add.addViewWidget.TextLayout;
-import com.venter.easyweb.Dl;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.Editor;
+import com.hiweb.ide.R;
+import com.hiweb.ide.Vers;
+import com.hiweb.ide.add.addViewWidget.ChoiceLayout;
+import com.hiweb.ide.add.addViewWidget.NumLayout;
+import com.hiweb.ide.add.addViewWidget.StyleLayout;
+import com.hiweb.ide.add.addViewWidget.TextLayout;
+import com.hiweb.ide.Dl;
+import com.hiweb.ide.edit.*;
 
 public class AddClass
 {

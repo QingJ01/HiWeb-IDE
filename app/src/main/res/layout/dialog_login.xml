@@ -56,7 +56,7 @@
 
 	</LinearLayout>
 
-	<com.venter.easyweb.add.addViewWidget.TextLayout
+	<com.hiweb.ide.add.addViewWidget.TextLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/tl_user_login" />

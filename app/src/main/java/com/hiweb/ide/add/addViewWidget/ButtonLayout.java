@@ -1,4 +1,4 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.Gravity;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.R;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.R;
 
 public class ButtonLayout extends LinearLayout
 {

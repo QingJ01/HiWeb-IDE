@@ -1,11 +1,11 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 
 import android.content.Context;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.venter.easyweb.R;
+import com.hiweb.ide.R;
 import android.view.Gravity;
 
 import androidx.core.content.ContextCompat;

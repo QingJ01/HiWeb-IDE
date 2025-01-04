@@ -1,10 +1,10 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import com.venter.easyweb.MainActivity;
-import com.venter.easyweb.R;
-import com.venter.easyweb.Dl;
+import com.hiweb.ide.MainActivity;
+import com.hiweb.ide.R;
+import com.hiweb.ide.Dl;
 
 public class AddScript 
 {

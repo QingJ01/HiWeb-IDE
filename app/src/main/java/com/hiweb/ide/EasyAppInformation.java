@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 
 import java.io.File;
 import java.io.FileReader;

@@ -1,14 +1,14 @@
-package com.venter.easyweb.server.php_server;
+package com.hiweb.ide.server.php_server;
 
 import android.app.*;
 import android.graphics.*;
 import android.view.*;
 import android.widget.*;
 import com.google.gson.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.add.addViewWidget.*;
-import com.venter.easyweb.edit.*;
-import com.venter.easyweb.server.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.add.addViewWidget.*;
+import com.hiweb.ide.edit.*;
+import com.hiweb.ide.server.*;
 
 import java.io.*;
 import java.net.*;

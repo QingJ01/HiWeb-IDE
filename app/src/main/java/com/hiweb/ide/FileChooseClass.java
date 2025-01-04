@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -22,8 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-import com.venter.easyweb.add.addViewWidget.ButtonLayout;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.add.addViewWidget.ButtonLayout;
+import com.hiweb.ide.edit.Do;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;

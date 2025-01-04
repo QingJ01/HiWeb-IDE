@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.graphics.drawable.*;
 import android.os.*;
@@ -6,7 +6,7 @@ import android.view.*;
 
 import androidx.core.content.ContextCompat;
 
-import com.venter.easyweb.server.*;
+import com.hiweb.ide.server.*;
 import java.io.*;
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.venter.easyweb.edit;
+package com.hiweb.ide.edit;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.venter.easyweb.add.addViewWidget;
+package com.hiweb.ide.add.addViewWidget;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -15,9 +15,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.venter.easyweb.R;
-import com.venter.easyweb.Vers;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.R;
+import com.hiweb.ide.Vers;
+import com.hiweb.ide.edit.Do;
 
 import org.xmlpull.v1.XmlPullParser;
 

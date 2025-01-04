@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.app.Application;
 import android.content.Context;
 import android.os.Environment;

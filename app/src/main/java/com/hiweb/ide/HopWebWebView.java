@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.*;
@@ -19,13 +19,13 @@ import java.lang.reflect.Method;
 import java.net.*;
 import java.util.*;
 import android.widget.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.edit.*;
 import android.graphics.drawable.*;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.venter.easyweb.add.addViewWidget.*;
+import com.hiweb.ide.add.addViewWidget.*;
 
 public class HopWebWebView extends WebView
 {

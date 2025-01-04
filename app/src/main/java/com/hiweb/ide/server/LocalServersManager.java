@@ -1,17 +1,17 @@
-package com.venter.easyweb.server;
+package com.hiweb.ide.server;
 
 import android.content.*;
 import android.graphics.*;
 import android.graphics.drawable.*;
 import android.view.*;
 import com.google.gson.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.add.addViewWidget.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.add.addViewWidget.*;
+import com.hiweb.ide.edit.*;
 import java.io.*;
 import java.net.*;
 import java.util.*;
-import com.venter.easyweb.server.easyweb_server.*;
+import com.hiweb.ide.server.easyweb_server.*;
 import android.app.*;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -22,8 +22,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
-import com.venter.easyweb.server.php_server.*;
-import com.venter.easyweb.server.other.*;
+import com.hiweb.ide.server.php_server.*;
+import com.hiweb.ide.server.other.*;
 
 public class LocalServersManager {
     public void showDialog(final Context c) {

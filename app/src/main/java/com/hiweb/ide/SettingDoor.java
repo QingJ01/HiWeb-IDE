@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
@@ -17,11 +17,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.venter.easyweb.add.addViewWidget.ButtonLayout;
-import com.venter.easyweb.add.addViewWidget.ChoiceLayout;
-import com.venter.easyweb.add.addViewWidget.ObjectLayout;
-import com.venter.easyweb.add.addViewWidget.TextLayout;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.add.addViewWidget.ButtonLayout;
+import com.hiweb.ide.add.addViewWidget.ChoiceLayout;
+import com.hiweb.ide.add.addViewWidget.ObjectLayout;
+import com.hiweb.ide.add.addViewWidget.TextLayout;
+import com.hiweb.ide.edit.Do;
 import com.venter.jssrunner.JssRunner;
 import java.io.File;
 import java.util.ArrayList;
@@ -1344,7 +1344,7 @@ public class SettingDoor
                 public void onClick(View p1)
                 {
 					Toast.makeText(MainActivity.main,R.string.feedback_msg,Toast.LENGTH_SHORT).show();
-                    Uri  uri = Uri.parse("https://www.coolapk.com/apk/com.venter.easyweb");
+                    Uri  uri = Uri.parse("https://www.coolapk.com/apk/com.hiweb.ide");
 					Intent  intent = new  Intent(Intent.ACTION_VIEW, uri);
 					MainActivity.main.startActivity(intent);
                     AboutDialog.dismiss();

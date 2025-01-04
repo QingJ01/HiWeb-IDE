@@ -1,14 +1,14 @@
-package com.venter.easyweb.server;
+package com.hiweb.ide.server;
 
 import android.content.*;
 import com.google.gson.*;
-import com.venter.easyweb.*;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.*;
+import com.hiweb.ide.edit.*;
 import java.io.*;
 import java.util.*;
-import com.venter.easyweb.server.easyweb_server.*;
-import com.venter.easyweb.server.php_server.*;
-import com.venter.easyweb.server.other.*;
+import com.hiweb.ide.server.easyweb_server.*;
+import com.hiweb.ide.server.php_server.*;
+import com.hiweb.ide.server.other.*;
 
 public class ServerMain
 {

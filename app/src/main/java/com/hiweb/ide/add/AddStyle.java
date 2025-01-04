@@ -1,13 +1,13 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.View;
 import android.widget.EditText;
-import com.venter.easyweb.MainActivity;
-import com.venter.easyweb.R;
+import com.hiweb.ide.MainActivity;
+import com.hiweb.ide.R;
 import java.util.Arrays;
 import java.util.ArrayList;
-import com.venter.easyweb.Dl;
+import com.hiweb.ide.Dl;
 import android.app.AlertDialog;
 
 public class AddStyle

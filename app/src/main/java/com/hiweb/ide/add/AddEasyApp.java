@@ -1,10 +1,10 @@
-package com.venter.easyweb.add;
+package com.hiweb.ide.add;
 
-import com.venter.easyweb.Dl;
-import com.venter.easyweb.EasyAppInformation;
-import com.venter.easyweb.MainActivity;
-import com.venter.easyweb.R;
-import com.venter.easyweb.Vers;
+import com.hiweb.ide.Dl;
+import com.hiweb.ide.EasyAppInformation;
+import com.hiweb.ide.MainActivity;
+import com.hiweb.ide.R;
+import com.hiweb.ide.Vers;
 
 public class AddEasyApp {
     public AddEasyApp()

@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 
 public class LoveClass 
 {
@@ -60,7 +60,7 @@ public class LoveClass
     }
     private void ping()
     {
-        Uri  uri = Uri.parse("https://www.coolapk.com/apk/com.venter.easyweb");
+        Uri  uri = Uri.parse("https://www.coolapk.com/apk/com.hiweb.ide");
         Intent  intent = new  Intent(Intent.ACTION_VIEW, uri);
         C.startActivity(intent);
     }

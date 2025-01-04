@@ -1,8 +1,8 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.DialogInterface;
 
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import java.io.File;
 import java.util.Map;
 

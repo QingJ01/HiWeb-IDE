@@ -1,4 +1,4 @@
-package com.venter.easyweb.server.easyweb_server;
+package com.hiweb.ide.server.easyweb_server;
 
 import com.venter.jssrunner.*;
 import com.yanzhenjie.andserver.RequestHandler;

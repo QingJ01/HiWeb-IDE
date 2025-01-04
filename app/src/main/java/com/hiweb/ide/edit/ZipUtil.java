@@ -1,4 +1,4 @@
-package com.venter.easyweb.edit;
+package com.hiweb.ide.edit;
 
 import java.io.File;
 import java.io.FileInputStream;

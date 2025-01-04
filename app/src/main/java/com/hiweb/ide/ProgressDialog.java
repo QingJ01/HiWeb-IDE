@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;

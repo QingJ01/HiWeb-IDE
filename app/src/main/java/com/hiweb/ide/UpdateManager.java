@@ -1,5 +1,5 @@
-package com.venter.easyweb;
-import com.venter.easyweb.edit.Do;
+package com.hiweb.ide;
+import com.hiweb.ide.edit.Do;
 import android.content.DialogInterface;
 
 public class UpdateManager
@@ -39,7 +39,7 @@ public class UpdateManager
 										@Override
 										public void onClick(DialogInterface p1, int p2)
 										{
-											Do.openUrl("https://www.coolapk.com/apk/com.venter.easyweb",activity);
+											Do.openUrl("https://www.coolapk.com/apk/com.hiweb.ide",activity);
 										}
 									});
 								dl.builder.setNegativeButton(android.R.string.cancel,null);

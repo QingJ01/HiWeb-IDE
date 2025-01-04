@@ -1,5 +1,5 @@
-package com.venter.easyweb;
-import com.venter.easyweb.edit.Do;
+package com.hiweb.ide;
+import com.hiweb.ide.edit.Do;
 import java.io.File;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Attributes;

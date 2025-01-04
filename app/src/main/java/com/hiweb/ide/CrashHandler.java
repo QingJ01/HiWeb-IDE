@@ -1,8 +1,8 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.Context;
 import android.content.Intent;
-import com.venter.easyweb.ErrorActivity;
+import com.hiweb.ide.ErrorActivity;
 
 import org.apache.commons.lang3.exception.ExceptionUtils;
 

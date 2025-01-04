@@ -1,11 +1,11 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.View;
 import android.widget.EditText;
-import com.venter.easyweb.R;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.R;
+import com.hiweb.ide.edit.Do;
 import android.app.AlertDialog;
 
 import org.apache.commons.text.StringEscapeUtils;

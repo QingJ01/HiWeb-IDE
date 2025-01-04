@@ -1,12 +1,12 @@
-package com.venter.easyweb.server.easyweb_server;
+package com.hiweb.ide.server.easyweb_server;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import androidx.annotation.Nullable;
-import com.venter.easyweb.Vers;
-import com.venter.easyweb.edit.Do;
-import com.venter.easyweb.server.ServerNotification;
+import com.hiweb.ide.Vers;
+import com.hiweb.ide.edit.Do;
+import com.hiweb.ide.server.ServerNotification;
 import com.yanzhenjie.andserver.Server;
 import java.io.File;
 

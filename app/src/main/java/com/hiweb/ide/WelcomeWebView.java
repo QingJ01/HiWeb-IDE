@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -12,7 +12,7 @@ import android.webkit.WebViewClient;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;

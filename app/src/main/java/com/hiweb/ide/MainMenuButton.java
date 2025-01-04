@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.content.*;
 import android.util.*;
 import android.widget.*;
@@ -10,7 +10,7 @@ import android.graphics.drawable.*;
 
 import androidx.core.content.ContextCompat;
 
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.edit.*;
 
 public class MainMenuButton extends LinearLayout
 {

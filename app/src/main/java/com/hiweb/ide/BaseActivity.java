@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -10,7 +10,7 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.venter.easyweb.edit.Do;
+import com.hiweb.ide.edit.Do;
 import com.venter.jssrunner.Utils;
 
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.widget.Adapter;
 import android.view.View;
-import com.venter.easyweb.edit.*;
+import com.hiweb.ide.edit.*;
 
 public class SupplementManager
 {

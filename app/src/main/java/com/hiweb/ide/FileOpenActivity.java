@@ -1,4 +1,4 @@
-package com.venter.easyweb;
+package com.hiweb.ide;
 import android.app.*;
 import android.os.*;
 import android.content.*;
