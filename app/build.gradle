@@ -9,8 +9,8 @@ android {
         applicationId "com.hiweb.ide"
         minSdk 21
         targetSdk 28
-        versionCode 106
-        versionName "2.6.8.FIXED4.NEU"
+        versionCode 1000
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
