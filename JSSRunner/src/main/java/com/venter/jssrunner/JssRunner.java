@@ -1,4 +1,4 @@
-package com.venter.jssrunner;
+package com.hiweb.jssrunner;
 import android.app.Activity;
 import android.content.Context;
 import android.webkit.WebChromeClient;
